@@ -1,9 +1,9 @@
 masterProfileObject = { categoryOne: 0, categoryTwo: 0 , categoryThree: 0 , categoryFour: 0 };
 
 function answerSelection(formName) {
-    
+
     var input = formName['category'].value;
-    switch(x) {
+    switch(input) {
         case ((input) === 1):
             addPoints(categoryOne);
             break;
@@ -23,12 +23,29 @@ function answerSelection(formName) {
 };
 
 function addPoints(categoryName) {
-    masterProfileObject[categoryName] + 1; 
+    masterProfileObject[categoryName] + 1;
 };
 
-questionAnswers = document.getElementsByClassName('answers')
-for (let i = 0; i < questionAnswers.length; i++) {
-  answerSelection(questionAnswers[i]);
+function getAnswers() {
+  questionAnswers = document.getElementsByClassName('answers')
+  for (let i = 0; i < questionAnswers.length; i++) {
+
+    var submitForm = new Event('formSubmit', {
+           'view'       : window,
+           'bubbles'    : true,
+           'cancelable' : true
+       });
+
+    questionAnswers[i].addEventListener('formSubmit', function(e) {
+      answerSelection(e.target);
+    })
+
+    questionAnswers[i].dispatchEvent(submitForm)
+
+  }
 }
 
-
+var submitAllAnswers = document.querySelector("#submitAllAnswers")
+submitAllAnswers.addEventListener("click", function(){
+  getAnswers()
+})
