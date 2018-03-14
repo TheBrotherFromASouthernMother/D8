@@ -1,4 +1,4 @@
-var url = `https://api.themoviedb.org/3/movie/76341?api_key=${TMDB_KEY}`;
+var url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${TMDB_KEY}&language=en-US&page=1&ISO 3166-2:US-TX`;
 
 
 function makeAJAXRequest() {
