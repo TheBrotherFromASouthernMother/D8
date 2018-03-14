@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>d8</title>
 
@@ -12,96 +13,66 @@
     <header>
 
     </header>
-    <!-- <div class="container master">
-        <div class="questionBox">
-            <div class="questionHead">
-                <div class="questionIcon">
-                    <h1>#1.</h1>
-                </div>
-                <div class="questionText">
-                    <p>Hello, how are you?</p>
-                </div>
-            </div> -->
+    <div class="container master">
 
-            <!-- <div class="questionContent">
-                <form class="answers">
-                    <input type="radio" name="q1" value="Answer A">A. Answer A<br>
-                    <input type="radio" name="q1" value="Answer B">A. Answer B<br>
-                    <input type="radio" name="q1" value="Answer C">A. Answer C<br>
-                    <input type="radio" name="q1" value="Answer D">A. Answer D<br>
-                </form> -->
-<!--
-            </div> -->
-
-            <div class="questionBox">
-                <div class="questionHead">
-                    <div class="questionIcon">
-                        <h1>#2.</h1>
-                    </div>
-                <div class="questionText">
-                        <p>No, really, how are you?</p>
+        <div id="accordion">
+            <div class="card questionBox">
+                <div class="card-header questionHeader" id="headingOne">
+                    <h5 class="mb-0">
+                    <button class="btn btn-link questionText" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is your favorite color?
+                    </button>
+                    </h5>
+                </div>
+        
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body questionAnswers">
+                        <div class="answer" value="1">I hate color.</div>
+                        <div class="answer" value="2">The rainbow.</div>
+                        <div class="answer" value="3">Glitter</div>
+                        <div class="answer" value="4">What.</div>
                     </div>
                 </div>
-
-                <div class="questionContent">
-                    <form class="answers">
-                        <input type="radio" name="cat" value="1" category="one">A. Answer A<br>
-                        <input type="radio" name="q2" value="1" category="two">A. Answer B<br>
-                        <input type="radio" name="q2" value="1" category="three">A. Answer C<br>
-                        <input type="radio" name="q2" value="1" category="four">A. Answer D<br>
-                    </form>
-
+            </div>
+            <div class="card questionBox">
+                <div class="card-header questionHeader" id="headingOne">
+                    <h5 class="mb-0">
+                    <button class="btn btn-link questionText" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is your favorite color?
+                    </button>
+                    </h5>
                 </div>
+                
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body questionAnswers">
+                        <div class="answer" value="1">I hate color.</div>
+                        <div class="answer" value="2">The rainbow.</div>
+                        <div class="answer" value="3">Glitter</div>
+                        <div class="answer" value="4">What.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card questionBox">
+                <div class="card-header questionHeader" id="headingOne">
+                    <h5 class="mb-0">
+                    <button class="btn btn-link questionText" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is your favorite color?
+                    </button>
+                    </h5>
+                </div>
+                        
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body questionAnswers">
+                        <div class="answer" value="1">I hate color.</div>
+                        <div class="answer" value="2">The rainbow.</div>
+                        <div class="answer" value="3">Glitter</div>
+                        <div class="answer" value="4">What.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-         </div>
-
-
-         <div class="questionBox">
-             <div class="questionHead">
-                 <div class="questionIcon">
-                     <h1>#3.</h1>
-                 </div>
-             <div class="questionText">
-                     <p>No, really, how are you?</p>
-                 </div>
-             </div>
-
-             <div class="questionContent">
-                 <form class="answers">
-                     <input type="radio" name="cat" value="1" category="one">A. Answer A<br>
-                     <input type="radio" name="q2" value="1" category="two">A. Answer B<br>
-                     <input type="radio" name="q2" value="1" category="three">A. Answer C<br>
-                     <input type="radio" name="q2" value="1" category="four">A. Answer D<br>
-                 </form>
-
-             </div>
-
-      </div>
-
-
-      <div class="questionBox">
-          <div class="questionHead">
-              <div class="questionIcon">
-                  <h1>#2.</h1>
-              </div>
-          <div class="questionText">
-                  <p>No, really, how are you?</p>
-              </div>
-          </div>
-
-          <div class="questionContent">
-              <form class="answers">
-                  <input type="radio" name="cat" value="1" category="one">A. Answer A<br>
-                  <input type="radio" name="q2" value="1" category="two">A. Answer B<br>
-                  <input type="radio" name="q2" value="1" category="three">A. Answer C<br>
-                  <input type="radio" name="q2" value="1" category="four">A. Answer D<br>
-              </form>
-
-          </div>
-
-   </div>
-
-         <button type="button" name="button" id ="submitAllAnswers"> Missle Test</button>
+        <button type="button" name="button" id ="submitAllAnswers"> Missle Test</button>
 
 
 
