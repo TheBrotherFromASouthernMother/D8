@@ -41,14 +41,15 @@ function addPoints(categoryName) {
 };
 
 function getAnswers() {
+  var submitForm = new Event('formSubmit', {
+         'view'       : window,
+         'bubbles'    : true,
+         'cancelable' : true
+     });
   questionAnswers = document.getElementsByClassName('answers')
   for (let i = 0; i < questionAnswers.length; i++) {
 
-    var submitForm = new Event('formSubmit', {
-           'view'       : window,
-           'bubbles'    : true,
-           'cancelable' : true
-       });
+
 
     questionAnswers[i].addEventListener('formSubmit', function(e) {
       answerSelection(this);
