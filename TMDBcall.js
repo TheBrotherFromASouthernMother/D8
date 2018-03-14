@@ -1,19 +1,19 @@
-var url = `https://api.themoviedb.org/3/movie/76341?api_key=${TMDB_KEY}`;
+
+/*To be refactored, we should eventually add a feature that allows users
+to select from a drop down menu their state
+so that we can provide now playing info for more than just Texas */
+
+var url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${TMDB_KEY}&language=en-US&page=1&ISO 3166-2:US-TX`;
+
+  $.get(url).done(function(response) {
+    console.log(response)
+    updateUISucces()
+
+  }).fail(function(err) {
+    console.log(err)
+  })
 
 
-function makeAJAXRequest() {
-  movieData = null;
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-      movieData = JSON.parse(xhr.responseText);
-      console.log(movieData)
-    }
+  function updateUISucces(response) {
+      break;
   }
-
-  xhr.open("GET", url, true)
-  xhr.send()
-}
-
-
-makeAJAXRequest()
