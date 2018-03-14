@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i|Rammetto+One');
+    </style>            
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>d8</title>
 
@@ -13,35 +17,61 @@
     <header>
 
     </header>
-    <div class="container master">
+    <div class="container-fluid master">
+        <div class="row d-flex justify-content-center">
+            <h3>
+                Restaurants
+            </h3>
+        </div>
 
-        <div id="restaurantResultsCarousel" class="carousel slide" data-ride="carousel">
+        <div id="restaurantResultsCarousel" class="carousel slide" data-interval="false" data-ride="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="First slide">
+                    <div class="col-xl-4 col-lg-4 col-md-12">
+                    <img class="w-100" src="http://via.placeholder.com/350x150" alt="First slide">
                     <div class="card">
                         <div class="card-header" id="restaurantHeadingOne">
                             <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#restaurantCollapseOne" aria-expanded="true" aria-controls="restaurantCollapseOne">
-                                Collapsible Group Item #1
+                                <button class="btn btn-link collapsed resultTitle accordionHeader" data-toggle="collapse" data-target="#restaurantCollapseOne" aria-expanded="true" aria-controls="restaurantCollapseOne">
+                                Sushi Restaurant #1 very long title
                                 </button>
                             </h5>
                         </div>
                         
                         <div id="restaurantCollapseOne" class="collapse" aria-labelledby="restaurantHeadingOne" data-parent="#accordion">
                             <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                <div class="cardResult">
+                                <table class="table resultTable">
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" class="resultCost">$$$</th>
+                                            <th scope="row" class="resultCuisine">Japanese</th>
+                                            <th scope="row" class="resultLink">Yelp</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="resultReview">
+                                    <p>
+                                    This place is great. I love sushi!!!!
+                                    </p>
+                                </div>
+                            </div>
+                                <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="First slide">
+
+                    <div class="carousel-item">
+                            <div class="col-lg-4 col-md-12">
+
+                    <img class="w-100" src="http://via.placeholder.com/350x150" alt="First slide">
                     <div class="card">
                             <div class="card-header" id="restaurantHeadingTwo">
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#restaurantCollapseTwo" aria-expanded="true" aria-controls="restaurantCollapseTwo">
-                                    Collapsible Group Item #2
+                                            Sushi Restaurant #2
                                     </button>
                                 </h5>
                             </div>
@@ -53,37 +83,48 @@
                             </div>
                         </div>
                 </div>
+                </div>
+
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="First slide">
+                        <div class="col-lg-4 col-md-12">
+
+                    <img class="w-100" src="http://via.placeholder.com/350x150" alt="First slide">
                     <div class="card">
-                            <div class="card-header" id="restaurantHeadingThree">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#restaurantCollapseThree" aria-expanded="true" aria-controls="restaurantCollapseThree">
-                                    Collapsible Group Item #3
-                                    </button>
-                                </h5>
+                        <div class="card-header" id="restaurantHeadingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#restaurantCollapseThree" aria-expanded="true" aria-controls="restaurantCollapseThree">
+                                        Sushi Restaurant #3
+                                </button>
+                            </h5>
+                        </div>
+                        
+                        <div id="restaurantCollapseThree" class="collapse" aria-labelledby="restaurantHeadingThree" data-parent="#accordion">
+                            <div class="card-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
                             </div>
-                            
-                            <div id="restaurantCollapseThree" class="collapse" aria-labelledby="restaurantHeadingThree" data-parent="#accordion">
-                                <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                                </div>
-                            </div>
+                        </div>
+                    </div>
                         </div>
                 </div>
             </div>
         </div>
 
+        <div class="row d-flex justify-content-center">
+                <h3>
+                    Movies
+                </h3>
+            </div>
 
         <div id="movieResultsCarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="First slide">
+                        <div class="col-xl-4 col-lg-4 col-md-12">
+                                <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="First slide">
                     <div class="card">
                         <div class="card-header" id="movieHeadingOne">
                             <h5 class="mb-0">
                                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#movieCollapseOne" aria-expanded="true" aria-controls="movieCollapseOne">
-                                Collapsible Group Item #1
+                                Wes Anderson Movie #1
                                 </button>
                             </h5>
                         </div>
@@ -95,13 +136,15 @@
                         </div>
                     </div>
                 </div>
+                </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="First slide">
+                        <div class="col-xl-4 col-lg-4 col-md-12">
+                                <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="First slide">
                     <div class="card">
                         <div class="card-header" id="movieHeadingTwo">
                             <h5 class="mb-0">
                                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#movieCollapseTwo" aria-expanded="true" aria-controls="movieCollapseTwo">
-                                Collapsible Group Item #2
+                                        Wes Anderson Movie #2
                                 </button>
                             </h5>
                         </div>
@@ -113,13 +156,15 @@
                         </div>
                     </div>
                 </div>
+                </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="First slide">
+                        <div class="col-xl-4 col-lg-4 col-md-12">
+                                <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="First slide">
                     <div class="card">
                         <div class="card-header" id="movieHeadingThree">
                             <h5 class="mb-0">
                                 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#movieCollapseThree" aria-expanded="true" aria-controls="movieCollapseThree">
-                                Collapsible Group Item #3
+                                        Wes Anderson Movie #3
                                 </button>
                             </h5>
                         </div>
@@ -130,10 +175,41 @@
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="row d-flex justify-content-center">
+                <h3>
+                    Itinerary
+                </h3>
+            </div>
+
+        <div class="row">
+                <div class="col-lg-6 col-md-12">
+                        Sushi Restaurant #1
+                        <table class="table itineraryData">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">$$$</th>
+                                        <th scope="row">Japanese</th>
+                                        <th scope="row">Delete</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    </div>
+                <div class="col-lg-6 col-md-12">
+                        <img class="d-block w-100" src="http://via.placeholder.com/350x350" alt="Map">
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+<div class="col-lg-4 col-md-12">
+        <button type="button" class="btn btn-primary btn-lg btn-block">Finalize</button>
     </div>
+    </div>
+</div>
 
 <script src="masterJavascript.js"></script>
 <script type="text/javascript" src="apikey.js"></script>
