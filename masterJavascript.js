@@ -13,7 +13,7 @@ function answerSelection(answer) {
           inputValue = answer.getAttribute("value");
           console.log(inputValue)
     } else {
-      return false;
+        return false;
     }
 
     switch(inputValue !== null) {
