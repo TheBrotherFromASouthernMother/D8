@@ -1,0 +1,106 @@
+.accordionHeader {
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* glitch underline on hover */
+.accordionHeader:hover, .accordionHeader:visited {
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+h1 {
+    color: #363537;
+    font-family: "Rammetto One", cursive; 
+}
+
+h2 {
+    color: #363537;
+    font-family: "Rammetto One", cursive;
+    text-align: center;   
+}
+
+h3 {
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-weight: 700;
+    text-align: center;   
+}
+
+.resultTable {
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-weight: 400;
+}
+
+p {
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-weight: 400;
+}
+
+.answer {
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-weight: 400; 
+    padding: 10px;
+    text-align: left;
+}
+
+.answer:hover, .answer:checked {
+    border: none;
+    color: #8CD867;
+    font-family: "Muli", sans-serif;
+    font-weight: 400; 
+    padding: 10px;
+    text-align: left;
+}
+
+/* background color too pistachio */
+.card-header {
+    background-color: #F5F9E9;
+    border: none;
+}
+
+.card {
+    border: none;
+}
+
+.card-body {
+    padding: 0px;
+}
+
+.cardResult {
+    padding: 10px;
+}
+
+/* Why does this still have a border??? */
+.table {
+    border: none;
+}
+
+tr {
+    border: none;
+}
+
+tbody {
+    border: none;
+}
+
+th {
+    border: none;
+}
+
+.redButton {
+    background-color: #FF2B6B;
+    border: none;
+    border-radius: 0px;
+    color: #F5F9E9;
+    font-family: "Muli", sans-serif;
+    font-weight: bold;
+    padding: 15px;
+}
