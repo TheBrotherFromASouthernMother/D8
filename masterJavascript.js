@@ -1,34 +1,35 @@
-const masterProfileObject = { categoryOne: 0, categoryTwo: 0 , categoryThree: 0 , categoryFour: 0 };
+const masterProfileObject = {
+  categoryOne: 0,
+  categoryTwo: 0,
+  categoryThree: 0,
+  categoryFour: 0
+};
 
-function answerSelection(formName) {
-
-
-    let inputs = formName.childNodes;
-    let inputValues = null
-
+function answerSelection(answer) {
+    let inputValue = null
     //finds the radio button within each form that has been pressed and
     // stores it a local inputValues variable
-    for (let i = 0; i < inputs.length; i++) {
-      if (inputs[i].checked)
-        inputValues = inputs[i].getAttribute("category");
+    if (answer.checked === true) {
+          inputValue = answer.getAttribute("value");
+          console.log(inputValue)
+    } else {
+      return false;
     }
 
-    console.log(inputValues)
-
-    switch(true) {
-        case (inputValues === "one"):
+    switch(inputValue !== null) {
+        case (inputValue === "1"):
             addPoints("categoryOne");
             break;
 
-        case (inputValues === "two"):
+        case (inputValue === "2"):
             addPoints("categoryTwo");
             break;
 
-        case (inputValues === "three"):
+        case (inputValue === "3"):
             addPoints("categoryThree");
             break;
 
-        case (inputValues === "four"):
+        case (inputValue === "4"):
             addPoints("categoryFour");
             break;
     }
@@ -41,26 +42,13 @@ function addPoints(categoryName) {
 };
 
 function getAnswers() {
-  var submitForm = new Event('formSubmit', {
-         'view'       : window,
-         'bubbles'    : true,
-         'cancelable' : true
-     });
-  questionAnswers = document.getElementsByClassName('answers')
+  let questionAnswers = document.querySelectorAll('.answer')
   for (let i = 0; i < questionAnswers.length; i++) {
-
-
-
-    questionAnswers[i].addEventListener('formSubmit', function(e) {
-      answerSelection(this);
-    })
-
-    questionAnswers[i].dispatchEvent(submitForm)
-
+      answerSelection(questionAnswers[i]);
   }
 }
 
-var submitAllAnswers = document.querySelector("#submitAllAnswers")
+let submitAllAnswers = document.querySelector("#submitAllAnswers")
   submitAllAnswers.addEventListener("click", function(){
     getAnswers()
 })
