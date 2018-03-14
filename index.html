@@ -6,20 +6,37 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>d8</title>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
 <body>
-    <header>
-
-    </header>
+    <nav class="navbar navbar-default">
+        <img src="http://placehold.it/50x50">
+    </nav>
     <div class="container master">
 
         <div id="accordion">
+            <div class="card">
+                    <div class="card-header questionHeader" id="headingOne">
+                        <h5 class="mb-0">
+                        <button class="btn btn-link question1Text" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is your favorite color?
+                        </button>
+                        </h5>
+                    </div>
+                
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                    </div>
+
+
             <div class="card questionBox">
                 <div class="card-header questionHeader" id="headingOne">
                     <h5 class="mb-0">
-                    <button class="btn btn-link questionText" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="btn btn-link question1Text" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         What is your favorite color?
                     </button>
                     </h5>
@@ -35,15 +52,15 @@
                 </div>
             </div>
             <div class="card questionBox">
-                <div class="card-header questionHeader" id="headingOne">
+                <div class="card-header questionHeader" id="headingTwo">
                     <h5 class="mb-0">
-                    <button class="btn btn-link questionText" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="btn btn-link question2Text collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         What is your favorite color?
                     </button>
                     </h5>
                 </div>
                 
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                     <div class="card-body questionAnswers">
                         <div class="answer" value="1">I hate color.</div>
                         <div class="answer" value="2">The rainbow.</div>
@@ -53,15 +70,15 @@
                 </div>
             </div>
             <div class="card questionBox">
-                <div class="card-header questionHeader" id="headingOne">
+                <div class="card-header questionHeader" id="headingThree">
                     <h5 class="mb-0">
-                    <button class="btn btn-link questionText" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="btn btn-link question3Text collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         What is your favorite color?
                     </button>
                     </h5>
                 </div>
                         
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                     <div class="card-body questionAnswers">
                         <div class="answer" value="1">I hate color.</div>
                         <div class="answer" value="2">The rainbow.</div>
@@ -79,12 +96,12 @@
 
     </div>
 
-<script src="masterJavascript.js"></script>
-<script type="text/javascript" src="apikey.js"></script>
-<script type="text/javascript" src="TMDBcall.js">
+    <script src="masterJavascript.js"></script>
+    <script type="text/javascript" src="apikey.js"></script>
+    <script type="text/javascript" src="TMDBcall.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-</script>
-
-</script>
 </body>
 </html>
