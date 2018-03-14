@@ -1,29 +1,43 @@
-masterProfileObject = { categoryOne: 0, categoryTwo: 0 , categoryThree: 0 , categoryFour: 0 };
+const masterProfileObject = { categoryOne: 0, categoryTwo: 0 , categoryThree: 0 , categoryFour: 0 };
 
 function answerSelection(formName) {
 
-    var input = formName['category'].value;
-    switch(input) {
-        case ((input) === 1):
-            addPoints(categoryOne);
+
+    let inputs = formName.childNodes;
+    let inputValues = null
+
+    //finds the radio button within each form that has been pressed and
+    // stores it a local inputValues variable
+    for (let i = 0; i < inputs.length; i++) {
+      if (inputs[i].checked)
+        inputValues = inputs[i].getAttribute("category");
+    }
+
+    console.log(inputValues)
+
+    switch(true) {
+        case (inputValues === "one"):
+            addPoints("categoryOne");
             break;
 
-        case ((input) === 2):
-            addPoints(categoryTwo);
+        case (inputValues === "two"):
+            addPoints("categoryTwo");
             break;
 
-        case ((input) === 3):
-            addPoints(categoryThree);
+        case (inputValues === "three"):
+            addPoints("categoryThree");
             break;
 
-        case ((input) === 4):
-            addPoints(categoryFour);
+        case (inputValues === "four"):
+            addPoints("categoryFour");
             break;
     }
+    console.log(masterProfileObject)
+
 };
 
 function addPoints(categoryName) {
-    masterProfileObject[categoryName] + 1;
+    masterProfileObject[categoryName] += 1;
 };
 
 function getAnswers() {
@@ -37,7 +51,7 @@ function getAnswers() {
        });
 
     questionAnswers[i].addEventListener('formSubmit', function(e) {
-      answerSelection(e.target);
+      answerSelection(this);
     })
 
     questionAnswers[i].dispatchEvent(submitForm)
@@ -46,6 +60,6 @@ function getAnswers() {
 }
 
 var submitAllAnswers = document.querySelector("#submitAllAnswers")
-submitAllAnswers.addEventListener("click", function(){
-  getAnswers()
+  submitAllAnswers.addEventListener("click", function(){
+    getAnswers()
 })
