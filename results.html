@@ -18,48 +18,42 @@
 
     </header>
     <div class="container-fluid master">
+
+    <!--
         <div class="row d-flex justify-content-center">
-            <h3>
-                Restaurants
-            </h3>
+            <h3>Restaurants</h3>
         </div>
 
         <div id="restaurantResultsCarousel" class="carousel slide" data-interval="false" data-ride="false">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="col-xl-4 col-lg-4 col-md-12">
-                    <img class="w-100" src="http://via.placeholder.com/350x150" alt="First slide">
-                    <div class="card">
-                        <div class="card-header" id="restaurantHeadingOne">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed resultTitle accordionHeader" data-toggle="collapse" data-target="#restaurantCollapseOne" aria-expanded="true" aria-controls="restaurantCollapseOne">
-                                Sushi Restaurant #1 very long title
+                    <div class="col-lg-6 col-md-10">
+                        <img class="resultsImageCover" src="http://via.placeholder.com/350x150" alt="First slide">
+                        <div class="card">
+                            <div class="card-header" id="restaurantHeadingOne">
+                                <button class="btn btn-link collapsed resultTitle accordionHeader d-flex flex-wrap" data-toggle="collapse" data-target="#restaurantCollapseOne" aria-expanded="true" aria-controls="restaurantCollapseOne">
+                                Sushi Restaurant #1 very very very long title
                                 </button>
-                            </h5>
-                        </div>
+                            </div>
 
-                        <div id="restaurantCollapseOne" class="collapse" aria-labelledby="restaurantHeadingOne" data-parent="#accordion">
-                            <div class="card-body">
-                                <div class="cardResult">
-                                <table class="table resultTable">
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row" class="resultCost">$$$</th>
-                                            <th scope="row" class="resultCuisine">Japanese</th>
-                                            <th scope="row" class="resultLink">Yelp</th>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <div class="resultReview">
-                                    <p>
-                                    This place is great. I love sushi!!!!
-                                    </p>
+                            <div id="restaurantCollapseOne" class="collapse" aria-labelledby="restaurantHeadingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <div class="cardResult">
+                                        <table class="resultTable">
+                                            <tbody>
+                                                <tr class="tableHeader">
+                                                    <th scope="row" class="resultCost">$$$</th>
+                                                    <th scope="row" class="resultCuisine">Japanese</th>
+                                                    <th scope="row" class="resultLink"><a class="greenLink" href="http://www.yelp.com">Yelp</a></th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p class="resultReview">This place is great. I love sushi!!!!</p>
+                                    </div>
+                                    <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
                                 </div>
                             </div>
-                                <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
-                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
 
@@ -106,6 +100,14 @@
                     </div>
                         </div>
                 </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
             </div>
         </div>
 
@@ -177,6 +179,14 @@
                     </div>
                     </div>
                 </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
             </div>
         </div>
 
@@ -189,7 +199,7 @@
         <div class="row">
                 <div class="col-lg-6 col-md-12">
                         Sushi Restaurant #1
-                        <table class="table itineraryData">
+                        <table class="itineraryData">
                                 <tbody>
                                     <tr>
                                         <th scope="row">$$$</th>
@@ -209,6 +219,81 @@
         <button type="button" class="btn btn-primary btn-lg btn-block">Finalize</button>
     </div>
     </div>
+
+-->
+
+    <!--carousel test-->
+
+    <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
+        <div class="carousel-inner row w-100 mx-auto" role="listbox">
+            <div class="carousel-item col-md-4 active">
+                <img class="img-fluid mx-auto d-block" src="http://via.placeholder.com/350x150" alt="slide 1">
+                <div class="card">
+                    <div class="card-header" id="restaurantHeadingOne">
+                        <!-- BUG: can't get this button text to wrap -->
+                        <button class="btn btn-link collapsed resultTitle accordionHeader d-flex flex-wrap" data-toggle="collapse" data-target="#restaurantCollapseOne" aria-expanded="true" aria-controls="restaurantCollapseOne">
+                        Sushi Restaurant #1 very very very long title
+                        </button>
+                    </div>
+
+                    <div id="restaurantCollapseOne" class="collapse" aria-labelledby="restaurantHeadingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="cardResult">
+                                <table class="resultTable">
+                                    <tbody>
+                                        <tr class="tableHeader">
+                                            <th scope="row" class="resultCost">$$$</th>
+                                            <th scope="row" class="resultCuisine">Japanese</th>
+                                            <th scope="row" class="resultLink"><a class="greenLink" href="http://www.yelp.com">Yelp</a></th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="resultReview">This place is great. I love sushi!!!!</p>
+                            </div>
+                            <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-4">
+                <img class="img-fluid mx-auto d-block" src="http://via.placeholder.com/350x150" alt="slide 2">
+            </div>
+            <div class="carousel-item col-md-4">
+                <img class="img-fluid mx-auto d-block" src="http://via.placeholder.com/350x150" alt="slide 3">
+            </div>
+            <div class="carousel-item col-md-4">
+                <img class="img-fluid mx-auto d-block" src="http://via.placeholder.com/350x150" alt="slide 4">
+            </div>
+            <div class="carousel-item col-md-4">
+                <img class="img-fluid mx-auto d-block" src="http://via.placeholder.com/350x150" alt="slide 5">
+            </div>
+            <div class="carousel-item col-md-4">
+                <img class="img-fluid mx-auto d-block" src="http://via.placeholder.com/350x150" alt="slide 6">
+            </div>
+            <div class="carousel-item col-md-4">
+                <img class="img-fluid mx-auto d-block" src="http://via.placeholder.com/350x150" alt="slide 7">
+            </div>
+            <div class="carousel-item col-md-4">
+                <img class="img-fluid mx-auto d-block" src="http://via.placeholder.com/350x150" alt="slide 7">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <i class="fa fa-chevron-left fa-lg text-muted"></i>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
+            <i class="fa fa-chevron-right fa-lg text-muted"></i>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+
+<!--end test-->
+
+
+
+
 </div>
 
 <script src="masterJavascript.js"></script>
@@ -221,13 +306,32 @@
   })
 </script>
 
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script>
+$('#carouselExample').on('slide.bs.carousel', function (e) {
 
-<script type="text/javascript" src="NewRestaurants.js">
+    var $e = $(e.relatedTarget);
+    var idx = $e.index();
+    var itemsPerSlide = 3;
+    var totalItems = $('.carousel-item').length;
+
+    if (idx >= totalItems-(itemsPerSlide-1)) {
+        var it = itemsPerSlide - (totalItems - idx);
+        for (var i=0; i<it; i++) {
+            // append slides to end
+            if (e.direction=="left") {
+                $('.carousel-item').eq(i).appendTo('.carousel-inner');
+            }
+            else {
+                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+            }
+        }
+    }
+});
 
 </script>
 
