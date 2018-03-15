@@ -46,9 +46,11 @@ function getAnswers() {
   for (let i = 0; i < questionAnswers.length; i++) {
       answerSelection(questionAnswers[i]);
   }
+  localStorage.setItem("userAnswers", JSON.stringify(masterProfileObject))
 }
 
 let submitAllAnswers = document.querySelector("#submitAllAnswers")
   submitAllAnswers.addEventListener("click", function(){
     getAnswers()
+    console.log(window.location.assign("/Users/christianlowe/.atom/D8/results.html"))
 })
