@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i|Rammetto+One');
+
+/*
+@font-face {
+    font-family: "Rammetto One";
+    src: url(//fonts.googleapis.com/css?family=Rammetto+One);
+}
+
+@font-face {
+    font-family: Muli;
+    src: url(https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i);
+}
+*/
+
+a.greenLink {
+    color: #8CD867;
+    text-decoration: none;
+}
+
 .accordionHeader {
     color: #363537;
     font-family: "Muli", sans-serif;
@@ -13,9 +32,75 @@
     text-decoration: none;
 }
 
+.answer {
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-weight: 400; 
+    padding: 10px;
+    text-align: left;
+}
+.answer:hover, .answer:checked {
+    border: none;
+    color: #8CD867;
+    font-family: "Muli", sans-serif;
+    font-weight: 400; 
+    padding: 10px;
+    text-align: left;
+}
+
+.btn-secondary {
+    background-color: white;
+    border: 1px solid #596869;
+    color: #363537;
+    border-radius: 4px;
+    
+}
+
+.btn-secondary:hover, .btn-secondary:active:focus { /* when checked, change color to green */ 
+    background-color: #8cd867;
+    border: none;
+    
+}
+
+.cardResult {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+
+
+
+.card-header {
+    background-color: #596869;
+    color: white;
+    border: none;
+    border-top: 1px solid black;
+}
+
+.card {
+    border: none;
+}
+
+.card-body {
+    padding: 0px;
+}
+
+.cardResult {
+    padding: 10px;
+}
+
+.carousel-indicators {
+    color: black;
+}
+
+
 h1 {
     color: #363537;
-    font-family: "Rammetto One", cursive; 
+    font-family: "Rammetto One"
+    /* , cursive;  */
 }
 
 h2 {
@@ -31,10 +116,23 @@ h3 {
     text-align: center;   
 }
 
-.resultTable {
-    color: #363537;
-    font-family: "Muli", sans-serif;
-    font-weight: 400;
+
+img.resultsImageCover {
+    height: 300px; /* change later */
+    margin: 0px;
+    object-fit: cover;
+    overflow: hidden;
+    padding: 0px;
+    width: 100%;
+}
+
+.master {
+    margin-top: 70px;
+}
+
+nav {
+    position: fixed;
+    background-color: white;
 }
 
 p {
@@ -43,40 +141,20 @@ p {
     font-weight: 400;
 }
 
-.answer {
-    color: #363537;
-    font-family: "Muli", sans-serif;
-    font-weight: 400; 
-    padding: 10px;
-    text-align: left;
+.questionAnswers {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.questionBox {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
-.answer:hover, .answer:checked {
-    border: none;
-    color: #8CD867;
-    font-family: "Muli", sans-serif;
-    font-weight: 400; 
-    padding: 10px;
-    text-align: left;
-}
-
-.card-header {
-    /* background color too pistachio */
-    /* background-color: #F5F9E9;*/
-    background-color: transparent;
-    border: none;
-}
-
-.card {
-    border: none;
-}
-
-.card-body {
-    padding: 0px;
-}
-
-.cardResult {
-    padding: 10px;
+.questionAccordion {
+    max-width: 768px;
+    border: 1px solid black;
 }
 
 .redButton {
@@ -90,95 +168,30 @@ p {
 }
 
 
-/* controls for carousel */
-@media (min-width: 768px) {
-
-    /* show 3 items */
-    .carousel-inner .active,
-    .carousel-inner .active + .carousel-item,
-    .carousel-inner .active + .carousel-item + .carousel-item {
-        display: block;
-    }
-    
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
-    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
-        transition: none;
-    }
-    
-    .carousel-inner .carousel-item-next,
-    .carousel-inner .carousel-item-prev {
-        position: relative;
-        transform: translate3d(0, 0, 0);
-    }
-    
-    .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
-        position: absolute;
-        top: 0;
-        right: -33.3333%;
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
-    
-    /* left or forward direction */
-    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-    .carousel-item-next.carousel-item-left + .carousel-item,
-    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
-    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(-100%, 0, 0);
-        visibility: visible;
-    }
-    
-    /* farthest right hidden item must be abso position for animations */
-    .carousel-inner .carousel-item-prev.carousel-item-right {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        display: block;
-        visibility: visible;
-    }
-    
-    /* right or prev direction */
-    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-    .carousel-item-prev.carousel-item-right + .carousel-item,
-    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
-    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
-        position: relative;
-        transform: translate3d(100%, 0, 0);
-        visibility: visible;
-        display: block;
-        visibility: visible;
-    }
-
+.resultTable {
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-weight: 400;
 }
 
-
-
-
-
-
-img.resultsImageCover {
-    height: 300px;
-    margin: 0px;
-    object-fit: cover;
-    overflow: hidden;
-    padding: 0px;
-    width: 100%;
-}
 
 .tableHeader > th {
     padding: 20px;
 }
 
-.cardResult {
-    margin: 0px;
-    padding: 0px;
-}
 
-a.greenLink {
-    color: #8CD867;
-    text-decoration: none;
-}
+
+
+
+
+
+
+
+/* 
+body, nav {
+    max-width: 768px; 
+    margin: auto;
+} */
+
+
+

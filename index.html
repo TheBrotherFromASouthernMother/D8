@@ -3,699 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>d8</title>
+    <title>Document</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-default">
+    <nav class="navbar fixed-top">
         <a href="javascript:history.back()"><img src="http://placehold.it/50x50" alt="backButton"></a>
         <h1>d8</h1>
         <!-- <img src="http://placehold.it/50x50" alt="d8Logo"> -->
         <img class="rounded-circle" src="http://placehold.it/50x50" alt="profileThumbnail">
     </nav>
 
-
-    <div class="container master">
-
-        <div id="accordion">
-            <div class="card questionBox">
-                <div class="card-header questionHeader" id="headingOne">
-                    <h5 class="mb-0">
-                    <button class="btn btn-link question1Text accordionHeader" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        1. What is your favorite color?
-                    </button>
-                    </h5>
-                </div>
-
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body questionAnswers">
-                        <div class="btn-group-vertical">
-                            <div class="btn-group-toggle" data-toggle="buttons">
-                                <label class="btn">
-                                    <input class="answer" type="radio" value="1"> I hate color.
-                                </label>
-                                <label class="btn btn-outline-primary">
-                                    <input class="answer" type="radio" value="2"> The rainbow.
-                                </label>
-                                <label class="btn btn-outline-primary">
-                                    <input class="answer" type="radio" value="3"> Glitter
-                                </label>
-                                <label class="btn btn-outline-primary">
-                                    <input class="answer" type="radio" value="4"> What.
-                                </label>
-                            </div>
-                            <!-- <button type="button" class="btn btn-primary answer" value="1" data-toggle="button" aria-pressed="false">I hate color.</button><br>
-                            <button type="button" class="btn btn-primary answer" value="2" data-toggle="button" aria-pressed="false">The rainbow.</button><br>
-                            <button type="button" class="btn btn-primary answer" value="3" data-toggle="button" aria-pressed="false">Glitter</button><br>
-                            <button type="button" class="btn btn-primary answer" value="4" data-toggle="button" aria-pressed="false">What.</button><br> -->
-                            
-
-
-                            <!-- <div class="answer" value="2">The rainbow.</div>
-                            <div class="answer" value="3">Glitter</div>
-                            <div class="answer" value="4">What.</div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="card questionBox">
-                <div class="card-header questionHeader" id="headingTwo">
-                    <h5 class="mb-0">
-                    <button class="btn btn-link question2Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        2. What is your favorite food?
-                    </button>
-                    </h5>
-                </div>
-
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                    <div class="card-body questionAnswers">
-                        <div class="btn-group-vertical">
-                            <div class="btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-outline-secondary">
-                                    <input class="answer" type="radio" value="1"> I hate food.
-                                </label>
-                                <label class="btn btn-outline-primary">
-                                    <input class="answer" type="radio" value="2"> Rainbow food.
-                                </label>
-                                <label class="btn btn-outline-primary">
-                                    <input class="answer" type="radio" value="3"> Glitter is food.
-                                </label>
-                                <label class="btn btn-outline-primary">
-                                    <input class="answer" type="radio" value="4"> Wut food.
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card questionBox">
-                <div class="card-header questionHeader" id="headingThree">
-                    <h5 class="mb-0">
-                    <button class="btn btn-link question3Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        3. What is your favorite food?
-                    </button>
-                    </h5>
-                </div>
-
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                    <div class="card-body questionAnswers">
-                        <div class="btn-group-vertical">
-                            <div class="btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-outline-secondary">
-                                    <input class="answer" type="radio" value="1"> I hate food.
-                                </label>
-                                <label class="btn btn-outline-primary">
-                                    <input class="answer" type="radio" value="2"> Rainbow food.
-                                </label>
-                                <label class="btn btn-outline-primary">
-                                    <input class="answer" type="radio" value="3"> Glitter is food.
-                                </label>
-                                <label class="btn btn-outline-primary">
-                                    <input class="answer" type="radio" value="4"> Wut food.
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingFour">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question4Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            4. What is your favorite food?
-                        </button>
-                        </h5>
-                    </div>
-                    
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical">
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-secondary">
-                                        <input class="answer" type="radio" value="1"> I hate food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="2"> Rainbow food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="3"> Glitter is food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="4"> Wut food.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingFive">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question5Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            5. What is your favorite food?
-                        </button>
-                        </h5>
-                    </div>
-                    
-                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical">
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-secondary">
-                                        <input class="answer" type="radio" value="1"> I hate food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="2"> Rainbow food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="3"> Glitter is food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="4"> Wut food.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingSix">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question6Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                            6. What is your favorite food?
-                        </button>
-                        </h5>
-                    </div>
-                    
-                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical">
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-secondary">
-                                        <input class="answer" type="radio" value="1"> I hate food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="2"> Rainbow food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="3"> Glitter is food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="4"> Wut food.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingSeven">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question7Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                            7. What is your favorite food?
-                        </button>
-                        </h5>
-                    </div>
-                    
-                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical">
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-secondary">
-                                        <input class="answer" type="radio" value="1"> I hate food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="2"> Rainbow food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="3"> Glitter is food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="4"> Wut food.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingEight">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question8Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                            8. What is your favorite food?
-                        </button>
-                        </h5>
-                    </div>
-                    
-                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical">
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-secondary">
-                                        <input class="answer" type="radio" value="1"> I hate food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="2"> Rainbow food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="3"> Glitter is food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="4"> Wut food.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingNine">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question9Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                            9. What is your favorite food?
-                        </button>
-                        </h5>
-                    </div>
-                    
-                    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical">
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-secondary">
-                                        <input class="answer" type="radio" value="1"> I hate food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="2"> Rainbow food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="3"> Glitter is food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="4"> Wut food.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingTen">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question10Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                            10. What is your favorite food?
-                        </button>
-                        </h5>
-                    </div>
-                    
-                    <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical">
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-secondary">
-                                        <input class="answer" type="radio" value="1"> I hate food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="2"> Rainbow food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="3"> Glitter is food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="4"> Wut food.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingEleven">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question11Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-                            11. What is your favorite food?
-                        </button>
-                        </h5>
-                    </div>
-                    
-                    <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical">
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-secondary">
-                                        <input class="answer" type="radio" value="1"> I hate food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="2"> Rainbow food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="3"> Glitter is food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="4"> Wut food.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingTwelve">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question12Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
-                            12. What is your favorite food?
-                        </button>
-                        </h5>
-                    </div>
-                    
-                    <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical">
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-secondary">
-                                        <input class="answer" type="radio" value="1"> I hate food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="2"> Rainbow food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="3"> Glitter is food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="4"> Wut food.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingThirteen">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question13Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
-                            13. What is your favorite food?
-                        </button>
-                        </h5>
-                    </div>
-                    
-                    <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical">
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-secondary">
-                                        <input class="answer" type="radio" value="1"> I hate food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="2"> Rainbow food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="3"> Glitter is food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="4"> Wut food.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingFourteen">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question14Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
-                            14. What is your favorite food?
-                        </button>
-                        </h5>
-                    </div>
-                    
-                    <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical">
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-secondary">
-                                        <input class="answer" type="radio" value="1"> I hate food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="2"> Rainbow food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="3"> Glitter is food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="4"> Wut food.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingFifteen">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question15Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
-                            15. What is your favorite food?
-                        </button>
-                        </h5>
-                    </div>
-                    
-                    <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical">
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-secondary">
-                                        <input class="answer" type="radio" value="1"> I hate food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="2"> Rainbow food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="3"> Glitter is food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="4"> Wut food.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingSixteen">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question16Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
-                            16. What is your favorite food?
-                        </button>
-                        </h5>
-                    </div>
-                    
-                    <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical">
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-secondary">
-                                        <input class="answer" type="radio" value="1"> I hate food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="2"> Rainbow food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="3"> Glitter is food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="4"> Wut food.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingSeventeen">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question17Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
-                            17. What is your favorite food?
-                        </button>
-                        </h5>
-                    </div>
-                    
-                    <div id="collapseSeventeen" class="collapse" aria-labelledby="headingSeventeen" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical">
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-secondary">
-                                        <input class="answer" type="radio" value="1"> I hate food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="2"> Rainbow food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="3"> Glitter is food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="4"> Wut food.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingEighteen">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question18Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
-                            18. What is your favorite food?
-                        </button>
-                        </h5>
-                    </div>
-                    
-                    <div id="collapseEighteen" class="collapse" aria-labelledby="headingEighteen" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical">
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-secondary">
-                                        <input class="answer" type="radio" value="1"> I hate food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="2"> Rainbow food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="3"> Glitter is food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="4"> Wut food.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingNineteen">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question19Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseNineteen" aria-expanded="false" aria-controls="collapseNineteen">
-                            19. What is your favorite food?
-                        </button>
-                        </h5>
-                    </div>
-                    
-                    <div id="collapseNineteen" class="collapse" aria-labelledby="headingNineteen" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical">
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-secondary">
-                                        <input class="answer" type="radio" value="1"> I hate food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="2"> Rainbow food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="3"> Glitter is food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="4"> Wut food.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingTwenty">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question20Text collapsed accordionHeader" data-toggle="collapse" data-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
-                            20. What is your favorite food?
-                        </button>
-                        </h5>
-                    </div>
-                    
-                    <div id="collapseTwenty" class="collapse" aria-labelledby="headingTwenty" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical">
-                                <div class="btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-outline-secondary">
-                                        <input class="answer" type="radio" value="1"> I hate food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="2"> Rainbow food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="3"> Glitter is food.
-                                    </label>
-                                    <label class="btn btn-outline-primary">
-                                        <input class="answer" type="radio" value="4"> Wut food.
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <!-- <div class="card questionBox">
-                    <div class="card-header questionHeader" id="headingThree">
-                        <h5 class="mb-0">
-                        <button class="btn btn-link question3Text collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            What is your favorite time?
-                        </button>
-                        </h5>
-                    </div>
-                            
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                        <div class="card-body questionAnswers">
-                            <div class="answer" value="1">I hate time.</div>
-                            <div class="answer" value="2">The rainbow is timeless.</div>
-                            <div class="answer" value="3">Glitter time</div>
-                            <div class="answer" value="4">What the time.</div>
-                        </div>
-                    </div>
-                </div> -->
-
-        <br>
-        <button class="redButton" type="button" name="button" id="submitAllAnswers">Missile Test</button>
-        <br>
-
-
-
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
-    <script src="masterJavascript.js"></script>
-    <script type="text/javascript" src="apikey.js"></script>
-    <script type="text/javascript" src="TMDBcall.js"></script>
-    <script type="text/javascript" src="app.js">
-
-    </script>
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+<div class="container-fluid master">
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
+
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                    <h2>question 1</h2>
+                    <div class="card-body questionAnswers">
+                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary">
+                                    <input type="radio" class="answer" value="1"> Test
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" class="answer" value="2"> Radio
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" class="answer" value="3"> Radio
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" class="answer" value="4"> fourth
+                                </label>
+                            </div>
+                        </div>
+            </div>
+            <div class="carousel-item">
+                    <h2>question 2</h2>
+                    <div class="card-body questionAnswers">
+                        
+                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary">
+                                    <input type="radio" class="answer" value="1"> Test
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" class="answer" value="2"> Radio
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" class="answer" value="3"> Radio
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" class="answer" value="4"> fourth
+                                </label>
+                            </div>
+                        </div>
+            </div>
+            <div class="carousel-item">
+                    <h2>question 3</h2>
+                    <div class="card-body questionAnswers">
+                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary">
+                                    <input type="radio" class="answer" value="1"> Test
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" class="answer" value="2"> Radio
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" class="answer" value="3"> Radio
+                                </label>
+                                <label class="btn btn-secondary">
+                                    <input type="radio" class="answer" value="4"> fourth
+                                </label>
+                            </div>
+                        </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+</div>
+
+
+<script src="masterJavascript.js"></script>
+<script type="text/javascript" src="apikey.js"></script>
+<script type="text/javascript" src="TMDBcall.js"></script>
+<!-- <script type="text/javascript">
+  var body = document.querySelector("body");
+  body.addEventListener("unload", function(e) {
+    localStorage.removeItem("userAnswers");
+  })
+</script> -->
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
 
 </body>
 </html>
