@@ -10,7 +10,7 @@
 
     $.get(url + "&apikey=" + apiKey).done(function(response) {
         // console.log(response.cuisines[0].cuisine.cuisine_id);
-        // console.log(response.cuisines)
+        console.log(response.cuisines)
         // console.log(response.cuisines.cuisine);
         updateUISuccess(response);
         // console.log(newResponse);
@@ -25,23 +25,23 @@
 // Handle XHR succes.
 
 function updateUISuccess(response) {
-    var categoryOneArray:
-    var testArray = [73, 150, 1, 83, 227, 25, 304, 996, 995, 143, 193, 55, 82, 161, 177, 168, 3, 100, 308, 997];
+    var categoryOneArray;
+    var testArray = [73, 150, 1, 83, 227, 25, 304, 996, 70, 143, 193, 55, 82, 161, 177, 168, 3, 100, 308, 491];
     var newResponse = response.cuisines.filter(function(element) {
         if (testArray.includes(element.cuisine.cuisine_id))
         console.log(element.cuisine.cuisine_id);
             return element.cuisine.cuisine_id;
-        
+
 
         // for (var i = 0; i < response.cuisines.length; i++) {
         //     if (element.cuisines[element] in testArray) {
-        //         return element.cuisines[i].cuisine.cuisine_id;  
+        //         return element.cuisines[i].cuisine.cuisine_id;
         //     }
-        // } 
+        // }
     })
     // console.log(newResponse)
 
- 
+
 }
 // Handle XHR failure.
 

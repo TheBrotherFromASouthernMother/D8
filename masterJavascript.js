@@ -42,7 +42,7 @@ function addPoints(categoryName) {
 };
 
 function getAnswers() {
-  let questionAnswers = document.querySelectorAll('.answer')
+  let questionAnswers = document.querySelectorAll('.answer');
   for (let i = 0; i < questionAnswers.length; i++) {
       answerSelection(questionAnswers[i]);
   }
