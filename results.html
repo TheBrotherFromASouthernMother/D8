@@ -5,308 +5,502 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
-    <!-- <style>
-        @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i|Rammetto+One');
-    </style> -->
+    <link rel="stylesheet" href="css/resultCarouselStyle.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>d8</title>
 
-
 </head>
+
 <body>
+
     <nav class="navbar fixed-top navbar-default">
         <a href="javascript:history.back()"><img src="http://placehold.it/50x50" alt="backButton"></a>
         <h1>d8</h1>
-        <!-- <img src="http://placehold.it/50x50" alt="d8Logo"> -->
         <img class="rounded-circle" src="http://placehold.it/50x50" alt="profileThumbnail">
     </nav>
+
     <div class="container-fluid master">
 
-    <!--
-        <div class="row d-flex justify-content-center">
+
+        <!-- RESTAURANTS -->
+        <div class="row resultHeadingH3 d-flex justify-content-center">
             <h3>Restaurants</h3>
         </div>
 
-        <div id="restaurantResultsCarousel" class="carousel slide" data-interval="false" data-ride="false">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="col-lg-6 col-md-10">
-                        <img class="resultsImageCover" src="http://via.placeholder.com/350x150" alt="First slide">
-                        <div class="card">
-                            <div class="card-header" id="restaurantHeadingOne">
-                                <button class="btn btn-link collapsed resultTitle accordionHeader d-flex flex-wrap" data-toggle="collapse" data-target="#restaurantCollapseOne" aria-expanded="true" aria-controls="restaurantCollapseOne">
-                                Sushi Restaurant #1 very very very long title
-                                </button>
-                            </div>
+        <div id="restaurantCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                <div class="carousel-item col-md-4 active">
+                    <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 1">
 
-                            <div id="restaurantCollapseOne" class="collapse" aria-labelledby="restaurantHeadingOne" data-parent="#accordion">
-                                <div class="card-body">
-                                    <div class="cardResult">
-                                        <table class="resultTable">
-                                            <tbody>
-                                                <tr class="tableHeader">
-                                                    <th scope="row" class="resultCost">$$$</th>
-                                                    <th scope="row" class="resultCuisine">Japanese</th>
-                                                    <th scope="row" class="resultLink"><a class="greenLink" href="http://www.yelp.com">Yelp</a></th>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <p class="resultReview">This place is great. I love sushi!!!!</p>
+                    <div class="card">
+                        <div class="card-header" id="restaurantHeadingOne">
+                            <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#restaurantCollapseOne" aria-expanded="true" aria-controls="restaurantCollapseOne">
+                            <h5>Sushi Restaurant #1 very very very long title</h5>
+                            </button>
+                        </div>
+
+                        <div id="restaurantCollapseOne" class="collapse" aria-labelledby="restaurantHeadingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="cardResult">
+
+                                    <div class="row d-flex justify-content-space-between resultTable">
+                                        <div class="col resultCost">$$$</div>
+                                        <div class="col resultCuisine">Japanese</div>
+                                        <div class="col resultLink"><a class="greenLink" href="#">Menu</a></div>
                                     </div>
-                                    <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
+
+                                    <p class="resultReview">This place is great. I love sushi!!!!</p>
                                 </div>
+                                <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
                             </div>
                         </div>
                     </div>
+
                 </div>
+                <div class="carousel-item col-md-4">
+                    <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 2">
 
-                    <div class="carousel-item">
-                            <div class="col-lg-4 col-md-12">
-
-                    <img class="w-100" src="http://via.placeholder.com/350x150" alt="First slide">
                     <div class="card">
-                            <div class="card-header" id="restaurantHeadingTwo">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#restaurantCollapseTwo" aria-expanded="true" aria-controls="restaurantCollapseTwo">
-                                            Sushi Restaurant #2
-                                    </button>
-                                </h5>
-                            </div>
+                        <div class="card-header" id="restaurantHeadingTwo">
+                            <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#restaurantCollapseTwo" aria-expanded="true" aria-controls="restaurantCollapseTwo">
+                            <h5>Sushi Restaurant #2</h5>
+                            </button>
+                        </div>
 
-                            <div id="restaurantCollapseTwo" class="collapse" aria-labelledby="restaurantHeadingTwo" data-parent="#accordion">
-                                <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        <div id="restaurantCollapseTwo" class="collapse" aria-labelledby="restaurantHeadingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="cardResult">
+
+                                    <div class="row d-flex justify-content-space-between resultTable">
+                                        <div class="col resultCost">$$$</div>
+                                        <div class="col resultCuisine">Japanese</div>
+                                        <div class="col resultLink"><a class="greenLink" href="#">Menu</a></div>
+                                    </div>
+
+                                    <p class="resultReview">This place is great. I love sushi!!!!</p>
                                 </div>
+                                <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
                             </div>
                         </div>
-                </div>
-                </div>
+                    </div>
 
-                <div class="carousel-item">
-                        <div class="col-lg-4 col-md-12">
+                </div>
+                <div class="carousel-item col-md-4">
+                    <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 3">
 
-                    <img class="w-100" src="http://via.placeholder.com/350x150" alt="First slide">
                     <div class="card">
                         <div class="card-header" id="restaurantHeadingThree">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#restaurantCollapseThree" aria-expanded="true" aria-controls="restaurantCollapseThree">
-                                        Sushi Restaurant #3
-                                </button>
-                            </h5>
+                            <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#restaurantCollapseThree" aria-expanded="true" aria-controls="restaurantCollapseThree">
+                            <h5>Sushi Restaurant #3</h5>
+                            </button>
                         </div>
 
                         <div id="restaurantCollapseThree" class="collapse" aria-labelledby="restaurantHeadingThree" data-parent="#accordion">
                             <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                <div class="cardResult">
+
+                                    <div class="row d-flex justify-content-space-between resultTable">
+                                        <div class="col resultCost">$$$</div>
+                                        <div class="col resultCuisine">Japanese</div>
+                                        <div class="col resultLink"><a class="greenLink" href="#">Menu</a></div>
+                                    </div>
+
+                                    <p class="resultReview">This place is great. I love sushi!!!!</p>
+                                </div>
+                                <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
                             </div>
                         </div>
                     </div>
-                        </div>
+
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
+                <div class="carousel-item col-md-4">
+                    <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 4">
+
+                    <div class="card">
+                        <div class="card-header" id="restaurantHeadingFour">
+                            <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#restaurantCollapseFour" aria-expanded="true" aria-controls="restaurantCollapseFour">
+                            <h5>Sushi Restaurant #4</h5>
+                            </button>
+                        </div>
+
+                        <div id="restaurantCollapseFour" class="collapse" aria-labelledby="restaurantHeadingFour" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="cardResult">
+
+                                    <div class="row d-flex justify-content-space-between resultTable">
+                                        <div class="col resultCost">$$$</div>
+                                        <div class="col resultCuisine">Japanese</div>
+                                        <div class="col resultLink"><a class="greenLink" href="#">Menu</a></div>
+                                    </div>
+
+                                    <p class="resultReview">This place is great. I love sushi!!!!</p>
+                                </div>
+                                <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-item col-md-4">
+                    <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 5">
+
+                    <div class="card">
+                        <div class="card-header" id="restaurantHeadingFive">
+                            <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#restaurantCollapseFive" aria-expanded="true" aria-controls="restaurantCollapseFive">
+                            <h5>Sushi Restaurant #5</h5>
+                            </button>
+                        </div>
+
+                        <div id="restaurantCollapseFive" class="collapse" aria-labelledby="restaurantHeadingFive" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="cardResult">
+
+                                    <div class="row d-flex justify-content-space-between resultTable">
+                                        <div class="col resultCost">$$$</div>
+                                        <div class="col resultCuisine">Japanese</div>
+                                        <div class="col resultLink"><a class="greenLink" href="#">Menu</a></div>
+                                    </div>
+
+                                    <p class="resultReview">This place is great. I love sushi!!!!</p>
+                                </div>
+                                <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-item col-md-4">
+                    <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 6">
+
+                    <div class="card">
+                        <div class="card-header" id="restaurantHeadingSix">
+                            <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#restaurantCollapseSix" aria-expanded="true" aria-controls="restaurantCollapseSix">
+                            <h5>Sushi Restaurant #6</h5>
+                            </button>
+                        </div>
+
+                        <div id="restaurantCollapseSix" class="collapse" aria-labelledby="restaurantHeadingSix" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="cardResult">
+                                    <div class="row d-flex justify-content-space-between resultTable">
+                                        <div class="col resultCost">$$$</div>
+                                        <div class="col resultCuisine">Japanese</div>
+                                        <div class="col resultLink"><a class="greenLink" href="#">Menu</a></div>
+                                    </div>
+                                    <p class="resultReview">This place is great. I love sushi!!!!</p>
+                                </div>
+                                <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-item col-md-4">
+                    <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 7">
+
+                    <div class="card">
+                        <div class="card-header" id="restaurantHeadingSeven">
+                            <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#restaurantCollapseSeven" aria-expanded="true" aria-controls="restaurantCollapseSeven">
+                            <h5>Sushi Restaurant #7</h5>
+                            </button>
+                        </div>
+
+                        <div id="restaurantCollapseSeven" class="collapse" aria-labelledby="restaurantHeadingSeven" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="cardResult">
+                                    <div class="row d-flex justify-content-space-between resultTable">
+                                        <div class="col resultCost">$$$</div>
+                                        <div class="col resultCuisine">Japanese</div>
+                                        <div class="col resultLink"><a class="greenLink" href="#">Menu</a></div>
+                                    </div>
+                                    <p class="resultReview">This place is great. I love sushi!!!!</p>
+                                </div>
+                                <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+            <a class="carousel-control-prev accordionControl" href="#restaurantCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next text-faded accordionControl" href="#restaurantCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
 
-        <div class="row d-flex justify-content-center">
-                <h3>
-                    Movies
-                </h3>
-            </div>
+        <!-- MOVIES -->
 
-        <div id="movieResultsCarousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                        <div class="col-xl-4 col-lg-4 col-md-12">
-                                <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="First slide">
+        <div class="row resultHeadingH3 d-flex justify-content-center">
+            <h3>Movies</h3>
+        </div>
+
+        <div id="movieCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner row w-100 mx-auto" role="listbox">
+                <div class="carousel-item col-md-4 active">
+                    <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 1">
+
                     <div class="card">
                         <div class="card-header" id="movieHeadingOne">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#movieCollapseOne" aria-expanded="true" aria-controls="movieCollapseOne">
-                                Wes Anderson Movie #1
-                                </button>
-                            </h5>
+                            <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#movieCollapseOne" aria-expanded="true" aria-controls="movieCollapseOne">
+                            <h5>Wes Anderson Movie #1 very very very long title</h5>
+                            </button>
                         </div>
 
                         <div id="movieCollapseOne" class="collapse" aria-labelledby="movieHeadingOne" data-parent="#accordion">
                             <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                <div class="cardResult">
+                                    <div class="row d-flex justify-content-space-between resultTable">
+                                        <div class="col resultGenre">Indie</div>
+                                        <div class="col resultRunTime">1h 25m</div>
+                                        <div class="col resultLink"><a class="greenLink" href="#">Fandango</a></div>
+                                    </div>
+
+                                    <p class="resultReview">This movie is great. I love movies!!!!</p>
+                                </div>
+                                <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
                             </div>
                         </div>
                     </div>
+
                 </div>
-                </div>
-                <div class="carousel-item">
-                        <div class="col-xl-4 col-lg-4 col-md-12">
-                                <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="First slide">
+                <div class="carousel-item col-md-4">
+                    <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 2">
+
                     <div class="card">
                         <div class="card-header" id="movieHeadingTwo">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#movieCollapseTwo" aria-expanded="true" aria-controls="movieCollapseTwo">
-                                        Wes Anderson Movie #2
-                                </button>
-                            </h5>
+                            <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#movieCollapseTwo" aria-expanded="true" aria-controls="movieCollapseTwo">
+                            <h5>Wes Anderson Movie #2</h5>
+                            </button>
                         </div>
 
                         <div id="movieCollapseTwo" class="collapse" aria-labelledby="movieHeadingTwo" data-parent="#accordion">
                             <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                <div class="cardResult">
+                                    <div class="row d-flex justify-content-space-between resultTable">
+                                        <div class="col resultGenre">Indie</div>
+                                        <div class="col resultRunTime">1h 25m</div>
+                                        <div class="col resultLink"><a class="greenLink" href="#">Fandango</a></div>
+                                    </div>
+
+                                    <p class="resultReview">This movie is great. I love movies!!!!</p>
+                                </div>
+                                <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
                             </div>
                         </div>
                     </div>
+
                 </div>
-                </div>
-                <div class="carousel-item">
-                        <div class="col-xl-4 col-lg-4 col-md-12">
-                                <img class="d-block w-100" src="http://via.placeholder.com/350x150" alt="First slide">
+                <div class="carousel-item col-md-4">
+                    <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 3">
+
                     <div class="card">
                         <div class="card-header" id="movieHeadingThree">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#movieCollapseThree" aria-expanded="true" aria-controls="movieCollapseThree">
-                                        Wes Anderson Movie #3
-                                </button>
-                            </h5>
+                            <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#movieCollapseThree" aria-expanded="true" aria-controls="movieCollapseThree">
+                            <h5>Wes Anderson Movie #3</h5>
+                            </button>
                         </div>
 
                         <div id="movieCollapseThree" class="collapse" aria-labelledby="movieHeadingThree" data-parent="#accordion">
                             <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                <div class="cardResult">
+
+                                    <div class="row d-flex justify-content-space-between resultTable">
+                                        <div class="col resultGenre">Indie</div>
+                                        <div class="col resultRunTime">1h 25m</div>
+                                        <div class="col resultLink"><a class="greenLink" href="#">Fandango</a></div>
+                                    </div>
+
+                                    <p class="resultReview">This movie is great. I love movies!!!!</p>
+                                </div>
+                                <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
                             </div>
                         </div>
                     </div>
-                    </div>
+
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
-            </div>
-        </div>
+                <div class="carousel-item col-md-4">
+                    <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 4">
 
-        <div class="row d-flex justify-content-center">
-                <h3>
-                    Itinerary
-                </h3>
-            </div>
+                    <div class="card">
+                        <div class="card-header" id="movieHeadingFour">
+                            <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#movieCollapseFour" aria-expanded="true" aria-controls="movieCollapseFour">
+                            <h5>Wes Anderson Movie #4</h5>
+                            </button>
+                        </div>
 
-        <div class="row">
-                <div class="col-lg-6 col-md-12">
-                        Sushi Restaurant #1
-                        <table class="itineraryData">
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">$$$</th>
-                                        <th scope="row">Japanese</th>
-                                        <th scope="row">Delete</th>
-                                    </tr>
-                                </tbody>
-                            </table>
-                    </div>
-                <div class="col-lg-6 col-md-12">
-                        <img class="d-block w-100" src="http://via.placeholder.com/350x350" alt="Map">
-            </div>
-        </div>
+                        <div id="movieCollapseFour" class="collapse" aria-labelledby="movieHeadingFour" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="cardResult">
 
-        <div class="row d-flex justify-content-center">
-<div class="col-lg-4 col-md-12">
-        <button type="button" class="btn btn-primary btn-lg btn-block">Finalize</button>
-    </div>
-    </div>
+                                    <div class="row d-flex justify-content-space-between resultTable">
+                                        <div class="col resultGenre">Indie</div>
+                                        <div class="col resultRunTime">1h 25m</div>
+                                        <div class="col resultLink"><a class="greenLink" href="#">Fandango</a></div>
+                                    </div>
 
--->
-
-    <!--carousel test-->
-
-    <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
-        <div class="carousel-inner row w-100 mx-auto" role="listbox">
-            <div class="carousel-item col-md-4 active">
-                <img class="img-fluid mx-auto d-block" src="http://via.placeholder.com/350x150" alt="slide 1">
-                <div class="card">
-                    <div class="card-header" id="restaurantHeadingOne">
-                        <!-- BUG: can't get this button text to wrap -->
-                        <button class="btn btn-link collapsed resultTitle accordionHeader d-flex flex-wrap" data-toggle="collapse" data-target="#restaurantCollapseOne" aria-expanded="true" aria-controls="restaurantCollapseOne">
-                        Sushi Restaurant #1 very very very long title
-                        </button>
-                    </div>
-
-                    <div id="restaurantCollapseOne" class="collapse" aria-labelledby="restaurantHeadingOne" data-parent="#accordion">
-                        <div class="card-body">
-                            <div class="cardResult">
-                                <table class="resultTable">
-                                    <tbody>
-                                        <tr class="tableHeader">
-                                            <th scope="row" class="resultCost">$$$</th>
-                                            <th scope="row" class="resultCuisine">Japanese</th>
-                                            <th scope="row" class="resultLink"><a class="greenLink" href="http://www.yelp.com">Yelp</a></th>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <p class="resultReview">This place is great. I love sushi!!!!</p>
+                                    <p class="resultReview">This movie is great. I love movies!!!!</p>
+                                </div>
+                                <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
                             </div>
-                            <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
                         </div>
                     </div>
+
+                </div>
+                <div class="carousel-item col-md-4">
+                    <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 5">
+
+                    <div class="card">
+                        <div class="card-header" id="movieHeadingFive">
+                            <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#movieCollapseFive" aria-expanded="true" aria-controls="movieCollapseFive">
+                            <h5>Wes Anderson Movie #5</h5>
+                            </button>
+                        </div>
+
+                        <div id="movieCollapseFive" class="collapse" aria-labelledby="movieHeadingFive" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="cardResult">
+
+                                    
+                                    <div class="row d-flex justify-content-space-between resultTable">
+                                        <div class="col resultGenre">Indie</div>
+                                        <div class="col resultRunTime">1h 25m</div>
+                                        <div class="col resultLink"><a class="greenLink" href="#">Fandango</a></div>
+                                    </div>
+
+                                    <p class="resultReview">This movie is great. I love movies!!!!</p>
+                                </div>
+                                <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-item col-md-4">
+                    <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 6">
+
+                    <div class="card">
+                        <div class="card-header" id="movieHeadingSix">
+                            <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#movieCollapseSix" aria-expanded="true" aria-controls="movieCollapseSix">
+                            <h5>Wes Anderson Movie #6</h5>
+                            </button>
+                        </div>
+
+                        <div id="movieCollapseSix" class="collapse" aria-labelledby="movieHeadingSix" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="cardResult">
+
+                                    <div class="row d-flex justify-content-space-between resultTable">
+                                        <div class="col resultGenre">Indie</div>
+                                        <div class="col resultRunTime">1h 25m</div>
+                                        <div class="col resultLink"><a class="greenLink" href="#">Fandango</a></div>
+                                    </div>
+
+                                    <p class="resultReview">This movie is great. I love movies!!!!</p>
+                                </div>
+                                <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-item col-md-4">
+                    <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 7">
+
+                    <div class="card">
+                        <div class="card-header" id="movieHeadingSeven">
+                            <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#movieCollapseSeven" aria-expanded="true" aria-controls="movieCollapseSeven">
+                            <h5>Wes Anderson Movie #7</h5>
+                            </button>
+                        </div>
+
+                        <div id="movieCollapseSeven" class="collapse" aria-labelledby="movieHeadingSeven" data-parent="#accordion">
+                            <div class="card-body">
+                                <div class="cardResult">
+
+                                    <div class="row d-flex justify-content-space-between resultTable">
+                                        <div class="col resultGenre">Indie</div>
+                                        <div class="col resultRunTime">1h 25m</div>
+                                        <div class="col resultLink"><a class="greenLink" href="#">Fandango</a></div>
+                                    </div>
+
+                                    <p class="resultReview">This movie is great. I love movies!!!!</p>
+                                </div>
+                                <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="carousel-item col-md-4">
-                <img class="img-fluid mx-auto d-block" src="http://via.placeholder.com/350x150" alt="slide 2">
+            <a class="carousel-control-prev accordionControl" href="#movieCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next text-faded accordionControl" href="#movieCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+        <!-- ITINERARY -->
+
+        <div class="row resultHeadingH3 d-flex justify-content-center">
+            <h3>Itinerary</h3>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-5 col-md-12 itineraryCard">
+                <h5>Sushi Restaurant #1</h5>
+
+                <div class="row d-flex justify-content-space-between itineraryData">
+                    <div class="col resultCost">$$$</div>
+                    <div class="col resultCuisine">Japanese</div>
+                    <div class="col resultLink"><a class="greenLink" href="#">Menu</a></div>
+                </div>
+
+                <div class="resultReview"></div>
+
+                <h5>Wes Anderson Movie #1</h5>
+
+                <div class="row d-flex justify-content-space-between itineraryData">
+                    <div class="col resultGenre">Indie</div>
+                    <div class="col resultRunTime">1h 25m</div>
+                    <div class="col resultLink"><a class="greenLink" href="#">Fandango</a></div>
+                </div>
+
+                <div class="resultReview"></div>
+
             </div>
-            <div class="carousel-item col-md-4">
-                <img class="img-fluid mx-auto d-block" src="http://via.placeholder.com/350x150" alt="slide 3">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img class="img-fluid mx-auto d-block" src="http://via.placeholder.com/350x150" alt="slide 4">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img class="img-fluid mx-auto d-block" src="http://via.placeholder.com/350x150" alt="slide 5">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img class="img-fluid mx-auto d-block" src="http://via.placeholder.com/350x150" alt="slide 6">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img class="img-fluid mx-auto d-block" src="http://via.placeholder.com/350x150" alt="slide 7">
-            </div>
-            <div class="carousel-item col-md-4">
-                <img class="img-fluid mx-auto d-block" src="http://via.placeholder.com/350x150" alt="slide 7">
+            <div class="col-lg-5 col-md-12">
+                <img class="d-block w-100 resultsImageCover" src="http://via.placeholder.com/350x350" alt="Map">
             </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-            <i class="fa fa-chevron-left fa-lg text-muted"></i>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next text-faded" href="#carouselExample" role="button" data-slide="next">
-            <i class="fa fa-chevron-right fa-lg text-muted"></i>
-            <span class="sr-only">Next</span>
-        </a>
+        
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-4 col-md-12">
+                <button type="button" class="btn btn-lg btn-block redButton extraTopMargin">Finalize</button>
+            </div>
+        </div>
+
+
     </div>
 
-
-
-<!--end test-->
-
-
-
-
-</div>
 
 <script src="masterJavascript.js"></script>
 <script type="text/javascript" src="apikey.js"></script>
 <script type="text/javascript" src="TMDBcall.js"></script>
+
 <script type="text/javascript">
-  var body = document.querySelector("body");
-  body.addEventListener("unload", function(e) {
+    var body = document.querySelector("body");
+    body.addEventListener("unload", function(e) {
     localStorage.removeItem("userAnswers");
-  })
+})
 </script>
 
 
@@ -314,14 +508,14 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-<script>
-$('#carouselExample').on('slide.bs.carousel', function (e) {
 
+<!-- script to make carousel move one by one -->
+<script type="text/javascript">
+$('#restaurantCarousel').on('slide.bs.carousel', function (e) {
     var $e = $(e.relatedTarget);
     var idx = $e.index();
     var itemsPerSlide = 3;
     var totalItems = $('.carousel-item').length;
-
     if (idx >= totalItems-(itemsPerSlide-1)) {
         var it = itemsPerSlide - (totalItems - idx);
         for (var i=0; i<it; i++) {
@@ -336,7 +530,24 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
     }
 });
 
-
+$('#movieCarousel').on('slide.bs.carousel', function (e) {
+    var $e1 = $(e.relatedTarget);
+    var idx1 = $e1.index();
+    var itemsPerSlide1 = 3;
+    var totalItems1 = $('.carousel-item').length;
+    if (idx1 >= totalItems1-(itemsPerSlide1-1)) {
+        var it1 = itemsPerSlide1 - (totalItems1 - idx1);
+        for (var i=0; i<it; i++) {
+            // append slides to end
+            if (e.direction=="left") {
+                $('.carousel-item').eq(i).appendTo('.carousel-inner');
+            }
+            else {
+                $('.carousel-item').eq(0).appendTo('.carousel-inner');
+            }
+        }
+    }
+});
 
 </script>
 <script
