@@ -120,6 +120,13 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     opacity: 0;
 }
 
+/* breakpoint for results page finalize button margin */
+@media (min-width: 992px) {
+    .extraTopMargin {
+        margin-top: 50px;
+    }
+}
+
 
 /* HEADINGS */
 
@@ -192,6 +199,13 @@ img.resultsImageCover {
     position: fixed;
     background-color: white;
     border-bottom: 1px solid #596869;
+    padding: 10px;
+}
+
+@media (min-width: 992px) {
+    .navbar {
+        padding: 20px;
+    }
 }
 
 p {
@@ -271,11 +285,4 @@ p {
 .question {
     padding: 0 25px 35px 25px;
     text-align: center;
-}
-
-/* breakpoint for results page finalize button margin */
-@media (min-width: 992px) {
-    .extraTopMargin {
-        margin-top: 50px;
-    }
 }
