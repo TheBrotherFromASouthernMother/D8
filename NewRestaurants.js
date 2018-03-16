@@ -60,11 +60,14 @@ function makeRequest(arr) {
   let apiKey = "c5d3000aa27c15341e4ef99bcd037e51"
   let url = `https://developers.zomato.com/api/v2.1/search?entity_id=277&entity_type=city&count=10&radius=25000&cuisines=${arr[0]}%2C%20${arr[1]}%2C%20${arr[2]}%2C%20${arr[3]}%2C%20${arr[4]}&sort=rating`
 
+  var restaurantData = null
   $.get(url + "&apikey=" + apiKey).done(function(response) {
     console.log(response.restaurants[0])
-    handleResponseObject(response);
+    restaurantData = handleResponseObject(response);
     }).fail(function(error) {
         console.log(error);
+      }).then(function (e) {
+        console.log("DONUTS")
       })
 }// end makeRequest
 
@@ -80,7 +83,7 @@ function handleResponseObject(data) {
 					name: data.restaurants[i].restaurant.name,
 					location: data.restaurants[i].restaurant.location,
 					featuredImage: data.restaurants[i].restaurant.featured_image,
-					rating: data.restaurants[i].user_rating.aggregate_rating,
+					rating: data.restaurants[i].restaurant.user_rating.aggregate_rating,
 					thumbnail: data.restaurants[i].restaurant.thumb,
 					price: data.restaurants[i].restaurant.price_range
 				}
