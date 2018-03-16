@@ -1,35 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i|Rammetto+One');
 
-/*
-@font-face {
-    font-family: "Rammetto One";
-    src: url(//fonts.googleapis.com/css?family=Rammetto+One);
-}
-
-@font-face {
-    font-family: Muli;
-    src: url(https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i);
-}
-*/
-
-a.greenLink {
+a.greenLink, a.greenLink:hover, a.greenLink:visited {
     color: #8CD867;
     text-decoration: none;
 }
 
-.accordionHeader {
-    color: #363537;
-    font-family: "Muli", sans-serif;
-    font-size: 24px;
-    text-decoration: none;
+/* ACCORDION CAROUSEL CONTROLS */
+.accordionControl:hover > .carousel-control-next-icon,
+.accordionControl:hover > .carousel-control-prev-icon {
+    opacity: 1;
 }
 
-/* glitch underline on hover */
-.accordionHeader:hover, .accordionHeader:visited {
-    color: #363537;
-    font-family: "Muli", sans-serif;
-    font-size: 24px;
-    text-decoration: none;
+.accordionControl {
+    background-color: none;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+    top: 100px;
+    width: 50px;
+}
+
+.accordionControl:hover {
+    background-color: #363537;
+    height: 100px;
+    margin: 0px;
+    opacity: 0.3;
+    padding: 0px;
+    top: 100px;
+    width: 40px;
 }
 
 .answer {
@@ -39,6 +37,7 @@ a.greenLink {
     padding: 10px;
     text-align: left;
 }
+
 .answer:hover, .answer:checked {
     border: none;
     color: #8CD867;
@@ -48,36 +47,26 @@ a.greenLink {
     text-align: left;
 }
 
+.btn, .btn:hover, .btn:focus {
+    white-space: normal; /* wrap text */
+    text-decoration: none;
+    border: none;
+}
+
+.btn-link, .btn-link:hover, .btn-link:focus { /* no underline when you move off of the link */
+    text-decoration: none;
+}
+
 .btn-secondary {
     background-color: white;
     border: 1px solid #596869;
     color: #363537;
     border-radius: 4px;
-    
 }
 
 .btn-secondary:hover, .btn-secondary:active:focus { /* when checked, change color to green */ 
     background-color: #8cd867;
     border: none;
-    
-}
-
-.cardResult {
-    margin: 0px;
-    padding: 0px;
-}
-
-
-
-
-
-
-
-.card-header {
-    background-color: #596869;
-    color: white;
-    border: none;
-    border-top: 1px solid black;
 }
 
 .card {
@@ -88,14 +77,22 @@ a.greenLink {
     padding: 0px;
 }
 
+.card-header {
+    background-color: #EFEFEF;
+    color: white;
+    border: none;
+}
+
 .cardResult {
-    padding: 10px;
+    padding: 20px 30px;
 }
 
-.carousel-indicators {
-    color: black;
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    opacity: 0;
 }
 
+
+/* HEADINGS */
 
 h1 {
     color: #363537;
@@ -116,9 +113,30 @@ h3 {
     text-align: center;   
 }
 
+h4 {
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-weight: 700;
+    text-align: left;   
+}
 
+/* glitch underline on hover */
+h4:hover, h4:visited, h4:focus {
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    text-decoration: none;
+}
+
+h5 {
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-weight: 700;
+    text-align: left;     
+}
+
+/* IMAGE MASK */
 img.resultsImageCover {
-    height: 300px; /* change later */
+    height: 300px;
     margin: 0px;
     object-fit: cover;
     overflow: hidden;
@@ -126,8 +144,22 @@ img.resultsImageCover {
     width: 100%;
 }
 
+.itineraryCard {
+    /* border: 1px solid #363537;
+    border-radius: 4px 4px 0px 0px; */
+    margin: 15px;
+    padding: 20px;
+}
+
+.itineraryData {
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
 .master {
-    margin-top: 70px;
+    padding-top: 50px;
 }
 
 nav {
@@ -141,46 +173,53 @@ p {
     font-weight: 400;
 }
 
+.questionAccordion {
+    max-width: 768px;
+    border: 1px solid #363537;
+}
+
 .questionAnswers {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
+
 .questionBox {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 
-.questionAccordion {
-    max-width: 768px;
-    border: 1px solid black;
-}
-
 .redButton {
     background-color: #FF2B6B;
     border: none;
     border-radius: 0px;
-    color: #F5F9E9;
+    color: #EFEFEF;
     font-family: "Muli", sans-serif;
     font-weight: bold;
     padding: 15px;
 }
 
-
-.resultTable {
-    color: #363537;
-    font-family: "Muli", sans-serif;
-    font-weight: 400;
+#restaurantCarousel, #movieCarousel {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    width: 100%;
 }
 
-
-.tableHeader > th {
-    padding: 20px;
+.resultHeadingH3 {
+    margin-bottom: 100px;
+    margin-top: 100px;
 }
 
+.resultReview {
+    border-top: 1px solid #596869;
+    padding-top: 30px;
+    width: 100%;
+}
 
 /* andy's added style */
+/*need to add a class for this so it doesn't change all of the body pages */
 body {
     background-color: #455051 !important; /* #545b62 */
     display: flex;
@@ -190,6 +229,15 @@ body {
     margin-right: auto;
     text-align: center;
     color: #FF2B6B;
+
+}
+
+.resultTable {
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
 
 }
 .btn {
@@ -216,6 +264,8 @@ body {
 .carousel-item {
     padding: 90px 30px;
 }
+
+/* Andy's Added Header Styles -- need to reconcile white vs gray text */
 
 h1 {
     color: #8cd867;
@@ -271,11 +321,11 @@ p, h2 {
 
 
 
-/* 
-body, nav {
-    max-width: 768px; 
-    margin: auto;
-} */
 
 
-
+/* breakpoint for results page finalize button margin */
+@media (min-width: 992px) {
+    .extraTopMargin {
+        margin-top: 50px;
+    }
+}
