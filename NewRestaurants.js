@@ -30,7 +30,7 @@ function handleResponseObject(data) {
 					name: data.restaurants[i].restaurant.name,
 					location: data.restaurants[i].restaurant.location,
 					featuredImage: data.restaurants[i].restaurant.featured_image,
-					// rating: data.restaurants[i].user_rating.aggregate_rating,
+					rating: data.restaurants[i].user_rating.aggregate_rating,
 					thumbnail: data.restaurants[i].restaurant.thumb,
 					price: data.restaurants[i].restaurant.price_range
 				}

@@ -50,7 +50,12 @@ function getAnswers() {
 }
 
 let submitAllAnswers = document.querySelector("#submitAllAnswers")
+  console.log(submitAllAnswers)
   submitAllAnswers.addEventListener("click", function(){
     getAnswers()
     console.log(window.location.assign("/Users/christianlowe/.atom/D8/results.html"))
 })
+
+function checkNumberOfAnswers() {
+
+}
