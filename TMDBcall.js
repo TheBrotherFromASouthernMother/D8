@@ -17,3 +17,6 @@ var url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${TMDB_KEY}&la
   function updateUISucces(response) {
       return 0;
   }
+
+
+function handle
