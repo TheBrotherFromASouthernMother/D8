@@ -11,7 +11,7 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     opacity: 1;
 }
 
-.accordionControl {
+.accordionControl, .quizControl {
     background-color: none;
     height: 100px;
     margin: 0px;
@@ -20,7 +20,8 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     width: 50px;
 }
 
-.accordionControl:hover {
+.accordionControl:hover,
+.quizControl:hover {
     background-color: #363537;
     height: 100px;
     margin: 0px;
@@ -30,6 +31,12 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     width: 40px;
 }
 
+.quizControl:hover > .carousel-control-next-icon,
+.quizControl:hover > .carousel-control-prev-icon {
+    opacity: 1;
+}
+
+/* quiz answers - need to change probably */
 .answer {
     color: #363537;
     font-family: "Muli", sans-serif;
@@ -47,6 +54,22 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     text-align: left;
 }
 
+/* figure out how to add margin between blerg */
+.answerButton {
+    padding-bottom: 10px;
+    border: 2px solid #596869;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+/* footer style */
+#bottom { /* probs change id or class */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #FF2B6B;
+}
+
 .btn, .btn:hover, .btn:focus {
     white-space: normal; /* wrap text */
     text-decoration: none;
@@ -62,6 +85,12 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     border: 1px solid #596869;
     color: #363537;
     border-radius: 4px;
+}
+
+/*buttons*/
+.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
+    background-color: #8cd867 !important;
+    border: none;
 }
 
 .btn-secondary:hover, .btn-secondary:active:focus { /* when checked, change color to green */ 
@@ -95,9 +124,8 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
 /* HEADINGS */
 
 h1 {
-    color: #363537;
+    color: #8cd867;
     font-family: "Rammetto One"
-    /* , cursive;  */
 }
 
 h2 {
@@ -117,7 +145,6 @@ h4 {
     color: #363537;
     font-family: "Muli", sans-serif;
     font-weight: 700;
-    text-align: left;   
 }
 
 /* glitch underline on hover */
@@ -131,7 +158,6 @@ h5 {
     color: #363537;
     font-family: "Muli", sans-serif;
     font-weight: 700;
-    text-align: left;     
 }
 
 /* IMAGE MASK */
@@ -162,15 +188,17 @@ img.resultsImageCover {
     padding-top: 50px;
 }
 
-nav {
+.navbar {
     position: fixed;
     background-color: white;
+    border-bottom: 1px solid #596869;
 }
 
 p {
     color: #363537;
     font-family: "Muli", sans-serif;
     font-weight: 400;
+    overflow-wrap: break-word;
 }
 
 .questionAccordion {
@@ -200,6 +228,10 @@ p {
     padding: 15px;
 }
 
+.redButton:hover {
+    filter: brightness(85%);
+}
+
 #restaurantCarousel, #movieCarousel {
     margin: 0px;
     padding: 0px;
@@ -218,20 +250,6 @@ p {
     width: 100%;
 }
 
-/* andy's added style */
-/*need to add a class for this so it doesn't change all of the body pages */
-body {
-    background-color: #455051 !important; /* #545b62 */
-    display: flex;
-}
-#bottom { /* probs change id or class */
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    color: #FF2B6B;
-
-}
-
 .resultTable {
     color: #363537;
     font-family: "Muli", sans-serif;
@@ -239,89 +257,21 @@ body {
     padding-bottom: 20px;
 }
 
-}
-.btn {
-    padding: 10px 100px;
-    background-color: #EFEFEF;
-}
-.btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
-    background-color: #8cd867 !important;
-}
-.carousel-control-prev {
-    justify-content: flex-start;
-    align-items: center;
-}
-.carousel-control-prev {
-    justify-content: flex-end;
-    align-items: center;
-}
-.carousel-indicators {
-    justify-content: center;
-    align-items: flex-end;
-    /* position: relative; */
-    /* height: 200px; */
-}
-.carousel-item {
-    padding: 90px 30px;
-}
-
-/* Andy's Added Header Styles -- need to reconcile white vs gray text */
-
-h1 {
-    color: #8cd867;
-    text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
-}
-h2 {
-    color: #EFEFEF;
-    padding-bottom: 50px;
-}
-h3, h4 {
-    color: #EFEFEF; 
-    margin-left: auto; 
-    margin-right: auto; 
-    text-align: center;
-}
-h5 {
-    color: #EFEFEF;
-    font-family: "Rammetto One", cursive;
-    text-align: center;   
-}
-
-.navbar {
-    background-color: #EFEFEF;
-}
-p, h2 {
-    overflow-wrap: break-word;
-}
-.redButton:hover {
-    filter: brightness(85%);
-}
 .quiz {
     width: 961px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
-.quizPrev, .quizNext {
-    height: 100px;
-    margin: 0px;
-    padding: 0px;
-    top: 100px;
-    width: 50px;
+
+.quizItem {
+    padding: 90px 30px;
 }
+
 .question {
     padding: 0 25px 35px 25px;
+    text-align: center;
 }
-
-
-
-
-
-
 
 /* breakpoint for results page finalize button margin */
 @media (min-width: 992px) {
