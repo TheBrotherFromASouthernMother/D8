@@ -4,10 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
+    <title>d8</title>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background-color: #455051 !important; /* #545b62 */
+            display: flex;
+            /* position: absolute; */
+        }
+        h3 {
+            color: #EFEFEF; margin-left: auto; margin-right: auto; text-align: center;
+        }
+        .carousel-control-prev {
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .carousel-control-prev {
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .carousel-indicators {
+            justify-content: center;
+            align-items: flex-end;
+            /* position: relative; */
+            /* height: 200px; */
+        }
+        .navbar {
+            background-color: #EFEFEF;
+        }
+        h1 {
+            color: #8cd867;
+            text-shadow:
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;
+        }
+        h2 {
+            color: #EFEFEF;
+        }
+        .btn {
+            padding: 10px 100px;
+            background-color: #EFEFEF;
+        }
+        #bottom { /* probs change id or class */
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            color: #FF2B6B;
+
+        }
+
+/*         
+        .btn:focus {
+            background-color: #8cd867 !important;
+        }
+        .btn:active,  .btn-secondary:active { 
+            background-color: #8cd867 !important;
+        }
+        .btn.btn-success {
+            background-color: #8cd867 !important;
+        }*/
+
+        .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+            background-color: #8cd867 !important;
+        }
+        
+        .redButton:hover {
+            filter: brightness(85%);
+        }
+        
+    </style>
+
 </head>
 <body>
     <nav class="navbar fixed-top">
@@ -17,75 +88,348 @@
         <img class="rounded-circle" src="http://placehold.it/50x50" alt="profileThumbnail">
     </nav>
 
-<div class="container-fluid master">
+    <nav class="navbar fixed-bottom">
+        <h5 id="bottom">powered by O</h5>
+    </nav>
+<div class="container-fluid master"> <!--style="position: relative;"> -->
     
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
 
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
+
 
 
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                    <h2>question 1</h2>
-                    <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary">
-                                    <input type="radio" class="answer" value="1"> Test
-                                </label>
-                                <label class="btn btn-secondary">
-                                    <input type="radio" class="answer" value="2"> Radio
-                                </label>
-                                <label class="btn btn-secondary">
-                                    <input type="radio" class="answer" value="3"> Radio
-                                </label>
-                                <label class="btn btn-secondary">
-                                    <input type="radio" class="answer" value="4"> fourth
-                                </label>
-                            </div>
-                        </div>
+            <div class="carousel-item active"><br>
+                <h2>Welcome to d8! Got a d8 and don't know where to go and eat?</h2>
+                
+                <div class="card-body questionAnswers"><br>
+                    <h3>Answer these next questions to find your personalized date night.</h3><br>
+                </div>
             </div>
-            <div class="carousel-item">
-                    <h2>question 2</h2>
-                    <div class="card-body questionAnswers">
-                        
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary">
-                                    <input type="radio" class="answer" value="1"> Test
-                                </label>
-                                <label class="btn btn-secondary">
-                                    <input type="radio" class="answer" value="2"> Radio
-                                </label>
-                                <label class="btn btn-secondary">
-                                    <input type="radio" class="answer" value="3"> Radio
-                                </label>
-                                <label class="btn btn-secondary">
-                                    <input type="radio" class="answer" value="4"> fourth
-                                </label>
-                            </div>
-                        </div>
+            <div class="carousel-item"><br>
+                <h2>question 1</h2><br>
+                <div class="card-body questionAnswers">
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="1"> Test 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="2"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="3"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="4"> fourth 1
+                        </label>
+                    </div>
+                </div>
             </div>
-            <div class="carousel-item">
-                    <h2>question 3</h2>
-                    <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary">
-                                    <input type="radio" class="answer" value="1"> Test
-                                </label>
-                                <label class="btn btn-secondary">
-                                    <input type="radio" class="answer" value="2"> Radio
-                                </label>
-                                <label class="btn btn-secondary">
-                                    <input type="radio" class="answer" value="3"> Radio
-                                </label>
-                                <label class="btn btn-secondary">
-                                    <input type="radio" class="answer" value="4"> fourth
-                                </label>
-                            </div>
-                        </div>
+            <div class="carousel-item"><br>
+                <h2>question 2</h2><br>
+                <div class="card-body questionAnswers">
+                    
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="1"> Test 2
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="2"> Radio 2
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="3"> Radio 2
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="4"> fourth 2
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item"><br>
+                <h2>question 3</h2><br>
+                <div class="card-body questionAnswers">
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="1"> Test 3
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="2"> Radio 3
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="3"> Radio 3
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="4"> fourth 3
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item"><br>
+                <h2>question 4</h2><br>
+                <div class="card-body questionAnswers">
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="1"> Test 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="2"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="3"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="4"> fourth 1
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item"><br>
+                <h2>question 5</h2><br>
+                <div class="card-body questionAnswers">
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="1"> Test 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="2"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="3"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="4"> fourth 1
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item"><br>
+                <h2>question 6</h2><br>
+                <div class="card-body questionAnswers">
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="1"> Test 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="2"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="3"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="4"> fourth 1
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item"><br>
+                <h2>question 7</h2><br>
+                <div class="card-body questionAnswers">
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="1"> Test 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="2"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="3"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="4"> fourth 1
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item"><br>
+                <h2>question 8</h2><br>
+                <div class="card-body questionAnswers">
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="1"> Test 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="2"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="3"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="4"> fourth 1
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item"><br>
+                <h2>question 9</h2><br>
+                <div class="card-body questionAnswers">
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="1"> Test 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="2"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="3"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="4"> fourth 1
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item"><br>
+                <h2>question 10</h2><br>
+                <div class="card-body questionAnswers">
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="1"> Test 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="2"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="3"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="4"> fourth 1
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item"><br>
+                <h2>question 11</h2><br>
+                <div class="card-body questionAnswers">
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="1"> Test 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="2"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="3"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="4"> fourth 1
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item"><br>
+                <h2>question 12</h2><br>
+                <div class="card-body questionAnswers">
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="1"> Test 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="2"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="3"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="4"> fourth 1
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item"><br>
+                <h2>question 13</h2><br>
+                <div class="card-body questionAnswers">
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="1"> Test 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="2"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="3"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="4"> fourth 1
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item"><br>
+                <h2>question 14</h2><br>
+                <div class="card-body questionAnswers">
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="1"> Test 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="2"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="3"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="4"> fourth 1
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item"><br>
+                <h2>question 15</h2><br>
+                <div class="card-body questionAnswers">
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="1"> Test 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="2"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="3"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="4"> fourth 1
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item"><br>
+                <h2>question 16</h2><br>
+                <div class="card-body questionAnswers">
+                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="1"> Test 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="2"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="3"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="4"> fourth 1
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item"><br>
+                <h2>DONE! READY TO SUBMIT</h2><br>
+                <div class="card-body questionAnswers">
+                    <button class="redButton" type="button" name="button" id="submitAllAnswers">Missile Test</button>
+                    <!-- <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="1"> Test 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="2"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="3"> Radio 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" class="answer" value="4"> fourth 1
+                        </label>
+                    </div> -->
+                </div>
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -96,25 +440,51 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </a>
+
+        <br>
+        <br>
+        <br>
+        
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="13"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="14"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="15"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="16"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="17"></li>
+                
+        </ol>
     </div>
 
 </div>
 
 
-<script src="masterJavascript.js"></script>
-<script type="text/javascript" src="apikey.js"></script>
-<script type="text/javascript" src="TMDBcall.js"></script>
-<!-- <script type="text/javascript">
-  var body = document.querySelector("body");
-  body.addEventListener("unload", function(e) {
-    localStorage.removeItem("userAnswers");
-  })
-</script> -->
+    <script src="masterJavascript.js"></script>
+    <script type="text/javascript" src="apikey.js"></script>
+    <script type="text/javascript" src="TMDBcall.js"></script>
+    <!-- <script type="text/javascript">
+    var body = document.querySelector("body");
+    body.addEventListener("unload", function(e) {
+        localStorage.removeItem("userAnswers");
+    })
+    </script> -->
 
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
 
