@@ -11,9 +11,9 @@ let disney = [25, 304, 996, 82, 168]
 // var pullData = localStorage.getItem("userAnswers");
 
 var pullData = {
-	categoryOne: 1,
+	categoryOne: 0,
 	categoryTwo: 0,
-	categoryThree: 0,
+	categoryThree: 5,
 	categoryFour: 0
   };
 
@@ -60,19 +60,18 @@ function makeRequest(arr) {
   let apiKey = "c5d3000aa27c15341e4ef99bcd037e51"
   let url = `https://developers.zomato.com/api/v2.1/search?entity_id=277&entity_type=city&count=10&radius=25000&cuisines=${arr[0]}%2C%20${arr[1]}%2C%20${arr[2]}%2C%20${arr[3]}%2C%20${arr[4]}&sort=rating`
 
-  var restaurantData = null
+  let restaurantData = null
   $.get(url + "&apikey=" + apiKey).done(function(response) {
-    console.log(response.restaurants[0])
-    restaurantData = handleResponseObject(response);
     }).fail(function(error) {
         console.log(error);
-      }).then(function (e) {
-        console.log("DONUTS")
+        //updateUIError
+      }).then(function (response) {
+        console.log(response)
+        restaurantData = handleResponseObject(response);
+        console.log(restaurantData)
+        updateUISucces()
       })
 }// end makeRequest
-
-
-
 
 
 function handleResponseObject(data) {
@@ -81,7 +80,8 @@ function handleResponseObject(data) {
 		for (let i = 0; i < data.restaurants.length; i ++) {
 			obj = {
 					name: data.restaurants[i].restaurant.name,
-					location: data.restaurants[i].restaurant.location,
+          cuisine: data.restaurants[i].restaurant.cuisines,
+					location: data.restaurants[i].restaurant.location.address,
 					featuredImage: data.restaurants[i].restaurant.featured_image,
 					rating: data.restaurants[i].restaurant.user_rating.aggregate_rating,
 					thumbnail: data.restaurants[i].restaurant.thumb,
@@ -89,7 +89,18 @@ function handleResponseObject(data) {
 				}
 			relevantRestaurantData.push(obj)
 		}
-		console.log(relevantRestaurantData)
 		return relevantRestaurantData;
 
+}
+
+
+function updateUISucces() {
+  let $imgClass = $('.restaurantImage')[0];
+  let imgSource = ""
+  let defaultImg = "./defaultImages/Vegetarian.jpg"
+  if (imgSource)  {
+    $imgClass.src = imgSource
+  } else {
+    $imgClass.src= defaultImg;
+  }
 }

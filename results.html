@@ -230,7 +230,7 @@
     <div id="carouselExample" class="carousel slide" data-ride="carousel" data-interval="9000">
         <div class="carousel-inner row w-100 mx-auto" role="listbox">
             <div class="carousel-item col-md-4 active">
-                <img class="img-fluid mx-auto d-block" src="http://via.placeholder.com/350x150" alt="slide 1">
+                <img class="img-fluid mx-auto d-block restaurantImage" src="http://via.placeholder.com/350x150" alt="slide 1">
                 <div class="card">
                     <div class="card-header" id="restaurantHeadingOne">
                         <!-- BUG: can't get this button text to wrap -->
@@ -299,9 +299,8 @@
 
 </div>
 
-<script src="masterJavascript.js"></script>
-<script type="text/javascript" src="apikey.js"></script>
-<script type="text/javascript" src="TMDBcall.js"></script>
+
+
 <script type="text/javascript">
   var body = document.querySelector("body");
   body.addEventListener("unload", function(e) {
@@ -343,6 +342,11 @@ $('#carouselExample').on('slide.bs.carousel', function (e) {
 src="http://code.jquery.com/jquery-3.3.1.js"
 integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
 crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="apikey.js"></script>
+
+<script type="text/javascript" src="TMDBcall.js"></script>
+
 <script src="NewRestaurants.js"></script>
 
 
