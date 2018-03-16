@@ -1,9 +1,11 @@
 const masterProfileObject = {
-  categoryOne: 0,
+  categoryOne: 1,
   categoryTwo: 0,
   categoryThree: 0,
   categoryFour: 0
 };
+
+localStorage.setItem("userAnswers", JSON.stringify(masterProfileObject))
 
 function answerSelection(answer) {
     let inputValue = null

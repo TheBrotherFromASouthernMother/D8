@@ -1,3 +1,5 @@
+
+
 let actionAdventure = [73, 150, 1, 227, 193];
 
 let hipster = [161, 3, 308, 70, 491];
@@ -6,6 +8,52 @@ let romance = [100, 177, 55, 143, 83];
 
 let disney = [25, 304, 996, 82, 168]
 
+// var pullData = localStorage.getItem("userAnswers");
+
+var pullData = {
+	categoryOne: 1,
+	categoryTwo: 0,
+	categoryThree: 0,
+	categoryFour: 0
+  };
+
+
+function checkProfile () {
+	var highestScore = Math.max(pullData.categoryOne, pullData.categoryTwo, pullData.categoryThree, pullData.categoryFour);
+	var userCategory = null;
+	(function() {
+		for (key in pullData) {
+			if (highestScore === pullData[key]) {
+				userCategory = key;
+			}
+		}
+	})();
+	console.log(highestScore);
+	console.log(userCategory);
+
+	switch (userCategory) {
+		case("categoryOne"):
+			makeRequest(actionAdventure);
+			console.log("Action");
+			break;
+		case("categoryTwo"):
+			makeRequest(hipster);
+			console.log("Hipster");
+			break;
+		case("categoryThree"):
+			makeRequest(romance);
+			console.log("Romance");
+			break;
+		case("categoryFour"):
+			makeRequest(disney);
+			console.log("Disney");
+			break;
+		default:
+			console.log("You done fucked up, brah.");
+	}
+}
+
+checkProfile();
 
 
 function makeRequest(arr) {
@@ -19,6 +67,8 @@ function makeRequest(arr) {
         console.log(error);
       })
 }// end makeRequest
+
+
 
 
 
@@ -40,5 +90,3 @@ function handleResponseObject(data) {
 		return relevantRestaurantData;
 
 }
-
-makeRequest(actionAdventure)
