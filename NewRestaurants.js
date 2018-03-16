@@ -69,7 +69,7 @@ function makeRequest(arr) {
         console.log(response)
         restaurantData = handleResponseObject(response);
         console.log(restaurantData)
-        updateUISucces()
+        updateUISucces(restaurantData)
       })
 }// end makeRequest
 
@@ -80,7 +80,8 @@ function handleResponseObject(data) {
 		for (let i = 0; i < data.restaurants.length; i ++) {
 			obj = {
 					name: data.restaurants[i].restaurant.name,
-          cuisine: data.restaurants[i].restaurant.cuisines,
+					cuisine: data.restaurants[i].restaurant.cuisines,
+					menu: data.restaurants[i].restaurant.menu_url,
 					location: data.restaurants[i].restaurant.location.address,
 					featuredImage: data.restaurants[i].restaurant.featured_image,
 					rating: data.restaurants[i].restaurant.user_rating.aggregate_rating,
@@ -89,12 +90,13 @@ function handleResponseObject(data) {
 				}
 			relevantRestaurantData.push(obj)
 		}
+		console.log(relevantRestaurantData);
 		return relevantRestaurantData;
 
 }
 
 
-function updateUISucces() {
+function updateUISucces(restaurantData) {
   let $imgClass = $('.restaurantImage')[0];
   let imgSource = ""
   let defaultImg = "./defaultImages/Vegetarian.jpg"
@@ -103,4 +105,23 @@ function updateUISucces() {
   } else {
     $imgClass.src= defaultImg;
   }
+
+
+  var carousel = document.querySelectorAll('.carousel-item');
+console.log(carousel)
+for (let i = 0; i < carousel.length; i++) {
+	carousel[i].querySelector('.resultTitke').innerHTML = restaurantData[i].name;
+	carousel[i].querySelector('.resultCuisine').innerHTML = restaurantData[i].cuisines;
+
+	if (estaurantData[i].featured_image) {
+		carousel[i].querySelector('.restaurantImage').src = restaurantData[i].featured_image;
+	} else {
+		carousel[i].querySelector('.restaurantImage').src = restaurantData[i].thumbnail
+	}
+
+	carousel[i].querySelector('.resultLink').href =  restaurantData[i].menu;
+
+
+
+}
 }
