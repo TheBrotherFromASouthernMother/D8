@@ -57,9 +57,10 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
 /* figure out how to add margin between blerg */
 .answerButton {
     padding-bottom: 10px;
-    border: 2px solid #596869;
-    border-radius: 4px;
+    border: 2px solid #596869 !important;
+    border-radius: 4px !important;
     background-color: transparent;
+    margin: 5px !important;
 }
 
 /* footer style */
@@ -221,8 +222,11 @@ p {
 }
 
 .questionAnswers {
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+    border-top: 1px solid #596869;
+    padding-top: 30px;
+    margin-top: 20px;
     /* text-align: center; */
 }
 

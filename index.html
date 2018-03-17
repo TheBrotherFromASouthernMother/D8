@@ -17,23 +17,19 @@
 
     .quizControlArrow > img {
         width: 60px;
-    }
-
-    .carouselNumber {
-        font-family: "Rammetto One";
-        font-size: 200px;
-        opacity: 0.2;
-        color: #FF2B6B;
+        padding-bottom: 50px;
     }
 
     .carousel-indicators > li {
         border-radius: 5px;
         width: 5px;
-        background-color: gray;
+        height: 5px;
+        background-color: #596869;
+        border: 1px solid #596869;
     }
 
     img.quizImageCover {
-        height: 250px;
+        height: 200px;
         margin: 0px;
         object-fit: cover;
         overflow: hidden;
@@ -52,8 +48,27 @@
         }
     }
 
-    .quizCol {
-        height: 500px;
+    .quizTextCol {
+        height: 450px;
+        margin: 0px;
+        padding: 20px 20px;
+    }
+
+    @media (min-width: 992px) {
+        .quizTextCol {
+        height: 450px;
+        margin: 0px;
+        padding: 50px;
+        }
+    }
+
+    .quizImgCol {
+        margin: 0px; 
+        padding: 0px;
+    }
+
+    .hero {
+        margin-top: 20px;
     }
 
     </style>
@@ -71,43 +86,51 @@
         <h5 id="bottom">powered by O</h5>
     </nav> -->
 
-    <div class="container-fluid master"> <!--style="position: relative;"> -->
+    <div class="container-fluid master hero"> <!--style="position: relative;"> -->
     <!-- <div class="quiz col"> -->
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false" style="border: 1px solid pink; margin: 0px; margin-top: 25px;">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
 
             <div class="carousel-inner">
                 <!-- <div class="row"> -->
 
                     <div class="carousel-item active">
                         <div class="row">
-                            <div class="col-lg-5 order-lg-2 col-md-12" style="margin: 0px; padding: 0px;">
-                                <img class="img-fluid mx-auto d-block quizImageCover" src="http://via.placeholder.com/350x150" alt="slide 7" style="background-color: blue; margin: 0px; padding: 0px;">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="http://via.placeholder.com/350x150" alt="slide 1">
                             </div>
-                            <div class="col-lg-7 order-lg-1 col-md-12 quizCol" style="margin: 0px; padding: 50px;">
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
                                 <h2>Ready for a night out?</h2>
-                                <div class="card-body questionAnswers" style="margin: 0px; padding: 0px;">
-                                    <p class="question">Answer a few questions to receive your personalized date night recommendations.</h3>
+                                <div class="card-body questionAnswers">
+                                    <h5 class="question">Answer a few questions to receive your personalized date night recommendations.</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item quizItem">
-                        <h5 class="question">1. Which of the following selections of film genres do you prefer?</h5>
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="1">Action/Adventure
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="2">Musical/Indie
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="3">Romance/Drama
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="4">Comedy/Disney
-                                </label>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="http://via.placeholder.com/350x150" alt="slide 2">
+                            </div>
+
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
+                            <h5 class="question">Which film genres do you like most?</h5>
+                            <div class="card-body questionAnswers d-flex justify-content-center">
+                                <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary answerButton">
+                                        <input type="radio" class="answer" value="1">Action/Adventure
+                                    </label>
+                                    <label class="btn btn-secondary answerButton">
+                                        <input type="radio" class="answer" value="2">Musical/Indie
+                                    </label>
+                                    <label class="btn btn-secondary answerButton">
+                                        <input type="radio" class="answer" value="3">Romance/Drama
+                                    </label>
+                                    <label class="btn btn-secondary answerButton">
+                                        <!-- Animated instead of Disney? -->
+                                        <input type="radio" class="answer" value="4">Comedy/Disney
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -422,11 +445,16 @@
 
             </div>
 
-            <div class="col-lg-7 col-md-12 d-flex align-self-start">
+            <div class="col-lg-7 col-md-12">
 
-                <a class="carousel-control-prev quizControlArrow d-flex justify-content-space-between" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <img class="align-self-end" src="defaultImages/carouselArrows-01.png">
+                <a class="carousel-control-prev quizControlArrow" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <img src="defaultImages/carouselArrows-01.png">
                     <span class="sr-only">Previous</span>
+                </a>
+
+                <a class="carousel-control-next quizControlArrow" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <img src="defaultImages/carouselArrows-02.png">
+                    <span class="sr-only">Next</span>
                 </a>
 
                 <ol class="carousel-indicators">
@@ -449,11 +477,6 @@
                     <li data-target="#carouselExampleIndicators" data-slide-to="16"></li>
                     <li data-target="#carouselExampleIndicators" data-slide-to="17"></li>
                 </ol>
-
-                <a class="carousel-control-next quizControlArrow d-flex justify-content-space-between" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <img class="align-self-end" src="defaultImages/carouselArrows-02.png">
-                    <span class="sr-only">Next</span>
-                </a>
 
             </div>
 
