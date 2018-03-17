@@ -36,28 +36,27 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     opacity: 1;
 }
 
-/* quiz answers - need to change probably */
-.answer {
+/* quiz answers - need to change probably - I don't think this is actually doing anything */
+/* .answer {
     color: #363537;
     font-family: "Muli", sans-serif;
     font-weight: 400; 
     padding: 10px;
     text-align: left;
-}
+} */
 
-.answer:hover, .answer:checked {
-    border: none;
+/* .answer:hover, .answer:checked {
+    border: 1px solid #8cd867;
     color: #8CD867;
     font-family: "Muli", sans-serif;
     font-weight: 400; 
     padding: 10px;
     text-align: left;
-}
+} */
 
-/* figure out how to add margin between blerg */
 .answerButton {
     padding-bottom: 10px;
-    border: 2px solid #596869 !important;
+    border: 2px solid #596869;
     border-radius: 4px !important;
     background-color: transparent;
     margin: 5px !important;
@@ -225,7 +224,7 @@ p {
     /* margin-left: auto;
     margin-right: auto; */
     border-top: 1px solid #596869;
-    padding-top: 30px;
+    padding-top: 20px;
     margin-top: 20px;
     /* text-align: center; */
 }
@@ -240,7 +239,7 @@ p {
     background-color: #FF2B6B;
     border: none;
     border-radius: 0px;
-    color: #EFEFEF;
+    color: white;
     font-family: "Muli", sans-serif;
     font-weight: bold;
     padding: 15px;

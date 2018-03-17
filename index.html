@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="css/styles.css">
     <style>
 
+    .backButton {
+        width: 40px;
+        height: auto;
+        filter: grayscale(100%);
+        opacity: 0.2;
+    }
+
     .quizControlArrow, .quizControlArrow:hover {
         background-color: none;
         margin: 0px;
@@ -28,15 +35,18 @@
         border: 1px solid #596869;
     }
 
+    /* need to crop these images in photoshop */
     img.quizImageCover {
-        height: 200px;
+        height: 150px;
         margin: 0px;
         object-fit: cover;
         overflow: hidden;
         padding: 0px;
         width: 100%;
+        opacity: 0.2;
     }
 
+    /* need to add spec for mobile (smaller image) */
     @media (min-width: 992px) {
         img.quizImageCover {
             height: 500px;
@@ -49,14 +59,14 @@
     }
 
     .quizTextCol {
-        height: 450px;
+        height: 400px;
         margin: 0px;
         padding: 20px 20px;
     }
 
     @media (min-width: 992px) {
         .quizTextCol {
-        height: 450px;
+        height: 500px;
         margin: 0px;
         padding: 50px;
         }
@@ -76,7 +86,7 @@
 </head>
 <body>
     <nav class="navbar fixed-top">
-        <a href="javascript:history.back()"><img class="backButton" src="http://placehold.it/50x50" alt="backButton"></a>
+        <a href="javascript:history.back()"><img class="backButton" src="defaultImages/arrowKey-03.png" alt="backButton"></a>
         <h1>d8</h1>
         <!-- <img src="http://placehold.it/50x50" alt="d8Logo"> -->
         <img class="rounded-circle profileThumbnail" src="http://placehold.it/50x50" alt="profileThumbnail">
@@ -96,11 +106,11 @@
                     <div class="carousel-item active">
                         <div class="row">
                             <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
-                                <img class="img-fluid mx-auto d-block quizImageCover" src="http://via.placeholder.com/350x150" alt="slide 1">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/exclamation.png" alt="slide 1">
                             </div>
                             <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
                                 <h2>Ready for a night out?</h2>
-                                <div class="card-body questionAnswers">
+                                <div class="card-body questionAnswers d-flex justify-content-center">
                                     <h5 class="question">Answer a few questions to receive your personalized date night recommendations.</h5>
                                 </div>
                             </div>
@@ -110,338 +120,478 @@
                     <div class="carousel-item">
                         <div class="row">
                             <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
-                                <img class="img-fluid mx-auto d-block quizImageCover" src="http://via.placeholder.com/350x150" alt="slide 2">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/01Number.png" alt="slide 2">
                             </div>
 
                             <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
-                            <h5 class="question">Which film genres do you like most?</h5>
-                            <div class="card-body questionAnswers d-flex justify-content-center">
-                                <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary answerButton">
-                                        <input type="radio" class="answer" value="1">Action/Adventure
-                                    </label>
-                                    <label class="btn btn-secondary answerButton">
-                                        <input type="radio" class="answer" value="2">Musical/Indie
-                                    </label>
-                                    <label class="btn btn-secondary answerButton">
-                                        <input type="radio" class="answer" value="3">Romance/Drama
-                                    </label>
-                                    <label class="btn btn-secondary answerButton">
-                                        <!-- Animated instead of Disney? -->
-                                        <input type="radio" class="answer" value="4">Comedy/Disney
-                                    </label>
+                                <h5 class="question">Which pair of film genres do you like most?</h5>
+                                <div class="card-body questionAnswers d-flex justify-content-center">
+                                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="1">Action/Adventure
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="2">Musical/Indie
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="3">Romance/Drama
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <!-- Animated instead of Disney? -->
+                                            <input type="radio" class="answer" value="4">Comedy/Disney
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item quizItem">
-                        <h5 class="question">2. If your personal finances were no longer a concern, what would you do first?</h5>
-                        <div class="card-body questionAnswers">
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/02Number.png" alt="slide 3">
+                            </div>
 
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="1">a. travel
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="2">b. continue in my career
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="3">c. volunteer work
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="4">d. pursues my hobbies
-                                </label>
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
+                                <h5 class="question">If your personal finances were no longer a concern, what would you do first?</h5>
+                                <div class="card-body questionAnswers d-flex justify-content-center">
+                                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="1">Travel
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="2">Continue in my career
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="3">Volunteer
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="4">Pursue my hobbies
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item quizItem">
-                        <h5 class="question">3. Which of the following is your ideal fashion style for a partner?</h5>
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="1">a. athletic and casual
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="2">b. hipster
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="3">c. unremarkable but nice
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="4">d. preppy and formal
-                                </label>
+
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/03Number.png" alt="slide 4">
+                            </div>
+
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
+                                <h5 class="question">Which of the following is your ideal fashion style for a partner?</h5>
+                                <div class="card-body questionAnswers d-flex justify-content-center">
+                                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="1">Athletic/Casual
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="2">Hipster
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="3">Unremarkable but nice
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="4">Preppy/Formal
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item quizItem">
-                        <h5 class="question">4. Which unpleasant characteristic is your least favorite in a partner?</h5>
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="1">a. unmotivated and uninspired
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="2">b. not willing to try the things you enjoy
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="3">c. too judgmental
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="4">d. petty and fickle
-                                </label>
+
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/04Number.png" alt="slide 5">
+                            </div>
+
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
+                                <h5 class="question">Which unpleasant characteristic is your least favorite in a partner?</h5>
+                                <div class="card-body questionAnswers d-flex justify-content-center">
+                                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="1">Unmotivated/Uninspired
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="2">Not willing to try things you enjoy
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="3">Judgmental
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="4">Petty/Fickle
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item quizItem">
-                        <h5 class="question">5. Which trait would you most prize in a partner?</h5>
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="1">a. confidence
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="2">b. intelligence
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="3">c. ambition
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="4">d. loyalty
-                                </label>
+
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/05Number.png" alt="slide 6">
+                            </div>
+
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
+                                <h5 class="question">Which trait do you look for in a partner?</h5>
+                                <div class="card-body questionAnswers d-flex justify-content-center">
+                                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="1">Confidence
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="2">Intelligence
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="3">Ambition
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="4">Loyalty
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item quizItem">
-                        <h5 class="question">6. Which activity would you most enjoy doing with your partner?</h5>
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="1">a. outdoor recreation
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="2">b. technology
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="3">c. music and film
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="4">d. crafting
-                                </label>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/06Number.png" alt="slide 7">
+                            </div>
+
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
+                                <h5 class="question">Which activity do you most enjoy doing with your partner?</h5>
+                                <div class="card-body questionAnswers d-flex justify-content-center">
+                                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary answerButton">
+                                            <!-- sports/camping instead of outdoor recreation? -->
+                                            <input type="radio" class="answer" value="1">Outdoor recreation
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="2">Technology
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="3">Music/Film
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="4">Crafting
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item quizItem">
-                        <h5 class="question">7. What flavor of jelly condiment do you think of first?</h5>
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="1">a. grape
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="2">b. apricot
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="3">c. strawberry
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="4">d. orange
-                                </label>
+
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/07Number.png" alt="slide 8">
+                            </div>
+
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
+                                <h5 class="question">Which flavor of jam/jelly is your favorite?</h5>
+                                <div class="card-body questionAnswers d-flex justify-content-center">
+                                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="1">Grape
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="2">Apricot
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="3">Strawberry
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="4">Orange
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item quizItem">
-                        <h5 class="question">8. Which would be an ideal vacation for you?</h5>
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="1">a. hiking a mountainside
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="2">b. exploring a large city
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="3">c. relaxing on the beach
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="4">d. a staycation
-                                </label>
+
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/08Number.png" alt="slide 9">
+                            </div>
+    
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
+                                <h5 class="question">Which would be your ideal vacation?</h5>
+                                <div class="card-body questionAnswers d-flex justify-content-center">
+                                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="1">Hiking a mountainside
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="2">Exploring a big city
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="3">Relaxing on the beach
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="4">Staycation
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item quizItem">
-                        <h5 class="question">9. If I could be any animal, I would be a:</h5>
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="1">a. pilot whale
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="2">b. lawyer bird
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="3">c. carpenter ant
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="4">d. nurse shark
-                                </label>
+
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/09Number.png" alt="slide 10">
+                            </div>
+    
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
+                                <h5 class="question">9. If you could be an animal, which animal would you be?</h5>
+                                <div class="card-body questionAnswers d-flex justify-content-center">
+                                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="1">Pilot whale
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="2">Lawyer bird
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="3">Carpenter ant
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="4">Nurse shark
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item quizItem">
-                        <h5 class="question">10. I prefer the smell of:</h5>
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="1">a. gasoline
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="2">b. bank customers
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="3">c. fresh-cut grass
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="4">d. French fries
-                                </label>
+
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/10Number.png" alt="slide 11">
+                            </div>
+    
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
+                                <h5 class="question">I prefer the smell of:</h5>
+                                <div class="card-body questionAnswers d-flex justify-content-center">
+                                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="1">Gasoline
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="2">Bank customers
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="3">Freshly-cut grass
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="4">French fries
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item quizItem">
-                        <h5 class="question">11. How do you take your coffee?</h5>
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="1">a. with sugar
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="2">b. I don’t; I tea
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="3">c. black
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="4">d. with cream
-                                </label>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/11Number.png" alt="slide 12">
+                            </div>
+    
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
+                                <h5 class="question">How do you take your coffee?</h5>
+                                <div class="card-body questionAnswers d-flex justify-content-center">
+                                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="1">With sugar
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="2">I drink tea
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="3">Black
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="4">With milk/cream
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item quizItem">
-                        <h5 class="question">12. If you could live in a fictional place, where would it be?</h5>
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="1">a. Wakanda from the <em>Marvel Universe</em>
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="2">b. Land of Oz from <em>The Wonderful Wizard of Oz</em>
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="3">c. Hogwarts and the Wizarding World from <em>Harry Potter</em>
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="4">d. Narnia from <em>The Chronicles of Narnia</em>
-                                </label>
+
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/12Number.png" alt="slide 13">
+                            </div>
+    
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
+                                <h5 class="question">If you could live in a fictional place, which would it be?</h5>
+                                <div class="card-body questionAnswers d-flex justify-content-center">
+                                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="1">Wakanda, <em>Marvel Universe</em>
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="2">Land of Oz, <em>The Wizard of Oz</em>
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="3">The Wizarding World of <em>Harry Potter</em>
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="4">Narnia, <em>The Chronicles of Narnia</em>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item quizItem">
-                        <h5 class="question">13. If you had a free ticket to a museum, which of the following would you visit?</h5>
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="1">a. American History Museum
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="2">b. Contemporary Arts Museum
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="3">c. Museum of Natural Science
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="4">d. Cultural Heritage Museum
-                                </label>
+
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/13Number.png" alt="slide 14">
+                            </div>
+    
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
+                                <h5 class="question">If you had a free ticket to any museum, which of the following would you visit?</h5>
+                                <div class="card-body questionAnswers d-flex justify-content-center">
+                                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="1">American History Museum
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="2">Contemporary Arts Museum
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="3">Science Museum
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="4">Cultural Heritage Museum
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item quizItem">
-                        <h5 class="question">14. You become the dictator of a small country. What is your first order of business?</h5> <!--check CSS white-space property later to long wrap question and answers text -->
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="1">a. Make driving slowly in the passing lane a capital offense
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="2">b. Establish a sound fiscal policy for the national budget and slash all frivolous spending
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="3">c. Build a giant palace and populate your garden with flamingos and peacocks
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="4">d. Commission a movie starring you as the lead to be screened as the only option in every movie theatre nationwide
-                                </label>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/14Number.png" alt="slide 15">
+                            </div>
+    
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
+                                <h5 class="question">You become the dictator of a small country. What is your first order of business?</h5> <!--check CSS white-space property later to long wrap question and answers text -->
+                                <div class="card-body questionAnswers d-flex justify-content-center">
+                                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="1">Make driving slowly in the fast lane a capital offense
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="2">Establish a sound fiscal policy
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="3">Build a giant palace and fill it peacocks
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="4">Commission a movie starring yourself
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item quizItem">
-                        <h5 class="question">15. In which Olympic sport would you most want to compete?</h5>
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="1">a. modern pentathlon
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="2">b. speed skating
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="3">c. synchronized swimming
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="4">d. curling
-                                </label>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/15Number.png" alt="slide 16">
+                            </div>
+    
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
+                                <h5 class="question">In which Olympic sport would you most want to compete?</h5>
+                                <div class="card-body questionAnswers d-flex justify-content-center">
+                                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="1">Modern pentathlon
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="2">Speed skating
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="3">Synchronized swimming
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="4">Curling
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item quizItem">
-                        <h5 class="question">16. Which reality TV show would you be on?</h5>
-                        <div class="card-body questionAnswers">
-                            <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="1">a. <em>The Amazing Race</em>
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="2">b. <em>The Great British Baking Show</em>
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="3">c. <em>The Bachelor/Bachelorette</em>
-                                </label>
-                                <label class="btn btn-secondary answerButton">
-                                    <input type="radio" class="answer" value="4">d. <em>The Real Housewives</em>
-                                </label>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/16Number.png" alt="slide 17">
+                            </div>
+    
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
+                                <h5 class="question">Which reality TV show would you be on?</h5>
+                                <div class="card-body questionAnswers d-flex justify-content-center">
+                                    <div class="btn-group-vertical btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="1"><em>The Amazing Race</em>
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="2"><em>The Great British Baking Show</em>
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="3"><em>The Bachelor/Bachelorette</em>
+                                        </label>
+                                        <label class="btn btn-secondary answerButton">
+                                            <input type="radio" class="answer" value="4"><em>The Real Housewives</em>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item quizItem">
-                        <h5>Ready to submit?</h5>
-                        <div class="col-lg-4 col-md-12 card-body">
-                            <button class="btn btn-lg btn-block redButton" type="button" name="button" id="submitAllAnswers">Submit</button>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-lg-5 order-lg-2 col-md-12 quizImgCol">
+                                <img class="img-fluid mx-auto d-block quizImageCover" src="defaultImages/d8Number.png" alt="slide 17">
+                            </div>
+    
+                            <div class="col-lg-7 order-lg-1 col-md-12 quizTextCol">
+                                <h2>Ready to submit?</h2>
+                                <div class="col-lg-4 col-md-12 card-body">
+                                    <button class="btn btn-lg btn-block redButton" type="button" name="button" id="submitAllAnswers">Submit</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+
 
             </div>
 
