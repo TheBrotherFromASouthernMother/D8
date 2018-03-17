@@ -36,37 +36,37 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     opacity: 1;
 }
 
-/* quiz answers - need to change probably */
-.answer {
+/* quiz answers - need to change probably - I don't think this is actually doing anything */
+/* .answer {
     color: #363537;
     font-family: "Muli", sans-serif;
     font-weight: 400; 
     padding: 10px;
     text-align: left;
-}
+} */
 
-.answer:hover, .answer:checked {
-    border: none;
+/* .answer:hover, .answer:checked {
+    border: 1px solid #8cd867;
     color: #8CD867;
     font-family: "Muli", sans-serif;
     font-weight: 400; 
     padding: 10px;
     text-align: left;
-}
+} */
 
-/* figure out how to add margin between blerg */
 .answerButton {
     padding-bottom: 10px;
     border: 2px solid #596869;
-    border-radius: 4px;
+    border-radius: 4px !important;
     background-color: transparent;
+    margin: 5px !important;
 }
 
 /* footer style */
 #bottom { /* probs change id or class */
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    /* text-align: center; */
     color: #FF2B6B;
 }
 
@@ -138,14 +138,14 @@ h1 {
 h2 {
     color: #363537;
     font-family: "Rammetto One", cursive;
-    text-align: center;   
+    /* text-align: center;    */
 }
 
 h3 {
     color: #363537;
     font-family: "Muli", sans-serif;
     font-weight: 700;
-    text-align: center;   
+    /* text-align: center;    */
 }
 
 h4 {
@@ -165,6 +165,13 @@ h5 {
     color: #363537;
     font-family: "Muli", sans-serif;
     font-weight: 700;
+}
+
+h5 {
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-weight: 400;
+    text-align: left;
 }
 
 /* IMAGE MASK */
@@ -198,14 +205,8 @@ img.resultsImageCover {
 .navbar {
     position: fixed;
     background-color: white;
-    border-bottom: 1px solid #596869;
-    padding: 10px;
-}
-
-@media (min-width: 992px) {
-    .navbar {
-        padding: 20px;
-    }
+    border-bottom: 1px solid #EFEFEF;
+    padding: 5px;
 }
 
 p {
@@ -221,22 +222,25 @@ p {
 }
 
 .questionAnswers {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    /* margin-left: auto;
+    margin-right: auto; */
+    border-top: 1px solid #596869;
+    padding-top: 20px;
+    margin-top: 20px;
+    /* text-align: center; */
 }
 
 .questionBox {
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .redButton {
     background-color: #FF2B6B;
     border: none;
     border-radius: 0px;
-    color: #EFEFEF;
+    color: white;
     font-family: "Muli", sans-serif;
     font-weight: bold;
     padding: 15px;
@@ -272,17 +276,21 @@ p {
 }
 
 .quiz {
-    width: 961px;
+    /* width: 961px; */
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    /* text-align: center; */
 }
 
-.quizItem {
-    padding: 90px 30px;
-}
+/* .quizItem {
+    padding-top: 150px;
+} */
 
 .question {
-    padding: 0 25px 35px 25px;
-    text-align: center;
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-weight: 400;
+    /* padding: 20px; */
+    font-size: 24px;
+    /* text-align: center; */
 }
