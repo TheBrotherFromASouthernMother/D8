@@ -12,9 +12,9 @@ let disney = [25, 304, 996, 82, 168]
 
 var pullData = {
 	categoryOne: 0,
-	categoryTwo: 0,
-	categoryThree: 5,
-	categoryFour: 0
+	categoryTwo: 2,
+	categoryThree: 0,
+	categoryFour: 3
   };
 
 
@@ -28,8 +28,6 @@ function checkProfile () {
 			}
 		}
 	})();
-	console.log(highestScore);
-	console.log(userCategory);
 
 	switch (userCategory) {
 		case("categoryOne"):
@@ -66,8 +64,8 @@ function makeRequest(arr) {
         console.log(error);
         //updateUIError
       }).then(function (response) {
+        console.log(response)
         restaurantData = handleResponseObject(response);
-        console.log(restaurantData)
         updateUISucces(restaurantData)
       })
 }// end makeRequest
@@ -113,10 +111,8 @@ function updateUISucces(restaurantData) {
 }
 
 function setDefaultImage(cuisine, image) {
-  console.log(image)
   switch(true) {
-    case (cuisine.includes("Italian")):
-      console.log("hooray")
+    case (cuisine.startsWith("Italian")):
       image.src = "./defaultImages/Italian.jpg";
       break;
     case (cuisine.includes("American")):
@@ -128,6 +124,9 @@ function setDefaultImage(cuisine, image) {
     case (cuisine.includes("Chinese")):
       image.src = "./defaultImages/Chinese.jpg";
       break;
+    case (cuisine.startsWith("Pizza")):
+        image.src = "./defaultImages/Pizza.jpg";
+        break;
     default:
       image.src = "./defaultImages/Vegetarian.jpg"
   }

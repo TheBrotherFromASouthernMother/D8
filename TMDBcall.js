@@ -8,15 +8,13 @@ var url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${TMDB_KEY}&la
   $.get(url).done(function(response) {
     console.log(response)
     updateUISucces()
-
   }).fail(function(err) {
     console.log(err)
+  }).then(function (response) {
+    console.log(repsonse)
   })
 
 
   function updateUISucces(response) {
       return 0;
   }
-
-
-function handle
