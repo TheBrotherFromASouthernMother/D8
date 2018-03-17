@@ -11,7 +11,8 @@ function makeMovieRequest() {
     }).fail(function(err) {
       console.log(err)
     }).then(function (response) {
-      console.log(response)
+        movieData = handleResponseObjectMovies(response)
+        updateUISucces(movieData)
     })
 
 
@@ -33,9 +34,10 @@ function makeMovieRequest() {
       }
       filteredData.push(obj)
     }
+    return filteredData
 
   }
 
-}
+} //end makeMovieRequest
 
 makeMovieRequest();

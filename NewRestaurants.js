@@ -86,6 +86,7 @@ function handleResponseObject(data) {
 				}
 			filteredData.push(obj)
 		}
+		console.log(filteredData)
 		return filteredData;
 
 }
