@@ -13,7 +13,7 @@ let disney = [25, 304, 996, 82, 168]
 var pullData = {
 	categoryOne: 0,
 	categoryTwo: 2,
-	categoryThree: 0,
+	categoryThree: 5,
 	categoryFour: 3
   };
 
@@ -64,7 +64,6 @@ function makeRequest(arr) {
         console.log(error);
         //updateUIError
       }).then(function (response) {
-        console.log(response)
         restaurantData = handleResponseObject(response);
         updateUISucces(restaurantData)
       })
@@ -72,7 +71,7 @@ function makeRequest(arr) {
 
 
 function handleResponseObject(data) {
-    let relevantRestaurantData = [];
+    let filteredData = [];
 		let obj = null;
 		for (let i = 0; i < data.restaurants.length; i ++) {
 			obj = {
@@ -85,9 +84,9 @@ function handleResponseObject(data) {
 					thumbnail: data.restaurants[i].restaurant.thumb,
 					price: data.restaurants[i].restaurant.price_range
 				}
-			relevantRestaurantData.push(obj)
+			filteredData.push(obj)
 		}
-		return relevantRestaurantData;
+		return filteredData;
 
 }
 
@@ -95,18 +94,19 @@ function handleResponseObject(data) {
 function updateUISucces(restaurantData) {
   var carousel = document.querySelectorAll('.carousel-item');
   for (let i = 0; i < carousel.length; i++) {
-    carousel[i].querySelector('.card .resultTitle h5').innerHTML = restaurantData[i].name;
-  	carousel[i].querySelector('.card .collapse .card-body .cardResult .resultTable .resultCuisine').innerHTML = restaurantData[i].cuisine;
+    document.querySelectorAll('.resultTitle h5')[i].innerHTML = restaurantData[i].name;
+  	document.querySelectorAll('.resultCuisine')[i].innerHTML = restaurantData[i].cuisine;
 
   	if (restaurantData[i].featuredImage) {
-  		carousel[i].querySelector('.resultsImageCover').src = restaurantData[i].featuredImage;
+  		document.querySelectorAll('.resultsImageCover')[i].src = restaurantData[i].featuredImage;
   	} else if (restaurantData[i].thumbnail) {
-  		carousel[i].querySelector('.resultsImageCover').src = restaurantData[i].thumbnail
+  		document.querySelectorAll('.resultsImageCover')[i].src = restaurantData[i].thumbnail
   	} else {
-      setDefaultImage(restaurantData[i].cuisine, carousel[i].querySelector('.resultsImageCover'))
+      setDefaultImage(restaurantData[i].cuisine, document.querySelectorAll('.resultsImageCover')[i])
     }
-    carousel[i].querySelector(".card .collapse .card-body .cardResult .resultTable .resultCost").textContent = "$".repeat(Number(restaurantData[i].price));
-  	carousel[i].querySelector('.card .collapse .card-body .cardResult .resultTable .resultLink').href =  restaurantData[i].menu;
+
+    document.querySelectorAll(".resultCost")[i].textContent = "$".repeat(Number(restaurantData[i].price));
+  	document.querySelectorAll('.resultLink a')[i].href =  restaurantData[i].menu;
     }
 }
 
@@ -125,8 +125,20 @@ function setDefaultImage(cuisine, image) {
       image.src = "./defaultImages/Chinese.jpg";
       break;
     case (cuisine.startsWith("Pizza")):
-        image.src = "./defaultImages/Pizza.jpg";
-        break;
+      image.src = "./defaultImages/Pizza.jpg";
+      break;
+		case (cuisine.includes("Burger")):
+		  image.src = "./defaultImages/Burger.jpg";
+		  break;
+		case (cuisine.includes("TexMex")):
+			image.src = "./defaultImages/TexMexjpg";
+			break;
+		case (cuisine.includes("Healthy")):
+	    image.src = "./defaultImages/Healthy.jpg";
+	    break;
+		case (cuisine.includes("Seafood")):
+		  image.src = "./defaultImages/Seafood.jpg";
+		  break;
     default:
       image.src = "./defaultImages/Vegetarian.jpg"
   }
