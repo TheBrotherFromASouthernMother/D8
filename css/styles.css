@@ -66,7 +66,7 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
 #bottom { /* probs change id or class */
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    /* text-align: center; */
     color: #FF2B6B;
 }
 
@@ -138,14 +138,14 @@ h1 {
 h2 {
     color: #363537;
     font-family: "Rammetto One", cursive;
-    text-align: center;   
+    /* text-align: center;    */
 }
 
 h3 {
     color: #363537;
     font-family: "Muli", sans-serif;
     font-weight: 700;
-    text-align: center;   
+    /* text-align: center;    */
 }
 
 h4 {
@@ -165,6 +165,12 @@ h5 {
     color: #363537;
     font-family: "Muli", sans-serif;
     font-weight: 700;
+}
+
+h5 {
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-weight: 400;
 }
 
 /* IMAGE MASK */
@@ -198,14 +204,8 @@ img.resultsImageCover {
 .navbar {
     position: fixed;
     background-color: white;
-    border-bottom: 1px solid #596869;
-    padding: 10px;
-}
-
-@media (min-width: 992px) {
-    .navbar {
-        padding: 20px;
-    }
+    border-bottom: 1px solid #EFEFEF;
+    padding: 5px;
 }
 
 p {
@@ -223,13 +223,13 @@ p {
 .questionAnswers {
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .questionBox {
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .redButton {
@@ -272,17 +272,21 @@ p {
 }
 
 .quiz {
-    width: 961px;
+    /* width: 961px; */
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
+    /* text-align: center; */
 }
 
-.quizItem {
-    padding: 90px 30px;
-}
+/* .quizItem {
+    padding-top: 150px;
+} */
 
 .question {
-    padding: 0 25px 35px 25px;
-    text-align: center;
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-weight: 400;
+    /* padding: 20px; */
+    font-size: 24px;
+    /* text-align: center; */
 }
