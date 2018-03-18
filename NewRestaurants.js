@@ -93,21 +93,28 @@ function handleResponseObject(data) {
 
 
 function updateUISucces(restaurantData) {
-  var carousel = document.querySelectorAll('.carousel-item');
+	let carousel = document.querySelectorAll(".carousel-item");
+	let restaurantTitles = document.querySelectorAll('.resultTitle h5');
+	let restaurantCuisines = document.querySelectorAll('.resultCuisine');
+	let restaurantImages = document.querySelectorAll('.resultsImageCover');
+	let restaurantCost = document.querySelectorAll(".resultCost");
+	let restaurantLink = document.querySelectorAll('.resultLink a');
+
   for (let i = 0; i < carousel.length; i++) {
-    document.querySelectorAll('.resultTitle h5')[i].innerHTML = restaurantData[i].name;
-  	document.querySelectorAll('.resultCuisine')[i].innerHTML = restaurantData[i].cuisine;
+		console.log(restaurantTitles[i])
+    restaurantTitles[i].innerHTML = restaurantData[i].name;
+  	restaurantCuisines[i].innerHTML = restaurantData[i].cuisine;
 
   	if (restaurantData[i].featuredImage) {
-  		document.querySelectorAll('.resultsImageCover')[i].src = restaurantData[i].featuredImage;
+  		restaurantImages[i].src = restaurantData[i].featuredImage;
   	} else if (restaurantData[i].thumbnail) {
-  		document.querySelectorAll('.resultsImageCover')[i].src = restaurantData[i].thumbnail
+  		restaurantImages[i].src = restaurantData[i].thumbnail
   	} else {
-      setDefaultImage(restaurantData[i].cuisine, document.querySelectorAll('.resultsImageCover')[i])
+      setDefaultImage(restaurantData[i].cuisine, restaurantImages[i])
     }
 
-    document.querySelectorAll(".resultCost")[i].textContent = "$".repeat(Number(restaurantData[i].price));
-  	document.querySelectorAll('.resultLink a')[i].href =  restaurantData[i].menu;
+		restaurantLink[i].href = restaurantData[i].menu;
+  	restaurantCost[i].textContent = "$".repeat(Number(restaurantData[i].price));
     }
 }
 
@@ -116,30 +123,48 @@ function setDefaultImage(cuisine, image) {
     case (cuisine.startsWith("Italian")):
       image.src = "./defaultImages/Italian.jpg";
       break;
-    case (cuisine.includes("American")):
+    case (cuisine.startsWith("American")):
       image.src = "./defaultImages/American.jpg";
       break;
-    case (cuisine.includes("BarFood")):
+    case (cuisine.startsWith("BarFood")):
       image.src = "./defaultImages/BarFood.jpg";
       break;
-    case (cuisine.includes("Chinese")):
+    case (cuisine.startsWith("Chinese")):
       image.src = "./defaultImages/Chinese.jpg";
       break;
     case (cuisine.startsWith("Pizza")):
       image.src = "./defaultImages/Pizza.jpg";
       break;
-		case (cuisine.includes("Burger")):
+		case (cuisine.startsWith("Burger")):
 		  image.src = "./defaultImages/Burger.jpg";
 		  break;
-		case (cuisine.includes("TexMex")):
+		case (cuisine.startsWith("TexMex")):
 			image.src = "./defaultImages/TexMexjpg";
 			break;
-		case (cuisine.includes("Healthy")):
+		case (cuisine.startsWith("Healthy")):
 	    image.src = "./defaultImages/Healthy.jpg";
 	    break;
-		case (cuisine.includes("Seafood")):
+		case (cuisine.startsWith("Seafood")):
 		  image.src = "./defaultImages/Seafood.jpg";
 		  break;
+		case (cuisine.startsWith("Mediterranean")):
+			image.src = "./defaultImages/Seafood.jpg";
+			break;
+		case (cuisine.includes("Sushi")):
+			image.src = "./defaultImages/Sushi.jpg"
+			break;
+		case (cuisine.startsWith("Sandwich")):
+			image.src = "./defaultImages/Sandwich.jpg"
+			break;
+		case (cuisine.startsWith("Desserts")):
+			image.src = "./defaultImages/Desserts.jpg"
+			break;
+		case (cuisine.startsWith("Cajun")):
+			image.src = "./defaultImages/Cajun.jpg"
+			break;
+		case (cuisine.startsWith("Coffee")):
+				image.src = "./defaultImages/Coffee&Tea.jpg"
+				break;
     default:
       image.src = "./defaultImages/Vegetarian.jpg"
   }
