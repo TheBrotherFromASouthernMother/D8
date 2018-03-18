@@ -99,6 +99,8 @@ function updateUISucces(restaurantData) {
 	let restaurantImages = document.querySelectorAll('.resultsImageCover');
 	let restaurantCost = document.querySelectorAll(".resultCost");
 	let restaurantLink = document.querySelectorAll('.resultLink a');
+	let addToItinerary = document.querySelectorAll(".addToItinerary");
+	let map = document.getElementById('map');
 
   for (let i = 0; i < carousel.length; i++) {
 		console.log(restaurantTitles[i])
@@ -115,6 +117,12 @@ function updateUISucces(restaurantData) {
 
 		restaurantLink[i].href = restaurantData[i].menu;
   	restaurantCost[i].textContent = "$".repeat(Number(restaurantData[i].price));
+		addToItinerary[i].addEventListener("click", function(e) {
+			map.src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBr_nNH9eMQH8IKiUegBXMArrgJ6bBkVAA&q="
+			let parameters = restaurantData[i].location.replace(" ", "+")
+			map.src += parameters
+			map.style.display = "block";
+		})
     }
 }
 

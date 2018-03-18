@@ -9,6 +9,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>d8</title>
 
+    <style media="screen">
+      #map {
+        display: none;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -491,6 +497,13 @@
 
     </div>
 
+    <iframe id="map"
+      width="600"
+      height="450"
+      frameborder="0" style="border:0"
+      allowfullscreen>
+    </iframe>
+
 
 
 <script type="text/javascript">
@@ -552,6 +565,21 @@ crossorigin="anonymous"></script>
 <script src="NewRestaurants.js"></script>
 <script type="text/javascript" src="apikey.js"></script>
 <script type="text/javascript" src="TMDBcall.js"></script>
+
+<script type="text/javascript">
+    let local = {
+      address: "gio's flying pizza and pasta"
+    }
+    var map = document.getElementById('map');
+    var showMap = document.getElementById('showMap');
+    showMap.addEventListener("click", function(e) {
+      map.src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBr_nNH9eMQH8IKiUegBXMArrgJ6bBkVAA&q="
+      var parameters = local.address.replace(" ", "+")
+      map.src += parameters
+      map.style.display = "block";
+    })
+
+</script>
 
 </body>
 </html>
