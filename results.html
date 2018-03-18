@@ -12,6 +12,8 @@
     <style media="screen">
       #map {
         display: none;
+        margin-top: 1%;
+        margin-bottom: 1%;
         }
     </style>
 
@@ -494,15 +496,19 @@
             </div>
         </div>
 
+        <div class="row d-flex justify-content-center">
+          <iframe id="map"
+            width="80%"
+            height="400"
+            frameborder="0" style="border:0"
+            allowfullscreen>
+          </iframe>
+
+        </div>
+
+
 
     </div>
-
-    <iframe id="map"
-      width="600"
-      height="450"
-      frameborder="0" style="border:0"
-      allowfullscreen>
-    </iframe>
 
 
 
@@ -566,20 +572,6 @@ crossorigin="anonymous"></script>
 <script type="text/javascript" src="apikey.js"></script>
 <script type="text/javascript" src="TMDBcall.js"></script>
 
-<script type="text/javascript">
-    let local = {
-      address: "gio's flying pizza and pasta"
-    }
-    var map = document.getElementById('map');
-    var showMap = document.getElementById('showMap');
-    showMap.addEventListener("click", function(e) {
-      map.src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBr_nNH9eMQH8IKiUegBXMArrgJ6bBkVAA&q="
-      var parameters = local.address.replace(" ", "+")
-      map.src += parameters
-      map.style.display = "block";
-    })
-
-</script>
 
 </body>
 </html>

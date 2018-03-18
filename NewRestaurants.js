@@ -8,17 +8,18 @@ let romance = [100, 177, 55, 143, 83];
 
 let disney = [25, 304, 996, 82, 168]
 
-// var pullData = localStorage.getItem("userAnswers");
 
-var pullData = {
-	categoryOne: 0,
-	categoryTwo: 2,
-	categoryThree: 5,
-	categoryFour: 3
-  };
+// var pullData = {
+// 	categoryOne: 0,
+// 	categoryTwo: 2,
+// 	categoryThree: 5,
+// 	categoryFour: 3
+//   };
 
 
 function checkProfile () {
+	var pullData = JSON.parse(localStorage.getItem("userAnswers"));
+	console.log(pullData)
 	var highestScore = Math.max(pullData.categoryOne, pullData.categoryTwo, pullData.categoryThree, pullData.categoryFour);
 	var userCategory = null;
 	(function() {
@@ -28,6 +29,8 @@ function checkProfile () {
 			}
 		}
 	})();
+	console.log(highestScore);
+	console.log(userCategory)
 
 	switch (userCategory) {
 		case("categoryOne"):
