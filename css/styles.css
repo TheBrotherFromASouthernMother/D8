@@ -7,10 +7,10 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
 }
 
 /* ACCORDION CAROUSEL CONTROLS */
-.accordionControl:hover > .carousel-control-next-icon,
+/* .accordionControl:hover > .carousel-control-next-icon,
 .accordionControl:hover > .carousel-control-prev-icon {
     opacity: 1;
-}
+} */
 
 .accordionControl, .quizControl {
     background-color: none;
@@ -21,8 +21,7 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     width: 50px;
 }
 
-.accordionControl:hover,
-.quizControl:hover {
+.accordionControl:hover, .quizControl:hover {
     background-color: salmon;
     height: 100px;
     margin: 0px;
@@ -32,28 +31,11 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     width: 40px;
 }
 
-.quizControl:hover > .carousel-control-next-icon,
+/* .quizControl:hover > .carousel-control-next-icon,
 .quizControl:hover > .carousel-control-prev-icon {
     opacity: 1;
-}
-
-/* quiz answers - need to change probably - I don't think this is actually doing anything */
-/* .answer {
-    color: #363537;
-    font-family: "Muli", sans-serif;
-    font-weight: 400; 
-    padding: 10px;
-    text-align: left;
 } */
 
-/* .answer:hover, .answer:checked {
-    border: 1px solid #8cd867;
-    color: #8CD867;
-    font-family: "Muli", sans-serif;
-    font-weight: 400; 
-    padding: 10px;
-    text-align: left;
-} */
 
 /* BUTTONS */
 .answerButton {
@@ -74,8 +56,7 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     text-decoration: none;
 }
 
-/* quiz answer buttons */
-.btn-secondary {
+.btn-secondary { /* quiz answer buttons */
     background-color: white;
     border: 1px solid #596869;
     color: #363537;
@@ -91,6 +72,7 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     background-color: #8cd867;
     border: none;
 }
+
 
 /* RESULTS PAGE CARDS */
 .card {
@@ -198,6 +180,39 @@ h6#credit {
     margin-right: auto;
     color: salmon;
     padding-top: 10px;
+}
+
+
+.heroTxtCol {
+    height: 400px;
+    padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .heroTxtCol {
+    padding: 0px;
+    }
+}
+
+.heroBtn {
+    margin-top: 40px;
+    max-width: 400px;
+}
+
+.heroBanner, .quizBanner {
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .heroBanner, .quizBanner {
+        padding: 40px;
+    }  
+}
+
+/* landing page banner */
+.heroBanner {
+    background: linear-gradient(to bottom left, pink, coral);
+    height: 600px;
 }
 
 /* IMAGE MASK */
@@ -312,32 +327,27 @@ p {
     font-size: 24px;
 }
 
-
-/* Erin's added styles */
-/* .backButton {
-    width: 40px;
-    height: auto;
-    filter: grayscale(100%);
-    opacity: 0.2;
-} */
-
-.quizControlArrow, .quizControlArrow:hover {
+.quizControlArrow, .quizControlArrow:focus {
     background-color: none;
     margin: 0px;
+    opacity: 0.2;
+}
+
+.quizControlArrow:hover {
     opacity: 0.4;
 }
 
 .quizControlArrow > img {
-    width: 60px;
-    padding-bottom: 50px;
+    width: 40px;
+    padding-bottom: 55px;
 }
 
 .carousel-indicators > li {
     border-radius: 5px;
     width: 5px;
     height: 5px;
-    background-color: #596869;
-    border: 1px solid #596869;
+    background-color: lightgray;
+    border: 1px solid lightgray;
 }
 
 /* need to crop these images in photoshop */
@@ -394,13 +404,13 @@ img.quizImageCover {
     padding: 0px;
 }
 
-/* included styles in master class */
-/* .hero {
-    margin-top: 20px;
-} */
+.navbar {
+    padding: 0px 20px;
+}
 
-
-
+.nav-link:hover {
+    color: coral !important;
+}
 
 .pacificoHeroTxt {
     font-family: 'Pacifico'; 
@@ -416,54 +426,13 @@ img.quizImageCover {
     }
 }
 
-.heroBanner, .quizBanner {
-    padding: 20px;
-}
-
-@media (min-width: 768px) {
-    .heroBanner, .quizBanner {
-        padding: 40px;
-    }  
-}
-
-/* landing page banner */
-.heroBanner {
-    background: linear-gradient(to bottom left, pink, coral);
-    height: 600px;
-}
-
-.navbar {
-    padding: 0px 20px;
-}
-
-.nav-link:hover {
-    color: coral !important;
-}
-
 .profileThumbnail {
     width: 50px;
     border: 2px solid #EFEFEF;
     border-radius: 50px;
 }
 
-.heroTxtCol {
-    height: 400px;
-    padding-top: 20px;
-}
-
-@media (min-width: 768px) {
-    .heroTxtCol {
-    padding: 0px;
-    }
-}
-
-.heroBtn {
-    margin-top: 40px;
-    max-width: 400px;
-}
-
 .whiteButton {
-
 background-color: white;
 border: none;
 border-radius: 0px;
@@ -476,3 +445,9 @@ padding: 15px;
 .whitebutton:hover { /* glitch */
     filter: brightness(85%);
 }
+
+
+/* included styles in master class */
+/* .hero {
+    margin-top: 20px;
+} */
