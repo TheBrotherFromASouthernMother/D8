@@ -37,6 +37,42 @@
     .theBackground {
         background: linear-gradient(to bottom, pink, pink 50%, white 50%, white);
         background-size: 100% 300px;
+        padding: 20px;
+    }
+
+    .carousel-item {
+        width: 250px;
+        max-width: 250px;
+    }
+
+    img.resultsImageCover {
+        height: 150px;
+    }
+
+    #restaurantCarousel {
+        height: 600px;
+        padding: 30px 0px;
+    }
+
+    h5 {
+        font-weight: 700;
+    }
+
+    .cardResult {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .card-header {
+        background-color: white;
+    }
+
+    .resultTable {
+        font-size: 14px;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 2px solid #EFEFEF;
+        padding-bottom: 0px;
     }
 
     </style>
@@ -61,6 +97,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Quiz</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="results.html">Browse</a>
+                    </li>
                 </ul>
             </div>
             <img class="rounded-circle profileThumbnail d-none d-lg-block d-xl-block" src="defaultImages/profileDefault.png" alt="profileThumbnail">
@@ -76,7 +115,7 @@
         <img class="rounded-circle" src="http://placehold.it/50x50" alt="profileThumbnail">
     </nav> -->
 
-    <div class="container-fluid master">
+    <div class="container-fluid master" style="padding: 0px;">
 
         <!-- loader modal -->
         <div class="loader"></div>
@@ -93,26 +132,28 @@
 
                     <div class="card">
                         <div class="card-header" id="restaurantHeadingOne">
-                            <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#restaurantCollapseOne" aria-expanded="true" aria-controls="restaurantCollapseOne">
+                            <!-- <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#restaurantCollapseOne" aria-expanded="true" aria-controls="restaurantCollapseOne"> -->
+                            <div class="resultTitle" data-toggle="collapse" data-target="#restaurantCollapseOne">
                             <h5>Sushi Restaurant #1 very very very long title</h5>
-                            </button>
-                        </div>
+                            </div>
+                        <!-- </div> -->
 
-                        <div id="restaurantCollapseOne" class="collapse" aria-labelledby="restaurantHeadingOne" data-parent="#accordion">
+                        <!-- <div id="restaurantCollapseOne" class="collapse" aria-labelledby="restaurantHeadingOne" data-parent="#accordion"> -->
                             <div class="card-body">
                                 <div class="cardResult">
+                                    <div class="resultTable">
 
-                                    <div class="row d-flex justify-content-space-between resultTable">
-                                        <div class="col resultCost">$$$</div>
-                                        <div class="col resultCuisine">Japanese</div>
-                                        <div class="col resultLink"><a class="greenLink" href="#">Menu</a></div>
+                                    <!-- <div class="row d-flex justify-content-space-between resultTable"> -->
+                                        <p class="resultCost">$$$</p>
+                                        <p class="resultCuisine">Japanese</p>
+                                        <p class="resultLink"><a class="greenLink" href="#">Menu</a></p>
                                     </div>
-
-                                    <p class="resultReview">This place is great. I love sushi!!!!</p>
+                                    <!-- <p class="resultReview">This place is great. I love sushi!!!!</p> -->
                                 </div>
-                                <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
                             </div>
                         </div>
+                        <button type="button" class="btn btn-lg btn-block redButton addToItinerary">Add to Itinerary</button>
+
                     </div>
 
                 </div>
@@ -578,6 +619,8 @@
 
 <!-- script to make carousel move one by one -->
 <script type="text/javascript">
+
+
 $('#restaurantCarousel').on('slide.bs.carousel', function (e) {
     var $e = $(e.relatedTarget);
     var idx = $e.index();
@@ -596,6 +639,7 @@ $('#restaurantCarousel').on('slide.bs.carousel', function (e) {
         }
     }
 });
+
 $('#movieCarousel').on('slide.bs.carousel', function (e) {
     var $e1 = $(e.relatedTarget);
     var idx1 = $e1.index();
@@ -615,6 +659,7 @@ $('#movieCarousel').on('slide.bs.carousel', function (e) {
     }
 });
 </script>
+
 <script type="text/javascript">
     (function() {
         let loader = document.querySelector('.loader');

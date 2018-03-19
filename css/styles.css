@@ -22,7 +22,8 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
 
 .accordionControl:hover,
 .quizControl:hover {
-    background-color: #363537;
+    /* background-color: #363537; */
+    background-color: salmon;
     height: 100px;
     margin: 0px;
     opacity: 0.3;
@@ -68,6 +69,7 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     margin-right: auto;
     /* text-align: center; */
     color: salmon;
+    padding-top: 10px;
 }
 
 .btn, .btn:hover, .btn:focus {
