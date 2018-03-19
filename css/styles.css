@@ -34,8 +34,25 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
 /* .quizControl:hover > .carousel-control-next-icon,
 .quizControl:hover > .carousel-control-prev-icon {
     opacity: 1;
+}
+
+/* quiz answers - need to change probably - I don't think this is actually doing anything */
+/* .answer {
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-weight: 400;
+    padding: 10px;
+    text-align: left;
 } */
 
+/* .answer:hover, .answer:checked {
+    border: 1px solid #8cd867;
+    color: #8CD867;
+    font-family: "Muli", sans-serif;
+    font-weight: 400;
+    padding: 10px;
+    text-align: left;
+} */
 
 /* BUTTONS */
 .answerButton {
@@ -68,7 +85,7 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     border: none;
 }
 
-.btn-secondary:hover, .btn-secondary:active:focus { /* when checked, change color to green */ 
+.btn-secondary:hover, .btn-secondary:active:focus { /* when checked, change color to green */
     background-color: #8cd867;
     border: none;
 }
@@ -116,7 +133,7 @@ h2 {
     font-family: "Rammetto One";
     font-size: 36px;
     line-height: 36px;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 
 @media (min-width: 992px) {
@@ -242,6 +259,7 @@ img.resultsImageCover {
 .itineraryCard {
     margin: 15px;
     padding: 20px;
+    display: none;
 }
 
 .itineraryData {
@@ -249,6 +267,10 @@ img.resultsImageCover {
     font-family: "Muli", sans-serif;
     font-weight: 700;
     padding-bottom: 20px;
+}
+
+.finalImage {
+  opacity: 0;
 }
 
 .master {
@@ -415,17 +437,42 @@ img.quizImageCover {
 }
 
 .pacificoHeroTxt {
-    font-family: 'Pacifico'; 
-    font-size: 54px; 
-    color: white; 
-    text-align: left; 
+    font-family: 'Pacifico';
+    font-size: 54px;
+    color: white;
+    text-align: left;
 }
 
 @media (min-width: 768px) {
     .pacificoHeroTxt {
-        font-size: 72px; 
-        text-align: right; 
+        font-size: 72px;
+        text-align: right;
     }
+}
+
+.heroBanner {
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .heroBanner {
+        padding: 40px;
+    }
+}
+
+
+/* landing page banner */
+.heroBanner {
+    background: linear-gradient(to bottom left, pink, coral);
+    height: 600px;
+}
+
+.navbar {
+    padding: 0px 20px;
+}
+
+.nav-link:hover {
+    color: coral !important;
 }
 
 .profileThumbnail {

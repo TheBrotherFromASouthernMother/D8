@@ -24,12 +24,11 @@ function getAnswers() {
 
 /* Assign click function to submit button and runs getAnswers function. */
 
-let submitAllAnswers = document.querySelector("#submitAllAnswers")
-  console.log(submitAllAnswers)
+let submitAllAnswers = document.querySelector("#submitAllAnswers");
+  console.log(submitAllAnswers);
   submitAllAnswers.addEventListener("click", function(){
-    getAnswers()
-    console.log(window.location.assign("/Users/christianlowe/.atom/D8/results.html"))
-})
+    getAnswers();
+});
 
 /* Creates 'inputValue' variable. Checks for selected answer and retrieves value from the current index
 in the HTML collection element and assigns then runs addPoints function on proper category within 'masterProfileObject'. */

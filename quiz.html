@@ -65,7 +65,7 @@
                                 </div>
 
                                     <div class="heroBtn">
-                                    <button class="btn btn-lg btn-block redButton" type="button" name="button" id="takeQuiz">Start</button>
+                                    <button class="btn btn-lg btn-block redButton" type="button" name="button" id="takeQuiz" onclick=$('.carousel').carousel("next")>Start</button>
                                     </div>
                             </div>
                         </div>
@@ -540,8 +540,9 @@
                                 <h2>Ready to submit?</h2>
                                 <div class="col-lg-4 col-md-12 card-body">
                                     <div class="heroBtn">
-                                    <button class="btn btn-lg btn-block redButton" type="button" name="button" id="submitAllAnswers">Submit</button>
-                                </div></div>
+                                    <button class="btn btn-lg btn-block redButton" type="button" name="button" id="submitAllAnswers" onclick="window.location.href='results.html'">Submit</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
