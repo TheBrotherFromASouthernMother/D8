@@ -37,7 +37,7 @@ function makeMovieRequest() {
     }).then(function (response) {
         movieData = handleResponseObjectMovies(response)
         updateUISuccesMovies(movieData)
-    })
+    }) //end AJAX request
 
 
   function handleResponseObjectMovies(data) {
@@ -56,7 +56,7 @@ function makeMovieRequest() {
     console.log(filteredData)
     return filteredData;
 
-  }
+  } //end handleResponseObjectMovies
 
 
   function updateUISuccesMovies(data) {
@@ -64,15 +64,13 @@ function makeMovieRequest() {
     let movieTitle = document.querySelectorAll(".resultTitleMovies h5");
     let movieGenre = document.querySelectorAll(".resultGenre");
     let moviePoster = document.querySelectorAll(".resultsImageCoverMovies")
+
     for (let i = 0; i < carousel.length; i++) {
       movieTitle[i].textContent = data[i].title;
       moviePoster[i].src = data[i].poster;
       movieGenre[i].textContent = genres[String(data[i].genre[0])];
     }
-
-
-
-  }
+  } //end updateUISuccesMovies
 
 } //end makeMovieRequest
 
