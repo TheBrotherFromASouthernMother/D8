@@ -183,7 +183,7 @@ h6#credit {
 }
 
 
-.heroTxtCol {
+.heroTxtCol, .quizTxtCol {
     height: 400px;
     padding-top: 20px;
 }
@@ -191,6 +191,20 @@ h6#credit {
 @media (min-width: 768px) {
     .heroTxtCol {
     padding: 0px;
+    }
+}
+
+/* .quizTxtCol {
+    height: 400px;
+    margin: 0px;
+    padding: 20px 20px;
+} */
+
+@media (min-width: 992px) {
+    .quizTxtCol {
+    height: 500px;
+    margin: 0px;
+    padding: 50px;
     }
 }
 
@@ -385,19 +399,7 @@ img.quizImageCover {
     }
 }
 
-.quizTextCol {
-    height: 400px;
-    margin: 0px;
-    padding: 20px 20px;
-}
 
-@media (min-width: 992px) {
-    .quizTextCol {
-    height: 500px;
-    margin: 0px;
-    padding: 50px;
-    }
-}
 
 .quizImgCol {
     margin: 0px;
