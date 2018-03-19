@@ -20,6 +20,7 @@ let disney = [25, 304, 996, 82, 168]
 function checkProfile () {
 	var pullData = JSON.parse(localStorage.getItem("userAnswers"));
 	console.log(pullData)
+
 	var highestScore = Math.max(pullData.categoryOne, pullData.categoryTwo, pullData.categoryThree, pullData.categoryFour);
 	var userCategory = null;
 	(function() {
@@ -59,10 +60,10 @@ checkProfile();
 
 function makeRequest(arr) {
   let apiKey = "c5d3000aa27c15341e4ef99bcd037e51"
-  let url = `https://developers.zomato.com/api/v2.1/search?entity_id=277&entity_type=city&count=10&radius=25000&cuisines=${arr[0]}%2C%20${arr[1]}%2C%20${arr[2]}%2C%20${arr[3]}%2C%20${arr[4]}&sort=rating`
+  let url = `https://developers.zomato.com/api/v2.1/search?entity_id=277&entity_type=city&count=10&radius=25000&cuisines=${arr[0]}%2C%20${arr[1]}%2C%20${arr[2]}%2C%20${arr[3]}%2C%20${arr[4]}&sort=rating&apikey=${apiKey}`
 
   let restaurantData = null
-  $.get(url + "&apikey=" + apiKey).done(function(response) {
+  $.get(url).done(function(response) {
     }).fail(function(error) {
         console.log(error);
         //updateUIError
@@ -96,6 +97,8 @@ function handleResponseObject(data) {
 
 
 function updateUISucces(restaurantData) {
+
+	//Gets the html fields that will be populated with restaurant information based on the data returned from the AJAX request
 	let carousel = document.querySelectorAll(".carousel-item");
 	let restaurantTitles = document.querySelectorAll('.resultTitle h5');
 	let restaurantCuisines = document.querySelectorAll('.resultCuisine');
@@ -120,6 +123,8 @@ function updateUISucces(restaurantData) {
 
 		restaurantLink[i].href = restaurantData[i].menu;
   	restaurantCost[i].textContent = "$".repeat(Number(restaurantData[i].price));
+
+		//Opens an embedded map on the page based on the restaurant selected by the user
 		addToItinerary[i].addEventListener("click", function(e) {
 			map.src = `https://www.google.com/maps/embed/v1/place?key=${GOOGLE_MAPS_KEY}&q=`;
 			let parameters = restaurantData[i].location.replace(" ", "+")

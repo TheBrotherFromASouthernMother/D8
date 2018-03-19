@@ -2,12 +2,28 @@
 /*To be refactored, we should eventually add a feature that allows users
 to select from a drop down menu their state
 so that we can provide now playing info for more than just Texas */
-categoryA = [
-  {"id": 28,"name": "Action"},
-  {"id": 12,"name": "Adventure"},
-  {"id": 10752,"name": "War"},
-  {"id": 37, "name": "Western"}
-];
+
+let genres = {
+      "28": "Action",
+      "12": "Adventure",
+      "16": "Animation",
+      "35": "Comedy",
+      "80": "Crime",
+      "99": "Documentary",
+      "18": "Drama",
+      "10751": "Family",
+      "14": "Fantasy",
+      "36": "History",
+      "27": "Horror",
+      "10402": "Music",
+      "9648": "Mystery",
+      "10749": "Romance",
+      "878": "Science Fiction",
+      "10770": "TV Movie",
+      "53": "Thriller",
+      "10752": "War",
+      "37": "Western"
+};
 
 
 function makeMovieRequest() {
@@ -51,7 +67,7 @@ function makeMovieRequest() {
     for (let i = 0; i < carousel.length; i++) {
       movieTitle[i].textContent = data[i].title;
       moviePoster[i].src = data[i].poster;
-      // movieGenre[i].textContent = data.genre[0];
+      movieGenre[i].textContent = genres[String(data[i].genre[0])];
     }
 
 
