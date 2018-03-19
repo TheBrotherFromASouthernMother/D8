@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i|Rammetto+One');
+@import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i|Rammetto+One|Pacifico');
 
 a.greenLink, a.greenLink:hover, a.greenLink:visited {
     color: #8CD867;
@@ -63,11 +63,11 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
 }
 
 /* footer style */
-#bottom { /* probs change id or class */
+#credit { /* probs change id or class */
     margin-left: auto;
     margin-right: auto;
     /* text-align: center; */
-    color: #FF2B6B;
+    color: salmon;
 }
 
 .btn, .btn:hover, .btn:focus {
@@ -205,7 +205,7 @@ img.resultsImageCover {
 .navbar {
     position: fixed;
     background-color: white;
-    border-bottom: 1px solid #EFEFEF;
+    border-bottom: 2px solid #EFEFEF;
     padding: 5px;
 }
 
@@ -378,4 +378,89 @@ img.quizImageCover {
 
 .hero {
     margin-top: 20px;
+}
+
+h1 {
+    font-family: "Pacifico";
+}
+
+
+.dateNight {
+    font-family: 'Pacifico'; 
+    font-size: 54px; 
+    color: white; 
+    text-align: left; 
+    padding: 10px; 
+    padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .dateNight {
+        font-family: 'Pacifico'; 
+        font-size: 72px; 
+        color: white; 
+        text-align: right; 
+        padding: 10px; 
+        padding-bottom: 20px;
+    }
+}
+
+.title {
+    font-family: 'Muli';
+    font-size: 24px;
+    color: white;
+    padding: 20px;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+        .title {
+        font-family: 'Muli';
+        font-size: 36px;
+        color: white;
+        padding: 40px;
+        font-weight: 700;
+    }
+}
+
+
+    .heroBanner {
+        background: linear-gradient(to bottom left, pink, coral);
+        height: 600px;
+    }
+    .navbar {
+        padding: 0px 20px;
+    }
+
+    .nav-link:hover {
+        color: coral !important;
+    }
+
+    .profileThumbnail {
+        width: 50px;
+        border: 2px solid #EFEFEF;
+        border-radius: 50px;
+    }
+
+    .landingHero {
+        height: 400px;
+    }
+    .landingHero2 {
+        margin: 20px; 
+        max-width: 400px;
+    }
+
+    .whiteButton {
+
+    background-color: white;
+    border: none;
+    border-radius: 0px;
+    color: coral;
+    font-family: "Muli", sans-serif;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.whitebutton:hover {
+    filter: brightness(85%);
 }

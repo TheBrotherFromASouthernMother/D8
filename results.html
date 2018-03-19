@@ -33,17 +33,48 @@
         0% {transform: rotate(0deg); }
         100% {transform: rotate(360deg); }
     }
+
+    .theBackground {
+        background: linear-gradient(to bottom, pink, pink 50%, white 50%, white);
+        background-size: 100% 300px;
+    }
+
     </style>
 
 </head>
 
 <body>
 
-    <nav class="navbar fixed-top navbar-default">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="landing.html"><h1>d8</h1></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="landing.html">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item d-block d-lg-none d-xl-none">
+                        <a class="nav-link" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Quiz</a>
+                    </li>
+                </ul>
+            </div>
+            <img class="rounded-circle profileThumbnail d-none d-lg-block d-xl-block" src="defaultImages/profileDefault.png" alt="profileThumbnail">
+        </nav>
+
+        <nav class="navbar fixed-bottom">
+            <h6 id="credit">Powered by Zomato</h6>
+        </nav>
+
+    <!-- <nav class="navbar fixed-top navbar-default">
         <a href="javascript:history.back()"><img src="http://placehold.it/50x50" alt="backButton"></a>
         <h1>d8</h1>
         <img class="rounded-circle" src="http://placehold.it/50x50" alt="profileThumbnail">
-    </nav>
+    </nav> -->
 
     <div class="container-fluid master">
 
@@ -55,7 +86,7 @@
             <h3>Restaurants</h3>
         </div>
 
-        <div id="restaurantCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div id="restaurantCarousel" class="carousel slide theBackground" data-ride="carousel" data-interval="false">
             <div class="carousel-inner row w-100 mx-auto" role="listbox">
                 <div class="carousel-item col-md-4 active">
                     <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 1">
