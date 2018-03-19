@@ -126,9 +126,7 @@ h2 {
     }
 }
 
-.takeTheQuiz {
-    padding: 20px;
-}
+
 
 h3 {
     color: #363537;
@@ -182,6 +180,15 @@ h6#credit {
     padding-top: 10px;
 }
 
+.takeTheQuiz {
+    padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .takeTheQuiz {
+        padding: 0px;
+    }
+}
 
 .heroTxtCol, .quizTxtCol {
     height: 400px;
@@ -189,7 +196,7 @@ h6#credit {
 }
 
 @media (min-width: 768px) {
-    .heroTxtCol {
+    .heroTxtCol, .quizTxtCol {
     padding: 0px;
     }
 }
@@ -203,8 +210,9 @@ h6#credit {
 @media (min-width: 992px) {
     .quizTxtCol {
     height: 500px;
-    margin: 0px;
-    padding: 50px;
+    /* margin: 0px; */
+    /* padding: 50px; */
+    padding: 0px;
     }
 }
 
@@ -213,13 +221,23 @@ h6#credit {
     max-width: 400px;
 }
 
-.heroBanner, .quizBanner {
+.heroBanner {
     padding: 20px;
 }
 
+.quizBanner {
+    margin: 20px;
+}
+
 @media (min-width: 768px) {
-    .heroBanner, .quizBanner {
+    .heroBanner {
         padding: 40px;
+    }  
+}
+
+@media (min-width: 768px) {
+    .quizBanner {
+        margin: 40px;
     }  
 }
 
@@ -401,10 +419,10 @@ img.quizImageCover {
 
 
 
-.quizImgCol {
+/* .quizImgCol {
     margin: 0px;
     padding: 0px;
-}
+} */
 
 .navbar {
     padding: 0px 20px;
