@@ -324,6 +324,7 @@ p {
 .quizControlArrow, .quizControlArrow:hover {
     background-color: none;
     margin: 0px;
+    opacity: 0.4;
 }
 
 .quizControlArrow > img {
@@ -415,16 +416,15 @@ img.quizImageCover {
     }
 }
 
-.heroBanner {
+.heroBanner, .quizBanner {
     padding: 20px;
 }
 
 @media (min-width: 768px) {
-    .heroBanner {
+    .heroBanner, .quizBanner {
         padding: 40px;
     }  
 }
-
 
 /* landing page banner */
 .heroBanner {
