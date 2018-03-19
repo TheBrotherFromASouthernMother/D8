@@ -97,6 +97,7 @@ function updateUISucces(restaurantData) {
 	let restaurantTitles = document.querySelectorAll('.resultTitle h5');
 	let restaurantCuisines = document.querySelectorAll('.resultCuisine');
 	let restaurantImages = document.querySelectorAll('.resultsImageCover');
+	let address = document.querySelectorAll(".resultReview");
 	let restaurantCost = document.querySelectorAll(".resultCost");
 	let restaurantLink = document.querySelectorAll('.resultLink a');
 	let addToItinerary = document.querySelectorAll(".addToItinerary");
@@ -117,6 +118,7 @@ function updateUISucces(restaurantData) {
 
 		restaurantLink[i].href = restaurantData[i].menu;
   	restaurantCost[i].textContent = "$".repeat(Number(restaurantData[i].price));
+		address[i].textContent = restaurantData[i].location;
 
 		//Opens an embedded map on the page based on the restaurant selected by the user
 		addToItinerary[i].addEventListener("click", function(e) {
