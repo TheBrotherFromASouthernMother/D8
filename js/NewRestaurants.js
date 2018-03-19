@@ -58,6 +58,7 @@ function makeRequest(arr) {
         console.log(error);
         //updateUIError
       }).then(function (response) {
+				console.log(response)
         restaurantData = handleResponseObject(response);
         updateUISucces(restaurantData)
       })
