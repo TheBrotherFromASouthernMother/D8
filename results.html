@@ -33,6 +33,19 @@
         0% {transform: rotate(0deg); }
         100% {transform: rotate(360deg); }
     }
+    .miniLoader {
+        display: block;
+        border: 6px solid #f3f3f3;
+        border-top: 6px solid #FF2B6B;
+        border-bottom: 6px solid #8cd867;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        animation: spin 2s linear infinite;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
 
     .theBackground {
         background: linear-gradient(to bottom, pink, pink 50%, white 50%, white);
@@ -134,7 +147,8 @@
                         <div class="card-header" id="restaurantHeadingOne">
                             <!-- <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#restaurantCollapseOne" aria-expanded="true" aria-controls="restaurantCollapseOne"> -->
                             <div class="resultTitle" data-toggle="collapse" data-target="#restaurantCollapseOne">
-                            <h5>Sushi Restaurant #1 very very very long title</h5>
+                                <h5>Sushi Restaurant #1 very very very long title</h5>
+                                <div class="miniLoader"></div>
                             </div>
                         <!-- </div> -->
 
@@ -163,7 +177,8 @@
                     <div class="card">
                         <div class="card-header" id="restaurantHeadingTwo">
                             <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#restaurantCollapseTwo" aria-expanded="true" aria-controls="restaurantCollapseTwo">
-                            <h5>Sushi Restaurant #2</h5>
+                                <h5>Sushi Restaurant #2</h5>
+                                <div class="miniLoader"></div>
                             </button>
                         </div>
 
@@ -191,7 +206,8 @@
                     <div class="card">
                         <div class="card-header" id="restaurantHeadingThree">
                             <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#restaurantCollapseThree" aria-expanded="true" aria-controls="restaurantCollapseThree">
-                            <h5>Sushi Restaurant #3</h5>
+                                <h5>Sushi Restaurant #3</h5>
+                                <div class="miniLoader"></div>
                             </button>
                         </div>
 
@@ -219,7 +235,8 @@
                     <div class="card">
                         <div class="card-header" id="restaurantHeadingFour">
                             <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#restaurantCollapseFour" aria-expanded="true" aria-controls="restaurantCollapseFour">
-                            <h5>Sushi Restaurant #4</h5>
+                                <h5>Sushi Restaurant #4</h5>
+                                <div class="miniLoader"></div>
                             </button>
                         </div>
 
@@ -247,7 +264,8 @@
                     <div class="card">
                         <div class="card-header" id="restaurantHeadingFive">
                             <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#restaurantCollapseFive" aria-expanded="true" aria-controls="restaurantCollapseFive">
-                            <h5>Sushi Restaurant #5</h5>
+                                <h5>Sushi Restaurant #5</h5>
+                                <div class="miniLoader"></div>
                             </button>
                         </div>
 
@@ -275,7 +293,8 @@
                     <div class="card">
                         <div class="card-header" id="restaurantHeadingSix">
                             <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#restaurantCollapseSix" aria-expanded="true" aria-controls="restaurantCollapseSix">
-                            <h5>Sushi Restaurant #6</h5>
+                                <h5>Sushi Restaurant #6</h5>
+                                <div class="miniLoader"></div>
                             </button>
                         </div>
 
@@ -301,7 +320,8 @@
                     <div class="card">
                         <div class="card-header" id="restaurantHeadingSeven">
                             <button class="btn btn-link collapsed resultTitle" data-toggle="collapse" data-target="#restaurantCollapseSeven" aria-expanded="true" aria-controls="restaurantCollapseSeven">
-                            <h5>Sushi Restaurant #7</h5>
+                                <h5>Sushi Restaurant #7</h5>
+                                <div class="miniLoader"></div>
                             </button>
                         </div>
 
@@ -557,7 +577,7 @@
             <div class="col-lg-5 col-md-12 itineraryCard">
                 <h5>Sushi Restaurant #1</h5>
 
-                <div class="row d-flex justify-content-space-between itineraryData">
+                <div class="row d-flex justify-content-space-between itineraryData restaurantFinal">
                     <div class="col resultCost">$$$</div>
                     <div class="col resultCuisine">Japanese</div>
                     <div class="col resultLink"><a class="greenLink" href="#">Menu</a></div>
@@ -567,7 +587,7 @@
 
                 <h5>Wes Anderson Movie #1</h5>
 
-                <div class="row d-flex justify-content-space-between itineraryData">
+                <div class="row d-flex justify-content-space-between itineraryData movieFinal">
                     <div class="col resultGenre">Indie</div>
                     <div class="col resultRunTime">1h 25m</div>
                     <div class="col resultLink"><a class="greenLink" href="#">Fandango</a></div>
@@ -577,7 +597,7 @@
 
             </div>
             <div class="col-lg-5 col-md-12">
-                <img class="d-block w-100 resultsImageCover" src="http://via.placeholder.com/350x350" alt="Map">
+                <img class="d-block w-100 resultsImageCover finalImage" src="http://via.placeholder.com/350x350" alt="Map">
             </div>
         </div>
 
@@ -658,7 +678,28 @@ $('#movieCarousel').on('slide.bs.carousel', function (e) {
         let loader = document.querySelector('.loader');
         setTimeout(function() {
             loader.style.display = "none";
-        }, 2000);
+        }, 1800);
+
+        let miniLoaders = document.querySelectorAll('.miniLoader');
+        
+
+        // NodeList.prototype.forEach = Array.prototype.forEach; // needed for fix in IE browsers: either convert generated NodeList to an array, or prototype Array's forEach to NodeList
+        setTimeout(function() {
+        // IE/Edge, Safari doesn't support NodeList's forEach
+            // miniLoaders.forEach(function(miniLoader) {
+            //     miniLoader.style.display = "none";
+            // });
+            
+            // another solution but can't easily reuse
+            // [].forEach.call(miniLoaders, function(miniLoader) {
+            //     miniLoader.style.display = "none";
+            // });
+
+            // iterate over NodeList with for loop as a fix
+            for (let i = 0; i < miniLoaders.length; i++) {
+                miniLoaders[i].style.display = "none";
+            }
+        }, 450);
     })();
 
 </script>
@@ -671,6 +712,7 @@ crossorigin="anonymous"></script>
 <script type="text/javascript" src="./js/apikey.js"></script>
 <script type="text/javascript" src="./js/NewRestaurants.js"></script>
 <script type="text/javascript" src="./js/TMDBcall.js"></script>
+
 
 <script type="text/javascript">
     var body = document.querySelector("body");
