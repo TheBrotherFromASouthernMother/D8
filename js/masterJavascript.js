@@ -1,11 +1,27 @@
 const masterProfileObject = {
-  categoryOne: 1,
+  categoryOne: 0,
   categoryTwo: 0,
   categoryThree: 0,
   categoryFour: 0
 };
 
 localStorage.setItem("userAnswers", JSON.stringify(masterProfileObject))
+
+
+function getAnswers() {
+  let questionAnswers = document.querySelectorAll('.answer');
+  for (let i = 0; i < questionAnswers.length; i++) {
+      answerSelection(questionAnswers[i]);
+  }
+  localStorage.setItem("userAnswers", JSON.stringify(masterProfileObject))
+}
+
+let submitAllAnswers = document.querySelector("#submitAllAnswers")
+  console.log(submitAllAnswers)
+  submitAllAnswers.addEventListener("click", function(){
+    getAnswers()
+    console.log(window.location.assign("/Users/christianlowe/.atom/D8/results.html"))
+})
 
 function answerSelection(answer) {
     let inputValue = null
@@ -42,22 +58,3 @@ function answerSelection(answer) {
 function addPoints(categoryName) {
     masterProfileObject[categoryName] += 1;
 };
-
-function getAnswers() {
-  let questionAnswers = document.querySelectorAll('.answer');
-  for (let i = 0; i < questionAnswers.length; i++) {
-      answerSelection(questionAnswers[i]);
-  }
-  localStorage.setItem("userAnswers", JSON.stringify(masterProfileObject))
-}
-
-let submitAllAnswers = document.querySelector("#submitAllAnswers")
-  console.log(submitAllAnswers)
-  submitAllAnswers.addEventListener("click", function(){
-    getAnswers()
-    console.log(window.location.assign("/Users/christianlowe/.atom/D8/results.html"))
-})
-
-function checkNumberOfAnswers() {
-
-}

@@ -34,8 +34,9 @@ function makeMovieRequest() {
       // updateUISucces()
     }).fail(function(err) {
       console.log(err)
+      //upDateUIError
     }).then(function (response) {
-        movieData = handleResponseObjectMovies(response)
+        let movieData = handleResponseObjectMovies(response)
         updateUISuccesMovies(movieData)
     }) //end AJAX request
 

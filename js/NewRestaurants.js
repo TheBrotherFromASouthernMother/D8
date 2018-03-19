@@ -51,8 +51,8 @@ checkProfile();
 
 
 function makeRequest(arr) {
-  let apiKey = "c5d3000aa27c15341e4ef99bcd037e51"
-  let url = `https://developers.zomato.com/api/v2.1/search?entity_id=277&entity_type=city&count=10&radius=25000&cuisines=${arr[0]}%2C%20${arr[1]}%2C%20${arr[2]}%2C%20${arr[3]}%2C%20${arr[4]}&sort=rating&apikey=${apiKey}`
+  // let apiKey = "c5d3000aa27c15341e4ef99bcd037e51"
+  let url = `https://developers.zomato.com/api/v2.1/search?entity_id=277&entity_type=city&count=10&radius=25000&cuisines=${arr[0]}%2C%20${arr[1]}%2C%20${arr[2]}%2C%20${arr[3]}%2C%20${arr[4]}&sort=rating&apikey=${ZAMATO_KEY}`
 
   let restaurantData = null
   $.get(url).done(function(response) {
