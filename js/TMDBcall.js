@@ -83,7 +83,7 @@ function makeMovieRequest() {
 
 
       addToItinerary[i].addEventListener("click", function(e) {
-        console.log(e);
+        let itineraryCard = document.querySelector('.itineraryCard');
         let resultTitle = document.querySelectorAll('.itineraryCard h5')[1];
         let resultGenre = document.querySelector('.movieFinal .resultGenre');
         let resultRunTime = document.querySelector('.movieFinal .resultRunTime');
@@ -93,6 +93,7 @@ function makeMovieRequest() {
         resultGenre.innerHTML = movieGenre[i].textContent;
         resultLink.href = "https://mobile.fandango.com/theaters";
         resultRunTime.textContent = rating[i].textContent;
+        itineraryCard.style.display = "block";
 
       })
 

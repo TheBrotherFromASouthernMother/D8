@@ -127,11 +127,13 @@ function updateUISucces(restaurantData) {
 			let resultCuisine = document.querySelector('.restaurantFinal .resultCuisine');
 			let resultLink = document.querySelector('.restaurantFinal .resultLink a');
 			let resultImage = document.querySelector('.finalImage');
+
 			resultTitle.innerHTML = restaurantData[i].name;
 			resultCost.innerHTML = restaurantCost[i].textContent
 			resultCuisine.innerHTML = restaurantData[i].cuisine;
 			resultLink.href = restaurantLink[i].href;
 			resultImage.src = restaurantImages[i].src;
+			resultImage.style.opacity = "1";
 		})
     }
 } //end updateUISucces
