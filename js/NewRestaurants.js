@@ -9,14 +9,6 @@ let romance = [100, 177, 55, 143, 83];
 let disney = [25, 304, 996, 82, 168]
 
 
-// var pullData = {
-// 	categoryOne: 0,
-// 	categoryTwo: 2,
-// 	categoryThree: 5,
-// 	categoryFour: 3
-//   };
-
-
 function checkProfile () {
 	var pullData = JSON.parse(localStorage.getItem("userAnswers"));
 	console.log(pullData)
@@ -53,14 +45,14 @@ function checkProfile () {
 		default:
 			console.log("You done fucked up, brah.");
 	}
-}
+} //end checkProfile
 
 checkProfile();
 
 
 function makeRequest(arr) {
-  let apiKey = "c5d3000aa27c15341e4ef99bcd037e51"
-  let url = `https://developers.zomato.com/api/v2.1/search?entity_id=277&entity_type=city&count=10&radius=25000&cuisines=${arr[0]}%2C%20${arr[1]}%2C%20${arr[2]}%2C%20${arr[3]}%2C%20${arr[4]}&sort=rating&apikey=${apiKey}`
+  // let apiKey = "c5d3000aa27c15341e4ef99bcd037e51"
+  let url = `https://developers.zomato.com/api/v2.1/search?entity_id=277&entity_type=city&count=10&radius=25000&cuisines=${arr[0]}%2C%20${arr[1]}%2C%20${arr[2]}%2C%20${arr[3]}%2C%20${arr[4]}&sort=rating&apikey=${ZAMATO_KEY}`
 
   let restaurantData = null
   $.get(url).done(function(response) {
@@ -93,7 +85,7 @@ function handleResponseObject(data) {
 		console.log(filteredData)
 		return filteredData;
 
-}
+} //end handleResponseObject
 
 
 function updateUISucces(restaurantData) {
@@ -132,7 +124,7 @@ function updateUISucces(restaurantData) {
 			map.style.display = "block";
 		})
     }
-}
+} //end updateUISucces
 
 function setDefaultImage(cuisine, image) {
   switch(true) {
@@ -184,4 +176,4 @@ function setDefaultImage(cuisine, image) {
     default:
       image.src = "./defaultImages/Vegetarian.jpg"
   }
-}
+} //end setDefaultImage
