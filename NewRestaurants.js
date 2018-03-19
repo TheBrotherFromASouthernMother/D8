@@ -121,7 +121,7 @@ function updateUISucces(restaurantData) {
 		restaurantLink[i].href = restaurantData[i].menu;
   	restaurantCost[i].textContent = "$".repeat(Number(restaurantData[i].price));
 		addToItinerary[i].addEventListener("click", function(e) {
-			map.src = "https://www.google.com/maps/embed/v1/place?key=AIzaSyBr_nNH9eMQH8IKiUegBXMArrgJ6bBkVAA&q="
+			map.src = `https://www.google.com/maps/embed/v1/place?key=${GOOGLE_MAPS_KEY}&q=`;
 			let parameters = restaurantData[i].location.replace(" ", "+")
 			map.src += parameters
 			map.style.display = "block";
