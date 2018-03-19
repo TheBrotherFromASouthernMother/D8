@@ -43,19 +43,31 @@
             <h6 id="credit">Powered by Zomato</h6>
         </nav>
 
-        <div class="container-fluid master hero">
+        <!-- <div class="container-fluid master hero"> -->
+        <div class="container-fluid master">
             <div class="row heroBanner">
                 <div class="col-12 order-md-2">
-                    <div class="dateNight d-md-flex "><div class="align-self-end ml-auto">Ready for date night?</div></div>
+                    <div class="pacificoLarge d-md-flex ">
+                        <div class="align-self-end ml-auto">Ready for date night?</div>
+                    </div>
                 </div>
-                <div class="col-lg-9 col-md-12 order-md-1 landingHero">
+                <div class="col-lg-9 col-md-12 order-md-1 heroTxt">
                     <div class="title">Welcome to D8! Our quiz will help you find your personalized date night recommendations.</div>
-                    <div class="landingHero2">
-                    <button class="btn btn-lg btn-block whiteButton" type="button" name="button" id="takeQuiz">Take the Quiz</button>
+                    <div class="heroBtn">
+                        <button class="btn btn-lg btn-block whiteButton" type="button" name="button" id="takeQuiz">Take the Quiz</button>
                     </div>
                 </div>
             </div>
         </div>
+
+        <script type="text/javascript">
+        // this doesn't work. halp.
+            (function() {
+                $("#takeQuiz").on("click", function() {
+                window.open("index.html");
+                });
+            });
+        </script>
 
     <script src="masterJavascript.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
