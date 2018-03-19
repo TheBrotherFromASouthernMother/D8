@@ -3,6 +3,7 @@
 to select from a drop down menu their state
 so that we can provide now playing info for more than just Texas */
 
+// Array containing movie genre ID numbers.
 let genres = {
       "28": "Action",
       "12": "Adventure",
@@ -27,6 +28,7 @@ let genres = {
 
 
 function makeMovieRequest() {
+  // Sets url varibable equal to API url and key.
   let url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${TMDB_KEY}&language=en-US&page=1&ISO 3166-2:US-TX`;
 
   $.get(url).done(function(response) {
@@ -42,6 +44,7 @@ function makeMovieRequest() {
 
 
   function handleResponseObjectMovies(data) {
+    // Pulls poster image, title, description, and genre values from object.
     let posterURL = "http://image.tmdb.org/t/p/w342"
     let filteredData = [];
     let obj = null;
@@ -59,18 +62,36 @@ function makeMovieRequest() {
 
   } //end handleResponseObjectMovies
 
-
+  // Fills html elements with data from handleResponseObjectMovies function.
   function updateUISuccesMovies(data) {
     let carousel = document.querySelectorAll(".carousel-item")
     let movieTitle = document.querySelectorAll(".resultTitleMovies h5");
     let movieGenre = document.querySelectorAll(".resultGenre");
-    let moviePoster = document.querySelectorAll(".resultsImageCoverMovies")
+    let moviePoster = document.querySelectorAll(".resultsImageCoverMovies");
+    let addToItinerary = document.querySelectorAll("#movieCarousel .carousel-inner .carousle-item .card .collapse .card-body .addToItinerary");
 
     for (let i = 0; i < carousel.length; i++) {
       movieTitle[i].textContent = data[i].title;
       moviePoster[i].src = data[i].poster;
       movieGenre[i].textContent = genres[String(data[i].genre[0])];
+
+
+      addToItinerary[i].addEventListener('click', function(e) {
+        console.log(e);
+        let resultGenre = document.querySelector('.movieFinal .resultGenre');
+        console.log(resultGenre + "Here I am")
+        let resultRunTime = document.querySelector('.movieFinal .resultRunTime');
+        let resultLink = document.querySelector('.movieFinal .resultLink a');
+
+
+        resultGenre.innerHTML = movieGenre[i].textContent;
+      })
+
     }
+
+
+
+
   } //end updateUISuccesMovies
 
 } //end makeMovieRequest

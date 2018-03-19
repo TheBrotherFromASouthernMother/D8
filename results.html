@@ -681,7 +681,7 @@ $('#movieCarousel').on('slide.bs.carousel', function (e) {
         }, 1800);
 
         let miniLoaders = document.querySelectorAll('.miniLoader');
-        
+
 
         // NodeList.prototype.forEach = Array.prototype.forEach; // needed for fix in IE browsers: either convert generated NodeList to an array, or prototype Array's forEach to NodeList
         setTimeout(function() {
@@ -689,7 +689,7 @@ $('#movieCarousel').on('slide.bs.carousel', function (e) {
             // miniLoaders.forEach(function(miniLoader) {
             //     miniLoader.style.display = "none";
             // });
-            
+
             // another solution but can't easily reuse
             // [].forEach.call(miniLoaders, function(miniLoader) {
             //     miniLoader.style.display = "none";
