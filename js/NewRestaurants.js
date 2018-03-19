@@ -1,4 +1,4 @@
-
+// Arrays containing cuisine type IDs from Zomato API.
 
 let actionAdventure = [73, 150, 1, 227, 193];
 
@@ -8,23 +8,23 @@ let romance = [100, 177, 55, 143, 83];
 
 let disney = [25, 304, 996, 82, 168]
 
-
 function checkProfile () {
-	var pullData = JSON.parse(localStorage.getItem("userAnswers"));
+	// Pulls masterProfileObject from the masterJavascript file.
+	let pullData = JSON.parse(localStorage.getItem("userAnswers"));
 	console.log(pullData)
-
-	var highestScore = Math.max(pullData.categoryOne, pullData.categoryTwo, pullData.categoryThree, pullData.categoryFour);
-	var userCategory = null;
-	(function() {
-		for (key in pullData) {
-			if (highestScore === pullData[key]) {
-				userCategory = key;
-			}
+	// Saves highest value in masterProfileObject in 'highestScore' variable.
+	let highestScore = Math.max(pullData.categoryOne, pullData.categoryTwo, pullData.categoryThree, pullData.categoryFour);
+	let userCategory = null;
+	// Runs for loop over masterProfileObject and sets 'userCategory' to key name that has the highest value.
+	for (key in pullData) {
+		if (highestScore === pullData[key]) {
+			userCategory = key;
 		}
-	})();
+	}
+
 	console.log(highestScore);
 	console.log(userCategory)
-
+	// Switch statement replaces userCategory value with related array.
 	switch (userCategory) {
 		case("categoryOne"):
 			makeRequest(actionAdventure);
@@ -52,8 +52,9 @@ checkProfile();
 
 function makeRequest(arr) {
   // let apiKey = "c5d3000aa27c15341e4ef99bcd037e51"
+	// Sets url variable to API url that pulls the five highest rated restaurants from the specific cuisine IDs determined in checkProfile.
   let url = `https://developers.zomato.com/api/v2.1/search?entity_id=277&entity_type=city&count=10&radius=25000&cuisines=${arr[0]}%2C%20${arr[1]}%2C%20${arr[2]}%2C%20${arr[3]}%2C%20${arr[4]}&sort=rating&apikey=${ZAMATO_KEY}`
-
+	// Actually gets the five restaurant objects.
   let restaurantData = null
   $.get(url).done(function(response) {
     }).fail(function(error) {
@@ -69,6 +70,7 @@ function makeRequest(arr) {
 function handleResponseObject(data) {
     let filteredData = [];
 		let obj = null;
+		// Pulls restaurant name, type of cuisine, menu, location, a featured image, rating, thumbnail, and price from each restaurant object.
 		for (let i = 0; i < data.restaurants.length; i ++) {
 			obj = {
 					name: data.restaurants[i].restaurant.name,
@@ -99,12 +101,12 @@ function updateUISucces(restaurantData) {
 	let restaurantLink = document.querySelectorAll('.resultLink a');
 	let addToItinerary = document.querySelectorAll(".addToItinerary");
 	let map = document.getElementById('map');
-
+	// Runs for loop that uses the DOM to fill each HTML element with correspondent JSON data.
   for (let i = 0; i < carousel.length; i++) {
 		console.log(restaurantTitles[i])
     restaurantTitles[i].innerHTML = restaurantData[i].name;
   	restaurantCuisines[i].innerHTML = restaurantData[i].cuisine;
-
+		// Checks to see if the restaurant object contains an image. If not, runs setDefaultImage.
   	if (restaurantData[i].featuredImage) {
   		restaurantImages[i].src = restaurantData[i].featuredImage;
   	} else if (restaurantData[i].thumbnail) {
@@ -122,10 +124,26 @@ function updateUISucces(restaurantData) {
 			let parameters = restaurantData[i].location.replace(" ", "+")
 			map.src += parameters
 			map.style.display = "block";
+
+			let resultTitle = document.querySelector('.itineraryCard h5');
+			let resultCost = document.querySelector('.restaurantFinal .resultCost');
+			console.log(resultCost + "Hello");
+			let resultCuisine = document.querySelector('.restaurantFinal .resultCuisine');
+			let resultLink = document.querySelector('.restaurantFinal .resultLink a');
+			let resultImage = document.querySelector('.finalImage');
+			console.log(resultImage);
+			resultTitle.innerHTML = restaurantData[i].name;
+			resultCost.innerHTML = restaurantCost[i].textContent
+			resultCuisine.innerHTML = restaurantData[i].cuisine;
+			resultLink.href = restaurantLink[i].href;
+			resultImage.src = restaurantImages[i].src;
+			console.log(resultImage.src);
 		})
     }
 } //end updateUISucces
 
+
+// Switch statement in a function that when called returns an image from the defaultImages file.
 function setDefaultImage(cuisine, image) {
   switch(true) {
     case (cuisine.startsWith("Italian")):

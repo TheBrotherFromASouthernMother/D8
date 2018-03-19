@@ -154,6 +154,19 @@ h3 {
     font-weight: 700;
 }
 
+.whiteHeroTxt {
+    font-family: 'Muli';
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .whiteHeroTxt {
+        font-size: 36px;
+    }
+}
+
 h4 {
     color: #363537;
     font-family: "Muli", sans-serif;
@@ -388,42 +401,28 @@ img.quizImageCover {
 
 
 
-.pacificoLarge {
+.pacificoHeroTxt {
     font-family: 'Pacifico'; 
     font-size: 54px; 
     color: white; 
     text-align: left; 
-    padding: 10px; 
-    padding-bottom: 20px;
 }
 
 @media (min-width: 768px) {
-    .pacificoLarge {
-        font-family: 'Pacifico'; 
+    .pacificoHeroTxt {
         font-size: 72px; 
-        color: white; 
         text-align: right; 
-        padding: 10px; 
-        padding-bottom: 20px;
     }
 }
 
-.title {
-    font-family: 'Muli';
-    font-size: 24px;
-    color: white;
+.heroBanner {
     padding: 20px;
-    font-weight: 700;
 }
 
 @media (min-width: 768px) {
-        .title {
-        font-family: 'Muli';
-        font-size: 36px;
-        color: white;
+    .heroBanner {
         padding: 40px;
-        font-weight: 700;
-    }
+    }  
 }
 
 
@@ -447,12 +446,19 @@ img.quizImageCover {
     border-radius: 50px;
 }
 
-.heroTxt {
+.heroTxtCol {
     height: 400px;
+    padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .heroTxtCol {
+    padding: 0px;
+    }
 }
 
 .heroBtn {
-    margin: 20px; 
+    margin-top: 40px;
     max-width: 400px;
 }
 
