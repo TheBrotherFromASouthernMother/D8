@@ -41,7 +41,7 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
 /* .answer {
     color: #363537;
     font-family: "Muli", sans-serif;
-    font-weight: 400; 
+    font-weight: 400;
     padding: 10px;
     text-align: left;
 } */
@@ -50,7 +50,7 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     border: 1px solid #8cd867;
     color: #8CD867;
     font-family: "Muli", sans-serif;
-    font-weight: 400; 
+    font-weight: 400;
     padding: 10px;
     text-align: left;
 } */
@@ -87,7 +87,7 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     border: none;
 }
 
-.btn-secondary:hover, .btn-secondary:active:focus { /* when checked, change color to green */ 
+.btn-secondary:hover, .btn-secondary:active:focus { /* when checked, change color to green */
     background-color: #8cd867;
     border: none;
 }
@@ -134,7 +134,7 @@ h2 {
     font-family: "Rammetto One";
     font-size: 36px;
     line-height: 36px;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 
 @media (min-width: 992px) {
@@ -213,6 +213,7 @@ img.resultsImageCover {
 .itineraryCard {
     margin: 15px;
     padding: 20px;
+    display: none;
 }
 
 .itineraryData {
@@ -220,6 +221,10 @@ img.resultsImageCover {
     font-family: "Muli", sans-serif;
     font-weight: 700;
     padding-bottom: 20px;
+}
+
+.finalImage {
+  opacity: 0;
 }
 
 .master {
@@ -402,16 +407,16 @@ img.quizImageCover {
 
 
 .pacificoHeroTxt {
-    font-family: 'Pacifico'; 
-    font-size: 54px; 
-    color: white; 
-    text-align: left; 
+    font-family: 'Pacifico';
+    font-size: 54px;
+    color: white;
+    text-align: left;
 }
 
 @media (min-width: 768px) {
     .pacificoHeroTxt {
-        font-size: 72px; 
-        text-align: right; 
+        font-size: 72px;
+        text-align: right;
     }
 }
 
@@ -422,7 +427,7 @@ img.quizImageCover {
 @media (min-width: 768px) {
     .heroBanner {
         padding: 40px;
-    }  
+    }
 }
 
 

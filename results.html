@@ -95,20 +95,20 @@
 <body>
 
         <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="landing.html"><h1>d8</h1></a>
+            <a class="navbar-brand" href="index.html"><h1>d8</h1></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="landing.html">Home<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item d-block d-lg-none d-xl-none">
                         <a class="nav-link" href="#">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Quiz</a>
+                        <a class="nav-link" href="quiz.html">Quiz</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="results.html">Browse</a>
@@ -162,7 +162,7 @@
                                         <p class="resultCuisine">Japanese</p>
                                         <p class="resultLink"><a class="greenLink" href="#">Menu</a></p>
                                     </div>
-                                    <!-- <p class="resultReview">This place is great. I love sushi!!!!</p> -->
+                                    <p class="resultReview">This place is great. I love sushi!!!!</p>
                                 </div>
                             </div>
                         </div>
@@ -575,7 +575,7 @@
 
         <div class="row d-flex justify-content-center">
             <div class="col-lg-5 col-md-12 itineraryCard">
-                <h5>Sushi Restaurant #1</h5>
+                <h5></h5>
 
                 <div class="row d-flex justify-content-space-between itineraryData restaurantFinal">
                     <div class="col resultCost">$$$</div>
@@ -585,7 +585,7 @@
 
                 <div class="resultReview"></div>
 
-                <h5>Wes Anderson Movie #1</h5>
+                <h5></h5>
 
                 <div class="row d-flex justify-content-space-between itineraryData movieFinal">
                     <div class="col resultGenre">Indie</div>
@@ -681,7 +681,7 @@ $('#movieCarousel').on('slide.bs.carousel', function (e) {
         }, 1800);
 
         let miniLoaders = document.querySelectorAll('.miniLoader');
-        
+
 
         // NodeList.prototype.forEach = Array.prototype.forEach; // needed for fix in IE browsers: either convert generated NodeList to an array, or prototype Array's forEach to NodeList
         setTimeout(function() {
@@ -689,7 +689,7 @@ $('#movieCarousel').on('slide.bs.carousel', function (e) {
             // miniLoaders.forEach(function(miniLoader) {
             //     miniLoader.style.display = "none";
             // });
-            
+
             // another solution but can't easily reuse
             // [].forEach.call(miniLoaders, function(miniLoader) {
             //     miniLoader.style.display = "none";

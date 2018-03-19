@@ -3,6 +3,7 @@
 to select from a drop down menu their state
 so that we can provide now playing info for more than just Texas */
 
+// Array containing movie genre ID numbers.
 let genres = {
       "28": "Action",
       "12": "Adventure",
@@ -27,6 +28,7 @@ let genres = {
 
 
 function makeMovieRequest() {
+  // Sets url varibable equal to API url and key.
   let url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${TMDB_KEY}&language=en-US&page=1&ISO 3166-2:US-TX`;
 
   $.get(url).done(function(response) {
@@ -42,6 +44,8 @@ function makeMovieRequest() {
 
 
   function handleResponseObjectMovies(data) {
+    // Pulls poster image, title, description, and genre values from object.
+    console.log(data)
     let posterURL = "http://image.tmdb.org/t/p/w342"
     let filteredData = [];
     let obj = null;
@@ -50,8 +54,9 @@ function makeMovieRequest() {
         title: data.results[i].title,
         description: data.results[i].overview,
         poster: posterURL + data.results[i].poster_path,
-        genre: data.results[i].genre_ids
-      }
+        genre: data.results[i].genre_ids,
+        rating: data.results[i].vote_average
+        }
       filteredData.push(obj)
     }
     console.log(filteredData)
@@ -59,18 +64,44 @@ function makeMovieRequest() {
 
   } //end handleResponseObjectMovies
 
-
+  // Fills html elements with data from handleResponseObjectMovies function.
   function updateUISuccesMovies(data) {
     let carousel = document.querySelectorAll(".carousel-item")
     let movieTitle = document.querySelectorAll(".resultTitleMovies h5");
     let movieGenre = document.querySelectorAll(".resultGenre");
-    let moviePoster = document.querySelectorAll(".resultsImageCoverMovies")
+    let moviePoster = document.querySelectorAll(".resultsImageCoverMovies");
+    let rating = document.querySelectorAll(".resultRunTime");
+    let addToItinerary = document.querySelectorAll("#movieCarousel .carousel-inner .carousel-item .card .collapse .card-body .addToItinerary");
+
+    console.log(addToItinerary)
 
     for (let i = 0; i < carousel.length; i++) {
       movieTitle[i].textContent = data[i].title;
       moviePoster[i].src = data[i].poster;
       movieGenre[i].textContent = genres[String(data[i].genre[0])];
+      rating[i].textContent = `Rating: ${String(data[i].rating)} of 10`;
+
+
+      addToItinerary[i].addEventListener("click", function(e) {
+        let itineraryCard = document.querySelector('.itineraryCard');
+        let resultTitle = document.querySelectorAll('.itineraryCard h5')[1];
+        let resultGenre = document.querySelector('.movieFinal .resultGenre');
+        let resultRunTime = document.querySelector('.movieFinal .resultRunTime');
+        let resultLink = document.querySelector('.movieFinal .resultLink a');
+
+        resultTitle.textContent = movieTitle[i].textContent;
+        resultGenre.innerHTML = movieGenre[i].textContent;
+        resultLink.href = "https://mobile.fandango.com/theaters";
+        resultRunTime.textContent = rating[i].textContent;
+        itineraryCard.style.display = "block";
+
+      })
+
     }
+
+
+
+
   } //end updateUISuccesMovies
 
 } //end makeMovieRequest

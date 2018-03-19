@@ -11,7 +11,6 @@ let disney = [25, 304, 996, 82, 168]
 function checkProfile () {
 	// Pulls masterProfileObject from the masterJavascript file.
 	let pullData = JSON.parse(localStorage.getItem("userAnswers"));
-	console.log(pullData)
 	// Saves highest value in masterProfileObject in 'highestScore' variable.
 	let highestScore = Math.max(pullData.categoryOne, pullData.categoryTwo, pullData.categoryThree, pullData.categoryFour);
 	let userCategory = null;
@@ -22,8 +21,6 @@ function checkProfile () {
 		}
 	}
 
-	console.log(highestScore);
-	console.log(userCategory)
 	// Switch statement replaces userCategory value with related array.
 	switch (userCategory) {
 		case("categoryOne"):
@@ -84,7 +81,6 @@ function handleResponseObject(data) {
 				}
 			filteredData.push(obj)
 		}
-		console.log(filteredData)
 		return filteredData;
 
 } //end handleResponseObject
@@ -97,13 +93,13 @@ function updateUISucces(restaurantData) {
 	let restaurantTitles = document.querySelectorAll('.resultTitle h5');
 	let restaurantCuisines = document.querySelectorAll('.resultCuisine');
 	let restaurantImages = document.querySelectorAll('.resultsImageCover');
+	let address = document.querySelectorAll(".resultReview");
 	let restaurantCost = document.querySelectorAll(".resultCost");
 	let restaurantLink = document.querySelectorAll('.resultLink a');
 	let addToItinerary = document.querySelectorAll(".addToItinerary");
 	let map = document.getElementById('map');
 	// Runs for loop that uses the DOM to fill each HTML element with correspondent JSON data.
   for (let i = 0; i < carousel.length; i++) {
-		console.log(restaurantTitles[i]);
     restaurantTitles[i].innerHTML = restaurantData[i].name;
   	restaurantCuisines[i].innerHTML = restaurantData[i].cuisine;
 		// Checks to see if the restaurant object contains an image. If not, runs setDefaultImage.
@@ -117,6 +113,7 @@ function updateUISucces(restaurantData) {
 
 		restaurantLink[i].href = restaurantData[i].menu;
   	restaurantCost[i].textContent = "$".repeat(Number(restaurantData[i].price));
+		address[i].textContent = restaurantData[i].location;
 
 		//Opens an embedded map on the page based on the restaurant selected by the user
 		addToItinerary[i].addEventListener("click", function(e) {
@@ -127,17 +124,16 @@ function updateUISucces(restaurantData) {
 
 			let resultTitle = document.querySelector('.itineraryCard h5');
 			let resultCost = document.querySelector('.restaurantFinal .resultCost');
-			console.log(resultCost + "Hello");
 			let resultCuisine = document.querySelector('.restaurantFinal .resultCuisine');
 			let resultLink = document.querySelector('.restaurantFinal .resultLink a');
 			let resultImage = document.querySelector('.finalImage');
-			console.log(resultImage);
+
 			resultTitle.innerHTML = restaurantData[i].name;
 			resultCost.innerHTML = restaurantCost[i].textContent
 			resultCuisine.innerHTML = restaurantData[i].cuisine;
 			resultLink.href = restaurantLink[i].href;
 			resultImage.src = restaurantImages[i].src;
-			console.log(resultImage.src);
+			resultImage.style.opacity = "1";
 		})
     }
 } //end updateUISucces
