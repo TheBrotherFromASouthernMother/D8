@@ -126,12 +126,26 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
 /* HEADINGS */
 h1 {
     color: #8cd867;
-    font-family: "Rammetto One"
+    font-family: "Pacifico";
 }
 
 h2 {
-    color: #363537;
-    font-family: "Rammetto One", cursive;
+    color: pink;
+    font-family: "Rammetto One";
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase; 
+}
+
+@media (min-width: 992px) {
+    h2 {
+        font-size: 125px;
+        line-height: 125px;
+    }
+}
+
+.takeTheQuiz {
+    padding: 20px;
 }
 
 h3 {
@@ -371,9 +385,7 @@ img.quizImageCover {
     margin-top: 20px;
 } */
 
-h1 {
-    font-family: "Pacifico";
-}
+
 
 
 .pacificoLarge {
