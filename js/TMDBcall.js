@@ -45,6 +45,7 @@ function makeMovieRequest() {
 
   function handleResponseObjectMovies(data) {
     // Pulls poster image, title, description, and genre values from object.
+    console.log(data)
     let posterURL = "http://image.tmdb.org/t/p/w342"
     let filteredData = [];
     let obj = null;
@@ -53,8 +54,9 @@ function makeMovieRequest() {
         title: data.results[i].title,
         description: data.results[i].overview,
         poster: posterURL + data.results[i].poster_path,
-        genre: data.results[i].genre_ids
-      }
+        genre: data.results[i].genre_ids,
+        rating: data.results[i].vote_average
+        }
       filteredData.push(obj)
     }
     console.log(filteredData)
@@ -68,23 +70,30 @@ function makeMovieRequest() {
     let movieTitle = document.querySelectorAll(".resultTitleMovies h5");
     let movieGenre = document.querySelectorAll(".resultGenre");
     let moviePoster = document.querySelectorAll(".resultsImageCoverMovies");
-    let addToItinerary = document.querySelectorAll("#movieCarousel .carousel-inner .carousle-item .card .collapse .card-body .addToItinerary");
+    let rating = document.querySelectorAll(".resultRunTime");
+    let addToItinerary = document.querySelectorAll("#movieCarousel .carousel-inner .carousel-item .card .collapse .card-body .addToItinerary");
+
+    console.log(addToItinerary)
 
     for (let i = 0; i < carousel.length; i++) {
       movieTitle[i].textContent = data[i].title;
       moviePoster[i].src = data[i].poster;
       movieGenre[i].textContent = genres[String(data[i].genre[0])];
+      rating[i].textContent = `Rating: ${String(data[i].rating)} of 10`;
 
 
-      addToItinerary[i].addEventListener('click', function(e) {
+      addToItinerary[i].addEventListener("click", function(e) {
         console.log(e);
+        let resultTitle = document.querySelectorAll('.itineraryCard h5')[1];
         let resultGenre = document.querySelector('.movieFinal .resultGenre');
-        console.log(resultGenre + "Here I am")
         let resultRunTime = document.querySelector('.movieFinal .resultRunTime');
         let resultLink = document.querySelector('.movieFinal .resultLink a');
 
-
+        resultTitle.textContent = movieTitle[i].textContent;
         resultGenre.innerHTML = movieGenre[i].textContent;
+        resultLink.href = "https://mobile.fandango.com/theaters";
+        resultRunTime.textContent = rating[i].textContent;
+
       })
 
     }
