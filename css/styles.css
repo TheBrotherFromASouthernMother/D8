@@ -126,12 +126,26 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
 /* HEADINGS */
 h1 {
     color: #8cd867;
-    font-family: "Rammetto One"
+    font-family: "Pacifico";
 }
 
 h2 {
-    color: #363537;
-    font-family: "Rammetto One", cursive;
+    color: pink;
+    font-family: "Rammetto One";
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase; 
+}
+
+@media (min-width: 992px) {
+    h2 {
+        font-size: 125px;
+        line-height: 125px;
+    }
+}
+
+.takeTheQuiz {
+    padding: 20px;
 }
 
 h3 {
@@ -196,7 +210,8 @@ img.resultsImageCover {
 }
 
 .master {
-    padding-top: 50px;
+    padding-top: 45px;
+    margin-top: 20px;
 }
 
 .navbar {
@@ -230,7 +245,7 @@ p {
 }
 
 .redButton {
-    background-color: #FF2B6B;
+    background-color: #ff3366;
     border: none;
     border-radius: 0px;
     color: white;
@@ -365,16 +380,15 @@ img.quizImageCover {
     padding: 0px;
 }
 
-.hero {
+/* included styles in master class */
+/* .hero {
     margin-top: 20px;
-}
-
-h1 {
-    font-family: "Pacifico";
-}
+} */
 
 
-.dateNight {
+
+
+.pacificoLarge {
     font-family: 'Pacifico'; 
     font-size: 54px; 
     color: white; 
@@ -384,7 +398,7 @@ h1 {
 }
 
 @media (min-width: 768px) {
-    .dateNight {
+    .pacificoLarge {
         font-family: 'Pacifico'; 
         font-size: 72px; 
         color: white; 
@@ -413,10 +427,12 @@ h1 {
 }
 
 
+/* landing page banner */
 .heroBanner {
     background: linear-gradient(to bottom left, pink, coral);
     height: 600px;
 }
+
 .navbar {
     padding: 0px 20px;
 }
@@ -431,11 +447,11 @@ h1 {
     border-radius: 50px;
 }
 
-.landingHero {
+.heroTxt {
     height: 400px;
 }
 
-.landingHero2 {
+.heroBtn {
     margin: 20px; 
     max-width: 400px;
 }
