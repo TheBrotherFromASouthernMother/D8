@@ -103,7 +103,7 @@ function updateUISucces(restaurantData) {
 	let map = document.getElementById('map');
 	// Runs for loop that uses the DOM to fill each HTML element with correspondent JSON data.
   for (let i = 0; i < carousel.length; i++) {
-		console.log(restaurantTitles[i])
+		console.log(restaurantTitles[i]);
     restaurantTitles[i].innerHTML = restaurantData[i].name;
   	restaurantCuisines[i].innerHTML = restaurantData[i].cuisine;
 		// Checks to see if the restaurant object contains an image. If not, runs setDefaultImage.
