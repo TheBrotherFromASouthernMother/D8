@@ -2,6 +2,7 @@
 
 a.greenLink, a.greenLink:hover, a.greenLink:visited {
     color: #8CD867;
+    font-weight: 700;
     text-decoration: none;
 }
 
@@ -22,7 +23,6 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
 
 .accordionControl:hover,
 .quizControl:hover {
-    /* background-color: #363537; */
     background-color: salmon;
     height: 100px;
     margin: 0px;
@@ -55,21 +55,13 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     text-align: left;
 } */
 
+/* BUTTONS */
 .answerButton {
     padding-bottom: 10px;
     border: 2px solid #596869;
     border-radius: 4px !important;
     background-color: transparent;
     margin: 5px !important;
-}
-
-/* footer style */
-#credit { /* probs change id or class */
-    margin-left: auto;
-    margin-right: auto;
-    /* text-align: center; */
-    color: salmon;
-    padding-top: 10px;
 }
 
 .btn, .btn:hover, .btn:focus {
@@ -82,6 +74,7 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     text-decoration: none;
 }
 
+/* quiz answer buttons */
 .btn-secondary {
     background-color: white;
     border: 1px solid #596869;
@@ -89,7 +82,6 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     border-radius: 4px;
 }
 
-/*buttons*/
 .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary:not(:disabled):not(.disabled).active, .show > .btn-secondary.dropdown-toggle {
     background-color: #8cd867 !important;
     border: none;
@@ -100,6 +92,7 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     border: none;
 }
 
+/* RESULTS PAGE CARDS */
 .card {
     border: none;
 }
@@ -131,7 +124,6 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
 
 
 /* HEADINGS */
-
 h1 {
     color: #8cd867;
     font-family: "Rammetto One"
@@ -140,14 +132,12 @@ h1 {
 h2 {
     color: #363537;
     font-family: "Rammetto One", cursive;
-    /* text-align: center;    */
 }
 
 h3 {
     color: #363537;
     font-family: "Muli", sans-serif;
     font-weight: 700;
-    /* text-align: center;    */
 }
 
 h4 {
@@ -156,7 +146,6 @@ h4 {
     font-weight: 700;
 }
 
-/* glitch underline on hover */
 h4:hover, h4:visited, h4:focus {
     color: #363537;
     font-family: "Muli", sans-serif;
@@ -176,6 +165,14 @@ h5 {
     text-align: left;
 }
 
+/* footer style */
+h6#credit {
+    margin-left: auto;
+    margin-right: auto;
+    color: salmon;
+    padding-top: 10px;
+}
+
 /* IMAGE MASK */
 img.resultsImageCover {
     height: 300px;
@@ -187,8 +184,6 @@ img.resultsImageCover {
 }
 
 .itineraryCard {
-    /* border: 1px solid #363537;
-    border-radius: 4px 4px 0px 0px; */
     margin: 15px;
     padding: 20px;
 }
@@ -224,18 +219,14 @@ p {
 }
 
 .questionAnswers {
-    /* margin-left: auto;
-    margin-right: auto; */
     border-top: 1px solid #596869;
     padding-top: 20px;
     margin-top: 20px;
-    /* text-align: center; */
 }
 
 .questionBox {
     margin-left: auto;
     margin-right: auto;
-    /* text-align: center; */
 }
 
 .redButton {
@@ -264,11 +255,11 @@ p {
     margin-top: 100px;
 }
 
-.resultReview {
+/* .resultReview {
     border-top: 1px solid #596869;
     padding-top: 30px;
     width: 100%;
-}
+} */
 
 .resultTable {
     color: #363537;
@@ -277,12 +268,10 @@ p {
     padding-bottom: 20px;
 }
 
-.quiz {
-    /* width: 961px; */
+/* .quiz {
     margin-left: auto;
     margin-right: auto;
-    /* text-align: center; */
-}
+} */
 
 /* .quizItem {
     padding-top: 150px;
@@ -292,19 +281,17 @@ p {
     color: #363537;
     font-family: "Muli", sans-serif;
     font-weight: 400;
-    /* padding: 20px; */
     font-size: 24px;
-    /* text-align: center; */
 }
 
 
 /* Erin's added styles */
-.backButton {
+/* .backButton {
     width: 40px;
     height: auto;
     filter: grayscale(100%);
     opacity: 0.2;
-}
+} */
 
 .quizControlArrow, .quizControlArrow:hover {
     background-color: none;
@@ -426,43 +413,44 @@ h1 {
 }
 
 
-    .heroBanner {
-        background: linear-gradient(to bottom left, pink, coral);
-        height: 600px;
-    }
-    .navbar {
-        padding: 0px 20px;
-    }
-
-    .nav-link:hover {
-        color: coral !important;
-    }
-
-    .profileThumbnail {
-        width: 50px;
-        border: 2px solid #EFEFEF;
-        border-radius: 50px;
-    }
-
-    .landingHero {
-        height: 400px;
-    }
-    .landingHero2 {
-        margin: 20px; 
-        max-width: 400px;
-    }
-
-    .whiteButton {
-
-    background-color: white;
-    border: none;
-    border-radius: 0px;
-    color: coral;
-    font-family: "Muli", sans-serif;
-    font-weight: bold;
-    padding: 15px;
+.heroBanner {
+    background: linear-gradient(to bottom left, pink, coral);
+    height: 600px;
+}
+.navbar {
+    padding: 0px 20px;
 }
 
-.whitebutton:hover {
+.nav-link:hover {
+    color: coral !important;
+}
+
+.profileThumbnail {
+    width: 50px;
+    border: 2px solid #EFEFEF;
+    border-radius: 50px;
+}
+
+.landingHero {
+    height: 400px;
+}
+
+.landingHero2 {
+    margin: 20px; 
+    max-width: 400px;
+}
+
+.whiteButton {
+
+background-color: white;
+border: none;
+border-radius: 0px;
+color: coral;
+font-family: "Muli", sans-serif;
+font-weight: bold;
+padding: 15px;
+}
+
+.whitebutton:hover { /* glitch */
     filter: brightness(85%);
 }
