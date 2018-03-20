@@ -6,12 +6,6 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     text-decoration: none;
 }
 
-/* ACCORDION CAROUSEL CONTROLS */
-/* .accordionControl:hover > .carousel-control-next-icon,
-.accordionControl:hover > .carousel-control-prev-icon {
-    opacity: 1;
-} */
-
 .accordionControl, .quizControl {
     background-color: none;
     height: 100px;
@@ -31,30 +25,6 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     width: 40px;
 }
 
-/* .quizControl:hover > .carousel-control-next-icon,
-.quizControl:hover > .carousel-control-prev-icon {
-    opacity: 1;
-}
-
-/* quiz answers - need to change probably - I don't think this is actually doing anything */
-/* .answer {
-    color: #363537;
-    font-family: "Muli", sans-serif;
-    font-weight: 400;
-    padding: 10px;
-    text-align: left;
-} */
-
-/* .answer:hover, .answer:checked {
-    border: 1px solid #8cd867;
-    color: #8CD867;
-    font-family: "Muli", sans-serif;
-    font-weight: 400;
-    padding: 10px;
-    text-align: left;
-} */
-
-/* BUTTONS */
 .answerButton {
     padding-bottom: 10px;
     border: 2px solid #596869;
@@ -90,24 +60,24 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     border: none;
 }
 
-
-/* RESULTS PAGE CARDS */
-.card {
-    border: none;
-}
-
 .card-body {
+    background-color: white;
+    border: none;
     padding: 0px;
 }
 
-.card-header {
-    background-color: #EFEFEF;
-    color: white;
-    border: none;
+.carouselSmCard {
+    max-width: 300px;
+    width: 300px;
 }
 
-.cardResult {
-    padding: 20px 30px;
+.cardResult, .card-header {
+    border: none;
+    background-color: white;
+}
+
+.card {
+    border: none;
 }
 
 .carousel-control-next-icon, .carousel-control-prev-icon {
@@ -120,7 +90,6 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
         margin-top: 50px;
     }
 }
-
 
 /* HEADINGS */
 h1 {
@@ -142,8 +111,6 @@ h2 {
         line-height: 125px;
     }
 }
-
-
 
 h3 {
     color: #363537;
@@ -182,29 +149,11 @@ h5 {
     font-weight: 700;
 }
 
-h5 {
-    color: #363537;
-    font-family: "Muli", sans-serif;
-    font-weight: 400;
-    text-align: left;
-}
-
-/* footer style */
-h6#credit {
+h6#credit { /* footer style */
     margin-left: auto;
     margin-right: auto;
     color: salmon;
     padding-top: 10px;
-}
-
-.takeTheQuiz {
-    padding-top: 20px;
-}
-
-@media (min-width: 768px) {
-    .takeTheQuiz {
-        padding: 0px;
-    }
 }
 
 .heroTxtCol, .quizTxtCol {
@@ -218,17 +167,9 @@ h6#credit {
     }
 }
 
-/* .quizTxtCol {
-    height: 400px;
-    margin: 0px;
-    padding: 20px 20px;
-} */
-
 @media (min-width: 992px) {
     .quizTxtCol {
     height: 500px;
-    /* margin: 0px; */
-    /* padding: 50px; */
     padding: 0px;
     }
 }
@@ -274,6 +215,22 @@ img.resultsImageCover {
     width: 100%;
 }
 
+img.quizImageSm {
+    height: 30px;
+    opacity: 0.2;
+}
+
+@media (min-width: 768px) {
+    img.quizImageSm {
+        height: 100px;
+        opacity: 0.2;
+    }
+}
+
+img.resultsImageCover {
+    height: 150px;
+}
+
 .itineraryCard {
     margin: 15px;
     padding: 20px;
@@ -316,7 +273,7 @@ p {
 }
 
 .questionAnswers {
-    border-top: 1px solid #596869;
+    border-top: 2px solid #EFEFEF;
     padding-top: 20px;
     margin-top: 20px;
 }
@@ -338,6 +295,20 @@ p {
 
 .redButton:hover {
     filter: brightness(85%);
+}
+
+#restaurantCarousel {
+    height: 600px;
+    padding: 20px 0px;
+    margin: 0px;
+}
+
+.resultTable {
+    font-size: 14px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 2px solid #EFEFEF;
+    padding-bottom: 0px;
 }
 
 #restaurantCarousel, #movieCarousel {
@@ -499,6 +470,21 @@ img.quizImageCover {
     border-radius: 50px;
 }
 
+.takeTheQuiz {
+    padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .takeTheQuiz {
+        padding: 0px;
+    }
+}
+
+.theBackground {
+    background: linear-gradient(to bottom, pink, pink 50%, white 50%, white);
+    background-size: 100% 320px;
+}
+
 .whiteButton {
 background-color: white;
 border: none;
@@ -511,52 +497,4 @@ padding: 15px;
 
 .whitebutton:hover { /* glitch */
     filter: brightness(85%);
-}
-
-
-/* included styles in master class */
-/* .hero {
-    margin-top: 20px;
-} */
-
-
-.theBackground {
-    background: linear-gradient(to bottom, pink, pink 50%, white 50%, white);
-    background-size: 100% 300px;
-    padding: 20px;
-}
-
-.carouselSmCard {
-    width: 300px;
-    max-width: 300px;
-}
-
-img.resultsImageCover {
-    height: 150px;
-}
-
-#restaurantCarousel {
-    height: 600px;
-    padding: 30px 0px;
-}
-
-h5 {
-    font-weight: 700;
-}
-
-.cardResult {
-    margin: 0px;
-    padding: 0px;
-}
-
-.card-header {
-    background-color: white;
-}
-
-.resultTable {
-    font-size: 14px;
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 2px solid #EFEFEF;
-    padding-bottom: 0px;
 }
