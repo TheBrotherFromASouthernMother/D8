@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i|Rammetto+One|Pacifico');
 
+/* next three styles is for the CSS fix for persistent footer */
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    
+    margin: 0;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+
+
 a.greenLink, a.greenLink:hover, a.greenLink:visited {
     color: #8CD867;
     font-weight: 700;
@@ -90,6 +109,14 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     .extraTopMargin {
         margin-top: 50px;
     }
+}
+
+.footer {
+    /* margin-bottom: 10px; */
+    /* padding-bottom: 100px; */
+    /* border-bottom: 100px solid transparent; */
+    /* display: inline; */
+    position: absolute;
 }
 
 /* HEADINGS */
@@ -258,6 +285,7 @@ img.resultsImageCover {
     position: fixed;
     background-color: white;
     border-bottom: 2px solid #EFEFEF;
+    border-top: 2px solid #EFEFEF;
     padding: 5px;
 }
 
