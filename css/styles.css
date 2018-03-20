@@ -11,7 +11,6 @@ html {
 }
 
 body {
-    
     margin: 0;
     padding-bottom: 50px;
     position: relative;
@@ -290,7 +289,7 @@ img.resultsImageCover {
 }
 
 #movieCarousel {
-    height: 680px;
+    height: 750px;
 }
 .navbar {
     position: fixed;
@@ -343,12 +342,21 @@ p {
     margin: 0px;
 }
 
-.resultTable {
+.resultReview {
     font-size: 14px;
-    margin-top: 10px;
-    padding-top: 10px;
+}
+.resultTable {
     border-top: 2px solid #EFEFEF;
-    padding-bottom: 0px;
+    color: #363537;
+    font-family: "Muli", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    width: 230px;
 }
 
 #restaurantCarousel, #movieCarousel {
@@ -378,17 +386,11 @@ p {
     }
 }
 
-/* .resultReview {
-    border-top: 1px solid #596869;
-    padding-top: 30px;
-    width: 100%;
-} */
-
-.resultTable {
-    color: #363537;
-    font-family: "Muli", sans-serif;
-    font-weight: 700;
-    padding-bottom: 20px;
+.resultReview {
+    margin-left: auto;
+    margin-right: auto;
+    /* padding-left: 12px; */
+    width: 230px;
 }
 
 /* .quiz {
