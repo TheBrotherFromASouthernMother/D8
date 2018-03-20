@@ -111,6 +111,9 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     }
 }
 
+.finalize {
+    margin-bottom: 20px;
+}
 .footer {
     /* margin-bottom: 10px; */
     /* padding-bottom: 100px; */
@@ -323,7 +326,6 @@ p {
     font-family: "Muli", sans-serif;
     font-weight: bold;
     padding: 15px;
-    margin-bottom: 20px;
 }
 
 .redButton:hover {
