@@ -76,7 +76,7 @@
             <img class="rounded-circle profileThumbnail d-none d-lg-block d-xl-block" src="defaultImages/profileDefault.png" alt="profileThumbnail">
         </nav>
 
-        <nav class="navbar fixed-bottom">
+        <nav class="navbar fixed-bottom footer">
             <h6 id="credit">Powered by Zomato</h6>
         </nav>
 
@@ -92,15 +92,15 @@
         <div class="loader"></div>
 
         <!-- RESTAURANTS -->
-        <div class="row resultHeadingH3 d-flex justify-content-center">
-            <h3>Restaurants</h3>
+        <div class="row">
+            <h3 class="resultHeadingH3">Restaurants</h3>
         </div>
 
-        <div id="restaurantCarousel" class="carousel slide theBackground" data-ride="carousel" data-interval="false">
+        <div id="restaurantCarousel" class="carousel slide theBackgroundA d-flex" data-ride="carousel" data-interval="false">
             <div class="carousel-inner row w-100 mx-auto" role="listbox">
 
                 <!-- this is how the carousel card should look -->
-                <div class="carousel-item carouselSmCard col-md-4 active">
+                <div class="carousel-item carouselSmCard col active">
                     <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 1">
                     <div class="card">
                         <div class="card-header" id="restaurantHeadingOne">
@@ -124,7 +124,7 @@
                 </div>
                 <!-- END -->
 
-                <div class="carousel-item carouselSmCard col-md-4">
+                <div class="carousel-item carouselSmCard col">
                     <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 2">
 
                     <div class="card">
@@ -153,7 +153,7 @@
                     </div>
 
                 </div>
-                <div class="carousel-item carouselSmCard col-md-4">
+                <div class="carousel-item carouselSmCard">
                     <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 3">
 
                     <div class="card">
@@ -182,7 +182,7 @@
                     </div>
 
                 </div>
-                <div class="carousel-item carouselSmCard col-md-4">
+                <div class="carousel-item carouselSmCard col">
                     <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 4">
 
                     <div class="card">
@@ -211,7 +211,7 @@
                     </div>
 
                 </div>
-                <div class="carousel-item carouselSmCard col-md-4">
+                <div class="carousel-item carouselSmCard col">
                     <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 5">
 
                     <div class="card">
@@ -240,7 +240,7 @@
                     </div>
 
                 </div>
-                <div class="carousel-item carouselSmCard col-md-4">
+                <div class="carousel-item carouselSmCard col">
                     <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 6">
 
                     <div class="card">
@@ -267,7 +267,7 @@
                     </div>
 
                 </div>
-                <div class="carousel-item carouselSmCard col-md-4">
+                <div class="carousel-item carouselSmCard col">
                     <img class="img-fluid mx-auto d-block resultsImageCover" src="http://via.placeholder.com/350x150" alt="slide 7">
 
                     <div class="card">
@@ -295,25 +295,29 @@
 
                 </div>
             </div>
-            <a class="carousel-control-prev accordionControl" href="#restaurantCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+            <div class="align-self-start" style="margin-top: 190px;">
+            <a class="accordionControl" href="#restaurantCarousel" role="button" data-slide="prev">
+                <img src="defaultImages/carouselArrows-01.png">
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next text-faded accordionControl" href="#restaurantCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+            <a class="accordionControl" href="#restaurantCarousel" role="button" data-slide="next">
+                <img src="defaultImages/carouselArrows-02.png">
                 <span class="sr-only">Next</span>
             </a>
+            </div>
         </div>
 
         <!-- MOVIES -->
 
-        <div class="row resultHeadingH3 d-flex justify-content-center">
-            <h3>Movies</h3>
+        <div class="row">
+            <h3 class="resultHeadingH3">Movies</h3>
         </div>
 
-        <div id="movieCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div id="movieCarousel" class="carousel slide theBackgroundB d-flex" data-ride="carousel" data-interval="false">
             <div class="carousel-inner row w-100 mx-auto" role="listbox">
-                <div class="carousel-item carouselSmCard col-md-4 active">
+                <div class="carousel-item carouselSmCard col active">
                     <img class="img-fluid mx-auto d-block resultsImageCoverMovies" src="http://via.placeholder.com/350x150" alt="slide 1">
 
                     <div class="card">
@@ -340,7 +344,7 @@
                     </div>
 
                 </div>
-                <div class="carousel-item carouselSmCard col-md-4">
+                <div class="carousel-item carouselSmCard col">
                     <img class="img-fluid mx-auto d-block resultsImageCoverMovies" src="http://via.placeholder.com/350x150" alt="slide 2">
 
                     <div class="card">
@@ -367,7 +371,7 @@
                     </div>
 
                 </div>
-                <div class="carousel-item carouselSmCard col-md-4">
+                <div class="carousel-item carouselSmCard col">
                     <img class="img-fluid mx-auto d-block resultsImageCoverMovies" src="http://via.placeholder.com/350x150" alt="slide 3">
 
                     <div class="card">
@@ -395,7 +399,7 @@
                     </div>
 
                 </div>
-                <div class="carousel-item carouselSmCard col-md-4">
+                <div class="carousel-item carouselSmCard col">
                     <img class="img-fluid mx-auto d-block resultsImageCoverMovies" src="http://via.placeholder.com/350x150" alt="slide 4">
 
                     <div class="card">
@@ -423,7 +427,7 @@
                     </div>
 
                 </div>
-                <div class="carousel-item carouselSmCard col-md-4">
+                <div class="carousel-item carouselSmCard col">
                     <img class="img-fluid mx-auto d-block resultsImageCoverMovies" src="http://via.placeholder.com/350x150" alt="slide 5">
 
                     <div class="card">
@@ -452,7 +456,7 @@
                     </div>
 
                 </div>
-                <div class="carousel-item carouselSmCard col-md-4">
+                <div class="carousel-item carouselSmCard col">
                     <img class="img-fluid mx-auto d-block resultsImageCoverMovies" src="http://via.placeholder.com/350x150" alt="slide 6">
 
                     <div class="card">
@@ -480,7 +484,7 @@
                     </div>
 
                 </div>
-                <div class="carousel-item carouselSmCard col-md-4">
+                <div class="carousel-item carouselSmCard col">
                     <img class="img-fluid mx-auto d-block resultsImageCoverMovies" src="http://via.placeholder.com/350x150" alt="slide 7">
 
                     <div class="card">
@@ -509,21 +513,24 @@
 
                 </div>
             </div>
-            <a class="carousel-control-prev accordionControl" href="#movieCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <div class="align-self-start" style="margin-top: 190px;">
+            <a class="accordionControl" href="#movieCarousel" role="button" data-slide="prev">
+                <img src="defaultImages/carouselArrows-01.png">
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next text-faded accordionControl" href="#movieCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+            <a class="accordionControl" href="#movieCarousel" role="button" data-slide="next">
+                <img src="defaultImages/carouselArrows-02.png">
                 <span class="sr-only">Next</span>
             </a>
+            </div>
         </div>
 
 
         <!-- ITINERARY -->
 
-        <div class="row resultHeadingH3 d-flex justify-content-center">
-            <h3>Itinerary</h3>
+        <div class="row">
+            <h3 class="resultHeadingH3">Itinerary</h3>
         </div>
 
         <div class="row d-flex justify-content-center">
@@ -557,7 +564,7 @@
 
         <div class="row d-flex justify-content-center">
             <div class="col-lg-4 col-md-12">
-                <button type="button" class="btn btn-lg btn-block redButton extraTopMargin">Finalize</button>
+                <button type="button" class="btn btn-lg btn-block redButton extraTopMargin finalize">Finalize</button>
             </div>
         </div>
 

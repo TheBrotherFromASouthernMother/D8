@@ -1,12 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i|Rammetto+One|Pacifico');
 
+/* next three styles are for the CSS fix for persistent footer */
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    
+    margin: 0;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+
+
 a.greenLink, a.greenLink:hover, a.greenLink:visited {
     color: #8CD867;
     font-weight: 700;
     text-decoration: none;
 }
 
-.accordionControl, .quizControl {
+/* .accordionControl, .quizControl {
     background-color: none;
     height: 100px;
     margin: 0px;
@@ -23,7 +42,7 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     padding: 0px;
     top: 100px;
     width: 40px;
-}
+} */
 
 .answerButton {
     padding-bottom: 10px;
@@ -90,6 +109,17 @@ a.greenLink, a.greenLink:hover, a.greenLink:visited {
     .extraTopMargin {
         margin-top: 50px;
     }
+}
+
+.finalize {
+    margin-bottom: 20px;
+}
+.footer {
+    /* margin-bottom: 10px; */
+    /* padding-bottom: 100px; */
+    /* border-bottom: 100px solid transparent; */
+    /* display: inline; */
+    position: absolute;
 }
 
 /* HEADINGS */
@@ -159,6 +189,11 @@ h6#credit { /* footer style */
 
 .heroTxtCol, .quizTxtCol {
     height: 400px;
+    padding-top: 20px;
+}
+
+.quizTxtCol {
+    height: 500px;
     padding-top: 20px;
 }
 
@@ -254,10 +289,14 @@ img.resultsImageCover {
     margin-top: 20px;
 }
 
+#movieCarousel {
+    height: 680px;
+}
 .navbar {
     position: fixed;
     background-color: white;
     border-bottom: 2px solid #EFEFEF;
+    border-top: 2px solid #EFEFEF;
     padding: 5px;
 }
 
@@ -299,8 +338,8 @@ p {
 }
 
 #restaurantCarousel {
-    height: 600px;
-    padding: 20px 0px;
+    height: 540px;
+    padding: 8px 0px;
     margin: 0px;
 }
 
@@ -313,15 +352,30 @@ p {
 }
 
 #restaurantCarousel, #movieCarousel {
-    margin: 0px;
-    padding: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
     position: relative;
     width: 100%;
 }
 
 .resultHeadingH3 {
-    margin-bottom: 100px;
-    margin-top: 100px;
+    font-family: "Rammetto One";
+    text-transform: uppercase;
+    color: salmon;
+    font-size: 24px;
+    margin: 30px;
+}
+
+@media (min-width: 576px) {
+    .resultHeadingH3 {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 992px) {
+    .resultHeadingH3 {
+        font-size: 48px;
+    }
 }
 
 /* .resultReview {
@@ -353,14 +407,24 @@ p {
     font-size: 24px;
 }
 
-.quizControlArrow, .quizControlArrow:focus {
+.quizControlArrow, .quizControlArrow:focus, 
+.accordionControl, .accordionControl:focus {
     background-color: none;
     margin: 0px;
     opacity: 0.2;
 }
 
-.quizControlArrow:hover {
+.quizControlArrow:hover, .accordionControl:hover {
     opacity: 0.4;
+}
+
+.accordionControl > img {
+    width: 40px;
+    padding: 10px 0px;
+}
+
+.accordionControl {
+    height: 20px;
 }
 
 .quizControlArrow > img {
@@ -481,9 +545,24 @@ img.quizImageCover {
     }
 }
 
-.theBackground {
+.theBackgroundA {
     background: linear-gradient(to bottom, pink, pink 50%, white 50%, white);
     background-size: 100% 320px;
+    height: 640px;
+    margin: 0px;
+    object-fit: cover;
+    overflow: hidden;
+    padding: 0px;
+}
+
+.theBackgroundB {
+    background: linear-gradient(to bottom, salmon, salmon 50%, white 50%, white);
+    background-size: 100% 320px;
+    height: 640px;
+    margin: 0px;
+    object-fit: cover;
+    overflow: hidden;
+    padding: 0px;
 }
 
 .whiteButton {
