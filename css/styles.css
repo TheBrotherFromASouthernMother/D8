@@ -130,8 +130,8 @@ h1 {
 h2 {
     color: pink;
     font-family: "Rammetto One";
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 48px;
+    line-height: 54px;
     text-transform: uppercase;
 }
 
@@ -186,18 +186,36 @@ h6#credit { /* footer style */
     padding-top: 10px;
 }
 
-.heroTxtCol, .quizTxtCol {
-    height: 400px;
+.heroTxtCol {
+    height: 500px;
+    padding-top: 20px;
+}
+
+.quizTxtColA {
+    height: 350px;
     padding-top: 20px;
 }
 
 .quizTxtCol {
-    height: 500px;
+    height: 460px;
     padding-top: 20px;
 }
 
 @media (min-width: 768px) {
     .heroTxtCol, .quizTxtCol {
+    padding: 0px;
+    }
+}
+
+@media (min-width: 576px) {
+    .quizTxtCol {
+        height: 340px;
+        }   
+}
+
+@media (min-width: 768px) {
+    .quizTxtCol {
+    height: 350px;
     padding: 0px;
     }
 }
