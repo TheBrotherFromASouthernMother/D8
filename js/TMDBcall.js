@@ -72,16 +72,15 @@ function makeMovieRequest() {
     let moviePoster = document.querySelectorAll(".resultsImageCoverMovies");
     let rating = document.querySelectorAll(".resultRunTime");
     let addToItinerary = document.querySelectorAll("#movieCarousel .carousel-inner .carousel-item .card .collapse .card-body .addToItinerary");
-    let movieLink = document.querySelectorAll(".resultLinkMovies .greenLink");
+    let movieLink = document.querySelectorAll(".greenLink");
 
     console.log(movieLink)
-
-    for (let i = 0; i < carousel.length; i++) {
+    for (let i = 0; i < 7; i++) {
       movieTitle[i].textContent = data[i].title;
       moviePoster[i].src = data[i].poster;
       movieGenre[i].textContent = genres[String(data[i].genre[0])];
       rating[i].textContent = `Rating: ${String(data[i].rating)} of 10`;
-      movieLink[i].href = "https://mobile.fandango.com/theaters";
+      movieLink[i + 7].href = "https://mobile.fandango.com/theaters";
 
 
       addToItinerary[i].addEventListener("click", function(e) {
