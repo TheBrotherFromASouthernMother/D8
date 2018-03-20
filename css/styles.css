@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i|Rammetto+One|Pacifico');
 
-/* next three styles is for the CSS fix for persistent footer */
+/* next three styles are for the CSS fix for persistent footer */
 html {
     height: 100%;
     box-sizing: border-box;
@@ -281,6 +281,9 @@ img.resultsImageCover {
     margin-top: 20px;
 }
 
+#movieCarousel {
+    height: 680px;
+}
 .navbar {
     position: fixed;
     background-color: white;
@@ -320,6 +323,7 @@ p {
     font-family: "Muli", sans-serif;
     font-weight: bold;
     padding: 15px;
+    margin-bottom: 20px;
 }
 
 .redButton:hover {
@@ -327,8 +331,8 @@ p {
 }
 
 #restaurantCarousel {
-    height: 600px;
-    padding: 20px 0px;
+    height: 540px;
+    padding: 8px 0px;
     margin: 0px;
 }
 
@@ -341,8 +345,8 @@ p {
 }
 
 #restaurantCarousel, #movieCarousel {
-    margin: 0px;
-    padding: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
     position: relative;
     width: 100%;
 }
