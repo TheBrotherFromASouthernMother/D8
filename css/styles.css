@@ -189,6 +189,11 @@ h6#credit { /* footer style */
     padding-top: 20px;
 }
 
+.quizTxtCol {
+    height: 500px;
+    padding-top: 20px;
+}
+
 @media (min-width: 768px) {
     .heroTxtCol, .quizTxtCol {
     padding: 0px;
