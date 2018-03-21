@@ -3,7 +3,7 @@
 
 #Indentation
   When writing any block of code that is logically subordinate, that block should be indented two spaces more than the surrounding lines. When a line opens a block, the next line starts 2 spaces further in than the line that opened:
-  
+
     Bad:
     1│ if (condition) {
     2│ action();
@@ -16,7 +16,7 @@
 
 
   When a line closes a block, that line starts at the same level as the line that opened the block
-  
+
     Bad:
     1│ if (condition) {
     2│   action();
@@ -29,7 +29,7 @@
     3│ }
 
   No two lines should ever have more or less than 2 spaces difference in their indentation. Any number of mistakes in the above rules could lead to this, but one example would be:
-  
+
       Bad:
     1│ transmogrify({
     2│    a: {
@@ -38,26 +38,26 @@
     5│ }});
 
 
-Variable declaration
-Use a new line for each variable declaration.
-As we will be using ECMAscript 2015, declare all new variables with the new let or const keywords with a separate keyword and line for each new variable.
+#Variable declaration
+  Use a new line for each variable declaration.
+  As we will be using ECMAscript 2015, declare all new variables with the new let or const keywords with a separate keyword and line for each new variable.
 
-    Bad:
-    1│ var cat,
-    2│     dog
+      Bad:
+      1│ var cat,
+      2│     dog
 
-    Better:
-    1│ const eel, fly;
+      Better:
+      1│ const eel, fly;
 
-    Best:
-    1│ const ape;
-    2│ let bat;
+      Best:
+      1│ const ape;
+      2│ let bat;
 
 
 #Naming
   Variable names
   A single descriptive word is best. "Descriptive" preferably means it's directly describing something about the data it contains. Try to name your variables after their purpose rather than just their structure.
-  
+
     Bad:
     1│ let array = ['cat', 'dog', 'fish'];
 
@@ -69,7 +69,7 @@ As we will be using ECMAscript 2015, declare all new variables with the new let 
 
 
   Where it makes sense, collections such as arrays and maps should have plural noun variable names over single noun names, this goes a long way in making the variable declarations descriptive.
-  
+
     Bad:
     1│ let animal = ['cat', 'dog', 'fish'];
 
@@ -83,7 +83,7 @@ As we will be using ECMAscript 2015, declare all new variables with the new let 
   Boolean names
   Variables that represent boolean values should be named accordingly. Since a boolean either is true or false, typically you prefix the variable name with is or are.
   E.g., isValid or areAvailable.
-  
+
     Bad:
     1│ let someBool = true;
 
@@ -96,38 +96,38 @@ As we will be using ECMAscript 2015, declare all new variables with the new let 
 
   Function names
   Function names should start with a verb -- in the form of verb + noun, like "calculateTotal" or "listInventory" etc. This makes it more descriptive telling the reader(s) of your code at a glance what the function's input and output are as well as a summary of the processing that transforms the former to the latter.
-  
+
     Bad:
     1│ function waterBlocks() {
-    2│   // count how many blocks of water are collected between each tower 
+    2│   // count how many blocks of water are collected between each tower
     3│ }
 
     Better:
     1│ function countWaterBlocks () {
-    2│   // do stuff 
+    2│   // do stuff
     3│ }
 
     Best:
     1│ function counterWaterBlocksBetweenTowers () {
-    2│   // do stuff 
+    2│   // do stuff
     3│ }
 
 
   Capital letters in variable names
   When declaring a class or an object constructor function, capitalize the first letter.
-     
+
     Good:
   1│ function Person (name, age, occupation) {
   2│   // this.name, etc.
   3│ }
 
   Good:
-  1│ class Job {  
+  1│ class Job {
   2    constructor(title, age, sl) {
   3│     // this.title = title, etc.
   4│   }
   5│ }
-  
+
 Use all-caps for constant variables (ones that will not change throughout the life of your program).
 Bad:
 1│ const max_items_in_queue = 100;
@@ -149,7 +149,7 @@ Bad:
 2│   alert(key);
 
 
- 
+
 Quoting
 Prefer single quotes around JavaScript strings, rather than double quotes.
 Having a standard of any sort is preferable to a mix-and-match approach, and single quotes allow for easy embedding of HTML, which prefers double quotes around tag attributes.
@@ -169,8 +169,8 @@ Bad:
 
 
 
- 
- 
+
+
 Operators and keywords
 Use strict comparison operators
 Always use === and !==, since == and != will automatically convert types in ways you're unlikely to expect.
@@ -203,28 +203,28 @@ Switch statements should be used in place of if-else blocks if the number of cla
 Bad:
 1│ if(a) {
 2│     //do stuff:
-3│ } else if (b) { 
+3│ } else if (b) {
 4│     //do stuff:
-5│ } else if (c) { 
+5│ } else if (c) {
 6│     //do stuff
-7│  } else if (d) { 
+7│  } else if (d) {
 8│     //do stuff
-9│  } else {; 
+9│  } else {;
 8      //do stuff
 9│ }
- 
- 
- 
+
+
+
 Good:
 1│ switch(element) {
 2│   case a:
-3│     break; 
+3│     break;
 4│   case b:
-5│     break; 
+5│     break;
 6│   case c:
-7│     break; 
+7│     break;
 8│   case d:
-9│      break; 
+9│      break;
 8    default:
 9│ }
 
@@ -236,7 +236,7 @@ Good:
 1│ function square(n) {
 2│   return n * n;
 3│ }
-4│ 
+4│
 5│ function assertEqual(actual, expected, testName) {
 6│   // compare actual and expected
 7│ }
@@ -289,7 +289,7 @@ Good:
 Bad:
 1│ if (condition) {
 2│   response();
-3│ } 
+3│ }
 4│ else {
 5│   otherResponse();
 6│ }
@@ -358,7 +358,7 @@ Bad:
 1│ var snake_cased = 'Used in other languages';
 1│ function snake_cased() {
 2│    // 'do stuff'
-3│ }; 
+3│ };
 
 Good:
 1│ let camelCased = 'Used in javascript';
