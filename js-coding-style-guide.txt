@@ -1,0 +1,365 @@
+#Coding Style Guide
+  Inspired by the HR prep style guide
+
+#Indentation
+  When writing any block of code that is logically subordinate, that block should be indented two spaces more than the surrounding lines. When a line opens a block, the next line starts 2 spaces further in than the line that opened:
+  
+    Bad:
+    1│ if (condition) {
+    2│ action();
+    3│ }
+
+    Good:
+    1│ if (condition) {
+    2│   action();
+    3│ }
+
+
+  When a line closes a block, that line starts at the same level as the line that opened the block
+  
+    Bad:
+    1│ if (condition) {
+    2│   action();
+    3│   }
+
+
+    Good:
+    1│ if (condition) {
+    2│   action();
+    3│ }
+
+  No two lines should ever have more or less than 2 spaces difference in their indentation. Any number of mistakes in the above rules could lead to this, but one example would be:
+  
+      Bad:
+    1│ transmogrify({
+    2│    a: {
+    3│     b: function(){
+    4│     }
+    5│ }});
+
+
+Variable declaration
+Use a new line for each variable declaration.
+As we will be using ECMAscript 2015, declare all new variables with the new let or const keywords with a separate keyword and line for each new variable.
+
+    Bad:
+    1│ var cat,
+    2│     dog
+
+    Better:
+    1│ const eel, fly;
+
+    Best:
+    1│ const ape;
+    2│ let bat;
+
+
+#Naming
+  Variable names
+  A single descriptive word is best. "Descriptive" preferably means it's directly describing something about the data it contains. Try to name your variables after their purpose rather than just their structure.
+  
+    Bad:
+    1│ let array = ['cat', 'dog', 'fish'];
+
+    Better:
+    1│ let targetInputs = ['cat', 'dog', 'fish'];
+
+    Best:
+    1│ let animals = ['cat', 'dog', 'fish'];
+
+
+  Where it makes sense, collections such as arrays and maps should have plural noun variable names over single noun names, this goes a long way in making the variable declarations descriptive.
+  
+    Bad:
+    1│ let animal = ['cat', 'dog', 'fish'];
+
+    Better:
+    1│ let animalList = ['cat', 'dog', 'fish'];
+
+    Best:
+    1│ let animals = ['cat', 'dog', 'fish'];
+
+
+  Boolean names
+  Variables that represent boolean values should be named accordingly. Since a boolean either is true or false, typically you prefix the variable name with is or are.
+  E.g., isValid or areAvailable.
+  
+    Bad:
+    1│ let someBool = true;
+
+    Better:
+    1│ let valid = true;
+
+    Best:
+    1│ let areEqual = true;
+
+
+  Function names
+  Function names should start with a verb -- in the form of verb + noun, like "calculateTotal" or "listInventory" etc. This makes it more descriptive telling the reader(s) of your code at a glance what the function's input and output are as well as a summary of the processing that transforms the former to the latter.
+  
+    Bad:
+    1│ function waterBlocks() {
+    2│   // count how many blocks of water are collected between each tower 
+    3│ }
+
+    Better:
+    1│ function countWaterBlocks () {
+    2│   // do stuff 
+    3│ }
+
+    Best:
+    1│ function counterWaterBlocksBetweenTowers () {
+    2│   // do stuff 
+    3│ }
+
+
+  Capital letters in variable names
+  When declaring a class or an object constructor function, capitalize the first letter.
+     
+    Good:
+  1│ function Person (name, age, occupation) {
+  2│   // this.name, etc.
+  3│ }
+
+  Good:
+  1│ class Job {  
+  2    constructor(title, age, sl) {
+  3│     // this.title = title, etc.
+  4│   }
+  5│ }
+  
+Use all-caps for constant variables (ones that will not change throughout the life of your program).
+Bad:
+1│ const max_items_in_queue = 100;
+Good:
+1│ const MAX_ITEMS_IN_QUEUE = 100;
+
+
+Symbols / punctuation
+Don't omit braces (even if you can)
+Never omit braces for statement blocks (although they are technically optional).
+Good:
+1│ for (key in object) {
+2│   alert(key);
+3│ }
+
+
+Bad:
+1│ for (key in object)
+2│   alert(key);
+
+
+ 
+Quoting
+Prefer single quotes around JavaScript strings, rather than double quotes.
+Having a standard of any sort is preferable to a mix-and-match approach, and single quotes allow for easy embedding of HTML, which prefers double quotes around tag attributes.
+Good:
+1│ var dog = 'dog';
+2│ var cat = 'cat';
+
+
+Acceptable:
+1│ var dog = "dog";
+2│ var cat = "cat";
+
+
+Bad:
+1│ var dog = 'dog';
+2│ var cat = "cat";
+
+
+
+ 
+ 
+Operators and keywords
+Use strict comparison operators
+Always use === and !==, since == and != will automatically convert types in ways you're unlikely to expect.
+Bad:
+1│ // This comparison evaluates to true, because after type coercion, zero and the empty string are equal.
+2│ if (0 == '') {
+3│   alert('looks like they\'re equal');
+4│ }
+
+
+Good:
+1│ // this comparison evaluates to false, because the number zero is not the same as the empty string.
+2│ if (0 === '') {
+3│   alert('looks like they\'re equal');
+4│ }
+Use of the not-operator (!)
+The idiom is to keep the not-operator right next to the item it is negating:
+Bad:
+1│ if (! isEqual) {
+
+
+
+
+Good:
+1│ if (!isEqual) {
+
+
+Switch statements
+Switch statements should be used in place of if-else blocks if the number of clauses within the if-else statement exceeds four.
+Bad:
+1│ if(a) {
+2│     //do stuff:
+3│ } else if (b) { 
+4│     //do stuff:
+5│ } else if (c) { 
+6│     //do stuff
+7│  } else if (d) { 
+8│     //do stuff
+9│  } else {; 
+8      //do stuff
+9│ }
+ 
+ 
+ 
+Good:
+1│ switch(element) {
+2│   case a:
+3│     break; 
+4│   case b:
+5│     break; 
+6│   case c:
+7│     break; 
+8│   case d:
+9│      break; 
+8    default:
+9│ }
+
+
+Spacing
+Code density
+Try to conserve vertical space by minimizing the number of lines you write. However, do not do so at the detriment to readability. The more concisely your code is written, the more context can be seen in one screen, however complex code may need more spacing in order to be more “readable.”
+Good:
+1│ function square(n) {
+2│   return n * n;
+3│ }
+4│ 
+5│ function assertEqual(actual, expected, testName) {
+6│   // compare actual and expected
+7│ }
+
+
+Bad:
+1│ function square(n) {
+2│   return n * n;
+3│ }
+4│
+5│
+6│
+7│ function assertEqual(actual, expected, testName) {
+8│   // compare actual and expected
+9│ }
+
+
+Conserve line length by minimizing the amount of complexity you put on each line. Long lines are difficult to read. Try to make it easily read in one glance.
+This goal is in conflict with the line quantity goal, so you must do your best to balance them.
+Padding & additional whitespace
+Generally, we don't care where you put extra spaces, provided they are not distracting.
+You may use it as padding for visual clarity. If you do though, make sure it's balanced on both sides.
+Good:
+1│ alert('I chose to put no visual padding around this string');
+
+
+Good:
+1│ alert( 'I chose to put visual padding around this string' );
+
+
+Bad:
+1│ alert( 'I only put visual padding on one side of this string');
+
+
+You may use it to align two similar lines, but it is not recommended. This pattern usually leads to unnecessary edits of many lines in your code every time you change a variable name.
+1│ // discouraged:
+2│ var firstItem  = getFirst();
+3│ var secondItem = getSecond();
+
+
+Put else and else if statements on the same line as the ending curly brace for the preceding if block
+Good:
+1│ if (condition) {
+2│   response();
+3│ } else {
+4│   otherResponse();
+5│ }
+
+
+Bad:
+1│ if (condition) {
+2│   response();
+3│ } 
+4│ else {
+5│   otherResponse();
+6│ }
+
+
+Spacing between commas
+Bad:
+1│ assertEqual(Math.pow(3,2),9,'Math.pow squares properly');
+
+
+Good:
+1│ assertEqual(Math.pow(3, 2), 9, 'Math.pow squares properly');
+
+
+Spacing around operators
+Bad:
+1│ 'Failed ['+testName+']'...
+
+
+Good:
+1│ 'Failed [' + testName + ']'...
+
+
+Bad:
+1│ if(actual===expected){
+2│   // action
+3│ }else{
+4│   // alternate action
+5│ }
+
+
+Good:
+1│ if(actual === expected){
+2│   // action
+3│ } else {
+4│   // alternate action
+5│ }
+
+
+Code comments
+Do not use code comments as placeholders for a good variable and function names.
+If you have written a complex piece of code that’s functionality is not immediately obvious, good comments are better than no comments
+Do not leave stray comments (aka "cruft", or leftover junk) sitting in your code. Just delete unnecessary / outdated / temporary-scaffolding type of comments.
+JavaScript gotchas
+
+
+Avoid for...in
+Do not use for...in statements with the intent of iterating over a list of numeric keys. Use a for-with-semicolons statement in stead.
+Good:
+1│ var list = ['a', 'b', 'c']
+2│ for (var i = 0; i < list.length; i++) {
+3│   alert(list[i]);
+4│ }
+
+
+Bad:
+1│ var list = ['a', 'b', 'c']
+2│ for (var i in list) {
+3│   alert(list[i]);
+4│ }
+
+
+Snake vs. Camel Casing
+Use camel casing for mutable data such as let, var, function names, use snake casing for constants.
+Bad:
+1│ var snake_cased = 'Used in other languages';
+1│ function snake_cased() {
+2│    // 'do stuff'
+3│ }; 
+
+Good:
+1│ let camelCased = 'Used in javascript';
+1│ const MAX_ITEMS_IN_QUEUE = 100;
