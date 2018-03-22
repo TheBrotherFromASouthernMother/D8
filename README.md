@@ -12,7 +12,7 @@ user with the most optimal restaurant and movie options for their personality ty
 
 
 
-## Technoligies used
+## Technologies used
   * HTML5
   * CSS3
   * JavaScript (ES6)
