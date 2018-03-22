@@ -22,6 +22,10 @@ user with the most optimal restaurant and movie options for their personality ty
   * Bootstrap 4
   * Adobe XD
   * Git
+  * AJAX
+  * Zamato Api
+  * TMDB Api
+  * Google Maps Api
   
 ## Authors
   ### <a href="https://github.com/andytanghr">Andy Tang</a>
