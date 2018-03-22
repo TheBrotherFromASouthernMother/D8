@@ -22,7 +22,7 @@ user with the most optimal restaurant and movie options for their personality ty
   * Git
   
 ## Authors
-  ### Andy Tang
+  ### <a href="https://github.com/andytanghr">Andy Tang</a>
   ### Christian Lowe
   ### Erin Thigpen
   ### Kyle Lang
