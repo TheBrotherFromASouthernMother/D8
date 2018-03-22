@@ -7,8 +7,10 @@ Built with a front end first design, our web app uses tried and tested internet 
 Utilizing a thorough personality survey based on real psychological principles, our algorithim matches each
 user with the most optimal restaurant and movie options for their personality type.
 
+<p align="center"><a href="https://imgflip.com/gif/26wp8u"><img src="https://i.imgflip.com/26wp8u.gif" title="made at imgflip.com"/></a></p>
 
-<p align="center"><a href="https://imgflip.com/gif/26wkfe"><img src="https://i.imgflip.com/26wkfe.gif" title="made at imgflip.com"/></a><p>
+
+<p align="center"><a href="https://imgflip.com/gif/26wkfe"><img src="https://i.imgflip.com/26wkfe.gif" title="made at imgflip.com"/></a></p>
 
 
 
