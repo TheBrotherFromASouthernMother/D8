@@ -27,12 +27,12 @@ user with the most optimal restaurant and movie options for their personality ty
   * TMDB Api
   * Google Maps Api
   
-## Authors
-   ## Design
+## Authors:
+  * ## Design
    * ### <a href="https://github.com/andytanghr">Andy Tang</a>
    * ### <a href="https://github.com/thigabiga">Erin Thigpen</a>
 
-   ## Functionality
+  * ## Functionality
    * ### <a href="https://github.com/TheBrotherFromASouthernMother">Christian Lowe</a>
    * ### <a href="https://github.com/AuriferousAurora">Kyle Lang</a>
   
