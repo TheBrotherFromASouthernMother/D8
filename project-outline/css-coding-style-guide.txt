@@ -1,0 +1,31 @@
+STYLE GUIDE
+
+COLORS
+#363537 JET / BLACK
+#596869 STORM CLOUD / GRAY
+#FF2B6B RADICAL / RED
+#8cd867 PISTACHIO / GREEN
+#EFEFEF ISABELLINE / WHITE
+
+FONTS
+RAMMETTO ONE
+Font Size 36+
+MULI
+Extra Bold | Font Size over 24pt, under 36pt
+Regular | Font Size 24 or smaller
+
+TEXT SIZE
+Default body text - 14pt
+Default page header - 24pt
+Default section header - 32pt
+
+COLOR USE
+Text on light background - Jet Black (Headings, Main) or Storm Cloud (Subheadings)
+Text on dark background - Isabelline
+Buttons - Radical Red or Pistachio
+
+MARGINS AND BORDERS
+MOBILE
+Background colors/images should extend 100% width
+There should be a 10px margin between the edge of the frame and any text container
+Buttons should extend 100% width with 10px padding (for now)
