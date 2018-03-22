@@ -23,7 +23,7 @@ user with the most optimal restaurant and movie options for their personality ty
   
 ## Authors
   ### <a href="https://github.com/andytanghr">Andy Tang</a>
-  ### Christian Lowe
-  ### Erin Thigpen
-  ### Kyle Lang
+  ### <a href="https://github.com/TheBrotherFromASouthernMother">Christian Lowe</a>
+  ### <a href="https://github.com/thigabiga">Erin Thigpen</a>
+  ### <a href="https://github.com/AuriferousAurora">Kyle Lang</a>
   
