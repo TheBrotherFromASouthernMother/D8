@@ -7,8 +7,13 @@ Built with a front end first design, our web app uses tried and tested internet 
 Utilizing a thorough personality survey based on real psychological principles, our algorithim matches each
 user with the most optimal restaurant and movie options for their personality type.
 
+<h2 align="center"> Take the Quiz </h2>
 
-<a href="https://imgflip.com/gif/26wkfe"><img src="https://i.imgflip.com/26wkfe.gif" title="made at imgflip.com"/></a>
+<p align="center"><a href="https://imgflip.com/gif/26wp8u"><img src="https://i.imgflip.com/26wp8u.gif" title="made at imgflip.com"/></a></p>
+
+<h2 align="center"> Get Personalized Results </h2>
+
+<p align="center"><a href="https://imgflip.com/gif/26wkfe"><img src="https://i.imgflip.com/26wkfe.gif" title="made at imgflip.com"/></a></p>
 
 
 
@@ -20,10 +25,17 @@ user with the most optimal restaurant and movie options for their personality ty
   * Bootstrap 4
   * Adobe XD
   * Git
+  * AJAX
+  * Zamato Api
+  * TMDB Api
+  * Google Maps Api
   
-## Authors
-  ### Andy Tang
-  ### Christian Lowe
-  ### Erin Thigpen
-  ### Kyle Lang
+## Authors:
+  ## Design
+   * ### <a href="https://github.com/andytanghr">Andy Tang</a>
+   * ### <a href="https://github.com/thigabiga">Erin Thigpen</a>
+
+  ## Functionality
+   * ### <a href="https://github.com/TheBrotherFromASouthernMother">Christian Lowe</a>
+   * ### <a href="https://github.com/AuriferousAurora">Kyle Lang</a>
   
