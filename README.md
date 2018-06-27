@@ -1,4 +1,4 @@
-# D8 
+# D8
 
 D8 is a simple web app to adress a complex question, "where are you gonna take your date tonight?"
 
@@ -23,13 +23,15 @@ user with the most optimal restaurant and movie options for their personality ty
   * JavaScript (ES6)
   * JQuery
   * Bootstrap 4
+  * Java SE 8
+  * Spark 
   * Adobe XD
   * Git
   * AJAX
   * Zamato Api
   * TMDB Api
   * Google Maps Api
-  
+
 ## Authors:
   ## Design
    * ### <a href="https://github.com/andytanghr">Andy Tang</a>
@@ -38,4 +40,3 @@ user with the most optimal restaurant and movie options for their personality ty
   ## Functionality
    * ### <a href="https://github.com/TheBrotherFromASouthernMother">Christian Lowe</a>
    * ### <a href="https://github.com/AuriferousAurora">Kyle Lang</a>
-  

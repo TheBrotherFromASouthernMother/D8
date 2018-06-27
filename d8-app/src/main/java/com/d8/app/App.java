@@ -61,12 +61,10 @@ public class App {
         } else {
           res.type("image/jpg");
         }
-        return render("/src/main/public/defaultImages/" + coverImage);
+        return render("./src/main/public/defaultImages/" + coverImage);
       });
 
     }
-
-
 
     static int getHerokuAssignedPort() {
         ProcessBuilder processBuilder = new ProcessBuilder();
