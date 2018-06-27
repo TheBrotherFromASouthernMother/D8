@@ -10,27 +10,39 @@ import java.io.*;
 
 public class App {
 
-    public static void main(String[] args) {
-        String content = "";
-        File file = new File("/Users/christianlowe/.atom/D8/d8-app/src/main/public/views/index.html");
-        try {
-        content += Files.toString(file, Charsets.UTF_8);
-      } catch (IOException error) {
-        System.out.println("sorry couldn\n't fufll your request");
-      }
-      final String html = content;
-        port(getHerokuAssignedPort());
-        get("/", (req, res) -> html);
+  public static String render(String file_location) {
+    String content = "";
+    File file = new File(file_location);
+    try {
+      content += Files.toString(file, Charsets.UTF_8);
+    } catch (IOException error) {
+      System.out.println("sorry couldn\'t fufll your request for: " + file_location);
+    }
+    final String file_content = content;
+    return file_content;
+  }
 
-        String cssContent = "";
-        File cssFile = new File("/Users/christianlowe/.atom/D8/d8-app/src/main/public/css/styles.css");
-        try {
-        cssContent += Files.toString(cssFile, Charsets.UTF_8);
-      } catch (IOException error) {
-        System.out.println("sorry couldn\n't fufll your request");
-      }
-      final String css = cssContent;
-      get("/styles.css", (req, res) -> { res.type("text/css"); return css; });
+    public static void main(String[] args) {
+
+        port(getHerokuAssignedPort());
+
+      get("/", (req, res) -> {
+          return render("./src/main/public/views/index.html");
+        });
+
+      get("/styles.css", (req, res) -> {
+        res.type("text/css");
+        return render("./src/main/public/css/styles.css");
+      });
+
+      get("/results", (req, res) -> {
+        return render("./src/main/public/views/results.html");
+      });
+
+      get("/js", "text/javascript", (req, res) -> {
+        String jsFile = req.queryParams("jsFile");
+        return render(".src/main/public/js/" + jsFile + ".js" );
+      });
 
     }
 
