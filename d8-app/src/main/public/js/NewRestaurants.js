@@ -144,51 +144,51 @@ function updateUISucces(restaurantData) {
 function setDefaultImage(cuisine, image) {
   switch(true) {
     case (cuisine.startsWith("Italian")):
-      image.src = "./defaultImages/Italian.jpg";
+      image.src = "/defaultImages?coverImage=Italian.jpg";
       break;
     case (cuisine.startsWith("American")):
-      image.src = "./defaultImages/American.jpg";
+      image.src = "/defaultImages?coverImageAmerican.jpg";
       break;
     case (cuisine.startsWith("BarFood")):
-      image.src = "./defaultImages/BarFood.jpg";
+      image.src = "./defaultImages?coverImage=BarFood.jpg";
       break;
     case (cuisine.startsWith("Chinese")):
-      image.src = "./defaultImages/Chinese.jpg";
+      image.src = "./defaultImages?coverImage=Chinese.jpg";
       break;
     case (cuisine.startsWith("Pizza")):
-      image.src = "./defaultImages/Pizza.jpg";
+      image.src = "./defaultImages?coverImage=Pizza.jpg";
       break;
 		case (cuisine.startsWith("Burger")):
-		  image.src = "./defaultImages/Burger.jpg";
+		  image.src = "./defaultImages?coverImage=Burger.jpg";
 		  break;
 		case (cuisine.startsWith("TexMex")):
-			image.src = "./defaultImages/TexMexjpg";
+			image.src = "./defaultImages?coverImage=TexMexjpg";
 			break;
 		case (cuisine.startsWith("Healthy")):
-	    image.src = "./defaultImages/Healthy.jpg";
+	    image.src = "./defaultImages?coverImage=Healthy.jpg";
 	    break;
 		case (cuisine.startsWith("Seafood")):
-		  image.src = "./defaultImages/Seafood.jpg";
+		  image.src = "./defaultImages?coverImage=Seafood.jpg";
 		  break;
 		case (cuisine.startsWith("Mediterranean")):
-			image.src = "./defaultImages/Seafood.jpg";
+			image.src = "./defaultImages?coverImage=Seafood.jpg";
 			break;
 		case (cuisine.includes("Sushi")):
-			image.src = "./defaultImages/Sushi.jpg"
+			image.src = "./defaultImages?coverImage=Sushi.jpg"
 			break;
 		case (cuisine.startsWith("Sandwich")):
-			image.src = "./defaultImages/Sandwich.jpg"
+			image.src = "./defaultImages?coverImage=Sandwich.jpg"
 			break;
 		case (cuisine.startsWith("Desserts")):
-			image.src = "./defaultImages/Desserts.jpg"
+			image.src = "./defaultImages?coverImage=Desserts.jpg"
 			break;
 		case (cuisine.startsWith("Cajun")):
-			image.src = "./defaultImages/Cajun.jpg"
+			image.src = "./defaultImages?coverImage=Cajun.jpg"
 			break;
 		case (cuisine.startsWith("Coffee")):
-				image.src = "./defaultImages/Coffee&Tea.jpg"
+				image.src = "./defaultImages?coverImage=Coffee&Tea.jpg"
 				break;
     default:
-      image.src = "./defaultImages/Vegetarian.jpg"
+      image.src = "./defaultImages?coverImage=Vegetarian.jpg"
   }
 } //end setDefaultImage
